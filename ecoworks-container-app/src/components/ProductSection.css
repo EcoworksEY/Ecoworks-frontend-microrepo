@@ -1,0 +1,26 @@
+.product_header {
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 2%;
+    text-align: center;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    
+    color: #000000;
+}
+
+.product_box {
+    position: relative; 
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 1%;
+    width: 98%;
+    height: max-content;
+
+    background: #FFFFFF;
+    box-shadow: inset 8px 8px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 28px;
+}

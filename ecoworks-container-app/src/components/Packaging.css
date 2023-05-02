@@ -1,0 +1,36 @@
+.packaging_container{
+    position: relative;
+    margin-top: 8%;
+    display: flex;
+}
+
+.packaging_image{
+    position: relative;
+    margin-left: 8%;
+    width: 32%;
+}
+
+.packaging_text{
+    position: relative;
+    margin-left: 8%;
+    margin-top: 5%;
+    width: 40%;
+    align-items: center;
+}
+
+.packaging_text_font{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.packaging_title_font {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 48px;
+    /* identical to box height */
+    color: #000000;
+}

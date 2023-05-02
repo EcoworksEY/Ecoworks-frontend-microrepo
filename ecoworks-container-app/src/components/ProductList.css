@@ -1,0 +1,13 @@
+.product_container{
+    display: flex;
+    margin: 1%;
+    width: 100%;
+    /* background-color:aqua; */
+}
+
+.product_icon_arrow{
+    margin-left: 1%;
+    width: 1.5%;
+    align-items: right;
+    cursor: pointer;
+}
