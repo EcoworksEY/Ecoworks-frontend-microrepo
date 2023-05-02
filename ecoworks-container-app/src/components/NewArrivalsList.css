@@ -1,0 +1,25 @@
+.new_arrivals_list1{
+        display: flex;
+        margin: 1%;
+        width: 98%;
+}
+
+.new_arrivals_list2{
+    position: relative;
+    display: flex;
+    margin: 1%;
+}
+
+.new_arrivals_background{
+    position: relative;
+    margin-top: 2%;
+    width: auto;
+    background: #D5DBE7;
+}
+
+.icon_arrow{
+    margin-left: 1%;
+    width: 1.5%;
+    align-items: right;
+    cursor: pointer;
+}

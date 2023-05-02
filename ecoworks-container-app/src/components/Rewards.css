@@ -1,0 +1,48 @@
+.rewards_container{
+    position: relative;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rewards_image{
+    position: relative;
+    margin-left: 4%;
+    width: 94%;
+}
+
+.rewards_text{
+    position: relative;
+    margin-left: 4%;
+    margin-bottom: 4%;
+    width: auto;
+    align-items: center;
+}
+
+
+.rewards_text1{
+    position: relative;
+    margin-left: 4%;
+    margin-top: 2%;
+    width: auto;
+    align-items: center;
+}
+
+
+.rewards_text_font{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.rewards_title_font {
+    margin-bottom: 1%;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    /* identical to box height */
+    color: #000000;
+}

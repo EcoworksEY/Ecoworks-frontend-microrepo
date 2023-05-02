@@ -1,0 +1,103 @@
+/* TOP PINK BAR */
+.navbar{
+    position: sticky;
+    display: flex;
+}
+.navbar_rectangle1 {
+    float: left;
+    width: 75%;
+    height: 45px;
+    left: 0px;
+    top: 0px;
+    background: #D6C6C6;
+}
+
+.navbar_message {
+    position: relative;
+    text-align: right;
+    height: 27px;
+    top: 10px;
+    right: 25%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.navbar_icons_top_layer{
+    width: 25%;
+    display: flex;
+    float: left;
+    height: 45px;
+    left: 0px;
+    top: 0px;
+    background: #D6C6C6;
+}
+
+.navbar_ecoworks_blog{
+    position: relative;
+    height: 27px;
+    top: 10px;
+    left: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.navbar_ecoworks_blog_logo{
+    position: relative;
+    align-items: right;
+    height: 25px;
+    top: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+}
+
+/* SECOND LAYER */
+
+.ecoworks_logo{
+    position: relative;
+   
+    width: 219px;
+    float: left;
+    height: 58px;
+    left: 50px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.ecoworks_menu_options{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    left: 175px;
+    float: left;
+    height: 27px;
+    top: 26px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.ecoworks_menu_options_text{
+    cursor: pointer;
+}
+
+.navbar_menu_options_icons{
+    position: relative;
+    width: 15%;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+
+    height: 45px;
+    left: 0px;
+    top: 10px;
+}
