@@ -138,10 +138,17 @@
     width: 25%;
 }
 
+.footer_email {
+    position: relative;
+    width: auto;
+}
+
 .footer_stay{
     position: relative;
+    display: flex;
     margin-left: 17%;
     width: 56%;
+    justify-content: space-around;
 }
 
 .footer_sign_up2{
