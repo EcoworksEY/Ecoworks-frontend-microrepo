@@ -3,11 +3,6 @@ import "./Footer.css";
 import paymentMethods from "../assets/VectorPaymentMethod.svg"
 import socialMediaIcons from "../assets/VectorSocials.svg"
 
-// import Button from 'react-bootstrap/Button';
-// import Col from 'react-bootstrap/Col';
-// import Form from 'react-bootstrap/Form';
-// import Row from 'react-bootstrap/Row';
-
 export default function Footer (props) {
     return (
         <div>
@@ -18,20 +13,15 @@ export default function Footer (props) {
                     </div>
                     <div className="footer_stay">
                         <p className="footer_join_conversation_text">STAY IN THE KNOW</p>
+                        <div className="footer_email">
+                            <form>
+                                <input type="text" />
+                                <input type="submit" />
+                            </form>
+                        </div>
                     </div>
-                    {/* <Form>
-                    <Row className="align-items-center">
-                        <Col sm={3} className="my-1">
-                        <Form.Label htmlFor="inlineFormInputName" visuallyHidden>
-                            Name
-                        </Form.Label>
-                        <Form.Control id="inlineFormInputName" placeholder="Jane Doe" />
-                        </Col>
-                        <Col xs="auto" className="my-1">
-                        <Button type="submit">Submit</Button>
-                        </Col>
-                    </Row>
-                    </Form> */}
+                    
+                    
                 </div>
                 <div class = "footer_sign_up2">
                     <img className="footer_social_icons" src = {socialMediaIcons} alt=""></img>
