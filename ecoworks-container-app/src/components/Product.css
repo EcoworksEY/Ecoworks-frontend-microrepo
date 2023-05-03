@@ -100,10 +100,18 @@
 .product_icons{
     margin-right: 15%;
     display: flex;
-    width: 14%;
+    width: 40%;
+    justify-content: space-around;
 }
 
 .product_icon{
-    padding-left: 15px;
+    
     cursor: pointer;
+}
+
+
+.product_icon_heart{
+    cursor: pointer;
+    margin-top: -7%;
+    /* background-color: #E1DFDE; */
 }

@@ -57,6 +57,16 @@
     cursor: pointer;
 }
 
+.navbar_search {
+  position: relative;
+  align-items: right;
+  height: 25px;
+  top: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor: pointer;
+}
+
 /* SECOND LAYER */
 
 .ecoworks_logo{
@@ -101,3 +111,40 @@
     left: 0px;
     top: 10px;
 }
+.options {
+  cursor: pointer;
+  display: flex;
+  width: 100%
+}
+
+/* @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.25);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .heart {
+    position: relative;
+    align-items: right;
+    height: 25px;
+    top: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+  }
+  
+  .heart:hover {
+    animation: heartbeat 1s infinite;
+    fill: #D6C6C6;
+    color: #D6C6C6;
+    opacity: 1;
+    transition: opacity 500ms;
+  } */
