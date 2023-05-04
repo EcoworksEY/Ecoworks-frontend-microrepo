@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import NewArrivalsProduct1 from "./NewArrivalsProduct1";
 import SideArrow from "../assets/VectorSideArrow.svg"
 import "./NewArrivalsList.css"
+import "./Product.css"
 
-const NewArrivals = [
+const newArrivalsData = [
     {
         name: "This is paper 1",
         price: 20.22
@@ -31,29 +32,43 @@ const NewArrivals = [
 ]
 
 export default function NewArrivalsList1 (props) {
-    // const elementRef = useRef(null);
-    // const [arrowDisable, setArrowDisable] = useState(true);
+    const ref = useRef(null)
+    const [expandedLeft, setexpandedLeft] = useState(false);
+    const [expandedRight, setExpandedRight] = useState(true);
 
-    // const handleHorizantalScroll = (element, speed, distance, step) => {
-    //     let scrollAmount = 0;
-    //     const slideTimer = setInterval(() => {
-    //     element.scrollLeft += step;
-    //     scrollAmount += Math.abs(step);
-    //     if (scrollAmount >= distance) {
-    //         clearInterval(slideTimer);
-    //     }
-    //     if (element.scrollLeft === 0) {
-    //         setArrowDisable(true);
-    //     } else {
-    //         setArrowDisable(false);
-    //     }
-    //     }, speed);
-    // }; onClick = {() => handleHorizantalScroll(elementRef.current,25,100,10)
+    const scrollRight = (scrollOffset) => {
+        let previousScroll = ref.current.scrollLeft;
+        ref.current.scrollLeft += scrollOffset;
+        let currentScroll = ref.current.scrollLeft;
+
+        setexpandedLeft(true)
+        if (((currentScroll - previousScroll) < 49)){
+            setExpandedRight(false)
+        }
+    }
+    const scrollLeft = (scrollOffset) => {
+        ref.current.scrollLeft -= scrollOffset;
+        if (ref.current.scrollLeft === 0){
+            setexpandedLeft(false);
+        }
+        setExpandedRight(true)
+    }
+
 
     return (
-        <div className="new_arrivals_list1">
-            <NewArrivalsProduct1 newArrivals = {NewArrivals}/>
-            <img className = 'product_icon_arrow' src = {SideArrow} alt=''/>
+        <div className="new_arrivals_list1" >
+            <img className = {`product_icon_arrow ${expandedLeft ? 'visible' : ''}`} style = {{rotate : "180deg"}} src = {SideArrow} alt='' onClick = {() => {scrollLeft(50)}}/>
+            <div className='new_arrivals_container' ref = {ref}>
+                {newArrivalsData.map ((data, index) => ( 
+                    <NewArrivalsProduct1
+                        key = {index}
+                        name = {data.name}
+                        price = {data.price}
+                    />
+                ))}
+            </div> 
+            <img className =  {`product_icon_arrow ${expandedRight ? 'visible' : ''}`} src = {SideArrow} alt='' onClick = {() => {scrollRight(50)}}/>
+
         </div>
     )
 }

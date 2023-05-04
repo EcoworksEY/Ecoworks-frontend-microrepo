@@ -1,5 +1,6 @@
 import React from 'react'
 import "./ProductSection.css"
+import "./NewArrivalsList.css"
 import NewArrivalsList1 from './NewArrivalsList1'
 import NewArrivalsList2 from './NewArrivalsList2'
 
