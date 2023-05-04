@@ -57,7 +57,7 @@ export default function NewArrivalsList2 (props) {
     return (
         <div className="new_arrivals_background">
             <div className="new_arrivals_list1" >
-                <img className = {`product_icon_arrow ${expandedLeft ? 'visible' : ''}`} style = {{rotate : "180deg"}} src = {SideArrow} alt='' onClick = {() => {scrollLeft(70)}}/>
+                <img className = {`product_icon_arrow ${expandedLeft ? 'visible' : ''}`} style = {{rotate : "180deg"}} src = {SideArrow} alt='' onClick = {() => {scrollLeft(360)}}/>
                 <div className='new_arrivals_container' ref = {ref}>
                     {newArrivalsData.map ((data, index) => ( 
                         <NewArrivalsProduct2
@@ -66,7 +66,7 @@ export default function NewArrivalsList2 (props) {
                         />
                     ))}
                 </div> 
-                <img className =  {`product_icon_arrow ${expandedRight ? 'visible' : ''}`} src = {SideArrow} alt='' onClick = {() => {scrollRight(70)}}/>
+                <img className =  {`product_icon_arrow ${expandedRight ? 'visible' : ''}`} src = {SideArrow} alt='' onClick = {() => {scrollRight(360)}}/>
             </div>
         </div>
 
