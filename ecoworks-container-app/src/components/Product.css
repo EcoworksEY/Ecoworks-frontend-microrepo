@@ -17,7 +17,7 @@
     grid-template-columns: auto auto auto auto;
     
     width: auto;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 1%;
     gap: 0.5%;
     overflow-x: auto;
@@ -73,6 +73,7 @@
     justify-content: space-around;
     height: 27px;
     top: 10px;
+    align-items: center;
 }
 
 .new_arrivals_text {
@@ -95,15 +96,44 @@
     font-size: 18px;
     line-height: 24px;
     color: #000000;
+    margin-left: 12%;
 }
 
 .product_icons{
     margin-right: 15%;
     display: flex;
-    width: 14%;
+    width: 40%;
+    height: 24px;
+    justify-content: space-around;
 }
 
 .product_icon{
-    padding-left: 15px;
     cursor: pointer;
+}
+
+.product_icons_new_arrivals{
+    margin-left: 15%;
+    display: flex;
+    width: 40%;
+    height: 24px;
+    justify-content: space-around;
+}
+
+.product_icon_new_arrivals{
+    cursor: pointer;
+}
+
+.product_price_new_arrivals {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 27px;
+    top: 10px;
+    align-items: center;
+}
+
+.product_icon_heart{
+    cursor: pointer;
+    margin-top: -7%;
+    /* background-color: #E1DFDE; */
 }

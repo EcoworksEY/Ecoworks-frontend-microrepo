@@ -57,6 +57,16 @@
     cursor: pointer;
 }
 
+.navbar_search {
+  position: relative;
+  align-items: right;
+  height: 25px;
+  top: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor: pointer;
+}
+
 /* SECOND LAYER */
 
 .ecoworks_logo{
@@ -101,3 +111,107 @@
     left: 0px;
     top: 10px;
 }
+.options {
+  cursor: pointer;
+  display: flex;
+  width: 100%
+}
+
+/* @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.25);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .heart {
+    position: relative;
+    align-items: right;
+    height: 25px;
+    top: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+  }
+  
+  .heart:hover {
+    animation: heartbeat 1s infinite;
+    fill: #D6C6C6;
+    color: #D6C6C6;
+    opacity: 1;
+    transition: opacity 500ms;
+  } */
+  .search-bar {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .search-icon {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+  }
+  
+  .search-icon.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 0px;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translate(-35%, -45%);
+    transition: all 0.5s ease;
+    visibility: hidden;
+  }
+  
+  .search-input.visible {
+    width: 200px;
+    visibility: visible;
+  }
+
+.cross-icon{
+  position: relative;
+  align-items: right;
+  height: 30px;
+  top: -15px;
+  left:200%;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  }
+
+  .cross-icon.visible{
+    visibility: visible;
+    opacity: 100;
+    }
+
+.search_bar_flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+  

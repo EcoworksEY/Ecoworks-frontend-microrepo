@@ -15,13 +15,11 @@ export default function Footer (props) {
                         <p className="footer_join_conversation_text">STAY IN THE KNOW</p>
                         <div className="footer_email">
                             <form>
-                                <input type="text" />
-                                <input type="submit" />
+                                <input className="email_input" type="text" placeholder="Enter Your Email Address"/>
+                                <input className="email_submit" type="submit" />
                             </form>
                         </div>
-                    </div>
-                    
-                    
+                    </div>                   
                 </div>
                 <div class = "footer_sign_up2">
                     <img className="footer_social_icons" src = {socialMediaIcons} alt=""></img>

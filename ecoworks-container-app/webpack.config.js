@@ -4,6 +4,10 @@ module.exports = {
   mode: 'development',
   devServer: {
     port: 8083,
+    historyApiFallback: true
+  },
+  output: {
+    publicPath : '/',
   },
   module: {
     rules: [
@@ -42,7 +46,7 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin(
       {
-        name: 'MFE1',
+        name: 'ContainerApplication',
         filename:
           'remoteEntry.js'
       }

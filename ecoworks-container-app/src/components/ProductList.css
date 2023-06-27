@@ -6,8 +6,15 @@
 }
 
 .product_icon_arrow{
-    margin-left: 1%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
     width: 1.5%;
-    align-items: right;
+    align-items: left;
     cursor: pointer;
+    visibility: hidden;
+}
+
+.product_icon_arrow.visible{
+    opacity: 100;
+    visibility: visible;
 }
