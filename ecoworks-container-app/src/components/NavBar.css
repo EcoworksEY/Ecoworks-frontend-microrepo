@@ -2,6 +2,7 @@
 .navbar{
     position: sticky;
     display: flex;
+    height: 45px;
 }
 .navbar_rectangle1 {
     float: left;
@@ -68,6 +69,15 @@
 }
 
 /* SECOND LAYER */
+.navbar2{
+  /* position: relative; */
+  display: flex;
+  height: 90px;
+}
+.navbar2_hovering{
+  /* position: relative; */
+  background-color: #fff;
+}
 
 .ecoworks_logo{
     position: relative;
@@ -84,37 +94,80 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    left: 175px;
-    float: left;
-    height: 27px;
-    top: 26px;
+    width: 75%;
+    float: center;
+    /* margin-top: 2%; */
+    margin-left: 12.5%;
+}
+
+/* .ecoworks_menu_options li:hover {
+  background-color: #fff;
+  color: #B59494;
+} */
+
+.ecoworks_menu_options_text{
+    cursor: pointer;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
     color: #000000;
+    padding:15px;
+    padding-top: 30px;
+}
+.hovering_menu_option_text{
+  color: #B59494;
+}
+.hovering_menu_option_rectangle{
+  margin-top: 8px;
+  width: 65%;
+  height: 10px;
+  border-radius: 18px;
+  margin-left: 17.5%;
+  margin-right: 17.5%;
+  background: #B59494;
 }
 
-.ecoworks_menu_options_text{
-    cursor: pointer;
+.hovering_line{
+  position:absolute;
+  top:100%;
+  margin-left:-53%;
+  width: 197.7%;
+  left: 0px;
+  height: 1px;
+  background: rgba(225, 223, 222, 0.80);
+}
+
+.hovering_container{
+  position:absolute;
+  /* top:109px; */
+  margin-left:-53%;
+  margin-top: 1.3%;
+  left:0px;
+  width: 197.7%;
+  height: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.not_hovering_container{
+  display: none;
 }
 
 .navbar_menu_options_icons{
-    position: relative;
-    width: 15%;
-    margin-left: 20%;
-    display: flex;
-    justify-content: space-between;
+  position: relative;
+  width: 15%;
+  margin-left: 12.5%;
+  display: flex;
+  justify-content: space-between;
 
-    height: 45px;
-    left: 0px;
-    top: 10px;
+  height: 45px;
+  top: 20%;
 }
 .options {
-  cursor: pointer;
-  display: flex;
-  width: 100%
+cursor: pointer;
+display: flex;
+width: 100%
 }
 
 /* @keyframes heartbeat {
@@ -151,6 +204,7 @@
   .search-bar {
     position: relative;
     display: inline-block;
+    margin-left: -20%;
   }
   
   .search-icon {

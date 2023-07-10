@@ -7,7 +7,7 @@
     float: left;
     width: 39%;
     height: auto;
-    margin-top: -60px;
+    margin-top: -90px;
     left: 0px;
     background: rgba(214, 198, 198, 0.62);
     z-index: -1;
@@ -15,7 +15,7 @@
 
 .main_section_rectangle2 {
     float: left;
-    margin-top: -60px;
+    margin-top: -90px;
     width: 61%;
     height: auto;
     z-index: -1;

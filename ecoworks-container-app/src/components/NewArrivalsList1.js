@@ -6,26 +6,32 @@ import "./Product.css"
 
 const newArrivalsData = [
     {
+        id:1,
         name: "This is paper 1",
         price: 20.22
     },
     {
+        id:2,
         name: "This is paper 1",
         price: 20.22
     },
     {
+        id:3,
         name: "This is paper 1",
         price: 20.22
     },
     {
+        id:4,
         name: "This is paper 1",
         price: 20.22
     },
     {
+        id:5,
         name: "This is paper 1",
         price: 20.22
     },
     {
+        id:16,
         name: "This is paper 1",
         price: 20.22
     }
@@ -61,7 +67,7 @@ export default function NewArrivalsList1 (props) {
             <div className='new_arrivals_container' ref = {ref}>
                 {newArrivalsData.map ((data, index) => ( 
                     <NewArrivalsProduct1
-                        key = {index}
+                        key = {data.id}
                         name = {data.name}
                         price = {data.price}
                     />

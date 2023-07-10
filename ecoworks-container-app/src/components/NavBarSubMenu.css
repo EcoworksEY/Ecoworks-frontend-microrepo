@@ -1,0 +1,13 @@
+.navbar_sub_container{
+    display: grid;
+    grid-template-columns: 25% 25% 50%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 3%;
+    padding-bottom: 3.5%;
+}
+
+.nav_bar_featured {
+    display: grid;
+    grid-template-rows: repeat(4, 15%);
+}
