@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.svg";
-import ecoworksSearchIcon from "../assets/VectorSearch.svg";
-import ecoworksFavouriteIcon from "../assets/VectorFavorite.svg";
-import ecoworksShoppingBagIcon from "../assets/VectorShoppingBag.svg";
+import logo from "../../assets/logo.svg";
+import ecoworksSearchIcon from "../../assets/VectorSearch.svg";
+import ecoworksFavouriteIcon from "../../assets/VectorFavorite.svg";
+import ecoworksShoppingBagIcon from "../../assets/VectorShoppingBag.svg";
 import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
 import { RxCross1 } from "react-icons/Rx";
 
-import NavBarOption from "./NavBar/NavbarOption";
-import menuOptions from "./NavBar/NavbarMenuOptions";
+import NavBarOption from "./NavbarOption";
+import menuOptions from "./NavbarMenuOptions";
 
 export default function NavBar2(props) {
   const navigate = useNavigate();

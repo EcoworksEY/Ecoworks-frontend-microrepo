@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
-import paymentMethods from "../assets/VectorPaymentMethod.svg"
-import socialMediaIcons from "../assets/VectorSocials.svg"
+import paymentMethods from "../../assets/VectorPaymentMethod.svg"
+import socialMediaIcons from "../../assets/VectorSocials.svg"
 
 export default function Footer (props) {
     return (

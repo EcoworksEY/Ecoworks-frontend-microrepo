@@ -1,8 +1,7 @@
 import React from "react";
 
-import { MediumTextDarkVHeavy } from "./Typography/MediumTextDarkVHeavy";
-import { MediumTextDark } from "./Typography/MediumTextDark";
-
+import {MediumTextDarkVHeavy} from "../Typography/MediumTextDarkVHeavy";
+import { MediumTextDark } from "../Typography/MediumTextDark";
 import "./NavBarSubMenu.css";
 
 const NavBarSubMenu = (props) => {

@@ -1,7 +1,7 @@
 import React from 'react'
 import "./MainSection.css"
-import temp from "../assets/temp1.svg"
-import arrow from "../assets/VectorArrowMainSection.svg"
+import temp from "../../../../assets/temp1.svg"
+import arrow from "../../../../assets/VectorArrowMainSection.svg"
 import "./MainSectionSlider.css"
 
 const promotions = [

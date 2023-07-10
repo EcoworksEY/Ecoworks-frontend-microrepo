@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import NavBarSubMenu from "../NavBarSubMenu";
+import NavBarSubMenu from "./NavBarSubMenu";
 
 const NavBarOption = (props) => {
     const [hovering, setHovering] = useState(false);

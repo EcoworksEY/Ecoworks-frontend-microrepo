@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Rewards.css"
-import rewards from "../assets/VectorRewards.svg"
-import greenOrder from "../assets/VectorGreenOrder.svg"
+import rewards from "../../../assets/VectorRewards.svg"
+import greenOrder from "../../../assets/VectorGreenOrder.svg"
 
 export default function Rewards (props) {
     return (

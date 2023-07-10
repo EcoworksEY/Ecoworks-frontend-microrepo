@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import LandingPage from './components/LandingPage';
+import LandingPage from './components/Landing Page/LandingPage';
 import reportWebVitals from './reportWebVitals';
-import NavBar1 from './components/NavBar1';
-import NavBgithuar2 from './components/NavBar2';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

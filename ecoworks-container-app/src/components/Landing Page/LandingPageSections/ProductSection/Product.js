@@ -1,7 +1,7 @@
 import React from 'react';
-import ecoworksFavouriteIcon from "../assets/VectorFavorite.svg"
-import ecoworksShoppingBagIcon from "../assets/VectorShoppingBag.svg"
-import tempProduct from "../assets/tempProduct.svg"
+import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg"
+import ecoworksShoppingBagIcon from "../../../../assets/VectorShoppingBag.svg"
+import tempProduct from "../../../../assets/tempProduct.svg"
 import "./Product.css"
 // import UseAnimations from 'react-useanimations';
 // import heart from 'react-useanimations/lib/heart'

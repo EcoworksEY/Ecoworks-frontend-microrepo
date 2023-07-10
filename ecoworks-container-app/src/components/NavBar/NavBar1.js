@@ -1,6 +1,6 @@
 import React from 'react';
-import ecoworksBlogIcon from "../assets/VectorblogIcon.svg"
-import ecoworksSignInIcon from "../assets/VectorsignInIcon.svg"
+import ecoworksBlogIcon from "../../assets/VectorblogIcon.svg"
+import ecoworksSignInIcon from "../../assets/VectorsignInIcon.svg"
 import "./NavBar.css"
 import { useNavigate } from 'react-router-dom';
 

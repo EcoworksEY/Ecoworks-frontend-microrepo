@@ -1,8 +1,8 @@
 import React from 'react';
-import ecoworksFavouriteIcon from "../assets/VectorFavorite.svg"
-import ecoworksShoppingBagIcon from "../assets/VectorShoppingBag.svg"
-import tempProduct from "../assets/tempProduct.svg"
-import "./Product.css"
+import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg"
+import ecoworksShoppingBagIcon from "../../../../assets/VectorShoppingBag.svg"
+import tempProduct from "../../../../assets/tempProduct.svg"
+import "../ProductSection/Product.css"
 
 export default function NewArrivalsProduct1(props) {
         return(

@@ -1,8 +1,8 @@
 import React, {useRef, useState} from "react";
 import NewArrivalsProduct2 from "./NewArrivalsProduct2";
-import SideArrow from "../assets/VectorSideArrow.svg"
+import SideArrow from "../../../../assets/VectorSideArrow.svg"
 import "./NewArrivalsList.css"
-import "./Product.css"
+import "../ProductSection/Product.css"
 
 const newArrivalsData = [
     {

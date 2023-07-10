@@ -1,6 +1,6 @@
 import React from 'react';
-import tempProduct from "../assets/tempProduct.svg"
-import "./Product.css"
+import tempProduct from "../../../../assets/tempProduct.svg"
+import "../ProductSection/Product.css"
 
 export default function NewArrivalsProduct2(props) {
         return(
