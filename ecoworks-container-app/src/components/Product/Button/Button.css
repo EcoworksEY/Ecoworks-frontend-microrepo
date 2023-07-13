@@ -1,0 +1,81 @@
+.button {
+    width: auto;
+    display: flex;
+    align-items: center;
+    background: #C8B6AA;
+    border-radius: 68px;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-around;
+}
+
+.button_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    /* identical to box height */
+
+    /* text-align: center; */
+
+    color: #000000;
+
+}
+
+.button_text_only {
+    width: auto;
+    margin-top: 0%;
+    align-items: center;
+    background: #C8B6AA;
+    border-radius: 68px;
+    cursor: pointer;
+
+}
+.button_text_only_element {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+.button_icon{
+    padding-left: 10px;
+    width: 25px;
+}
+
+.button_dark{
+    margin-top: 4%;
+    margin-left:5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 65px;
+    padding-top: 3.5%;
+    background: #000;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button_grey{
+    margin-top: 3.5%;
+    margin-left:5%;
+    margin-right: 5%;
+    width: 90%;
+    height: 65px;
+    padding-top: 3.5%;
+    background: #C5C1C1;
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    cursor: pointer;
+}

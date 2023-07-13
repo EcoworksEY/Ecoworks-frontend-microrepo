@@ -1,0 +1,40 @@
+.filters_container {
+    display: flex;
+    align-items: center;
+    width: 55%;
+    margin-left: 21.5%;
+    margin-top: 1.2%;
+    justify-content: center;
+}
+
+.filters_icon_container {
+    margin-left: 8%;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.filters_icon_image_background {
+    display: flex;
+    width: 110px;
+    background: rgba(207, 221, 249, 0.56);
+    border-radius: 68px;
+}
+
+.filters_icon_image {
+    padding: 25%;  
+}
+
+.filters_icon_text {
+    width: 95px;
+    height: 60px;
+    margin-top: 3%;
+    margin-left: 8%;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #000000;
+}

@@ -1,9 +1,17 @@
-import LandingPage from "./components/LandingPage";
 import React from 'react';
 
-function App() {
+import NavBar1 from "./components/NavBar/NavBar1";
+import NavBar2 from "./components/NavBar/NavBar2";
+import Footer from "./components/Footer/Footer";
+
+const App = (props) => {
   return (
-    <LandingPage />
+    <div className="container">
+      <NavBar1 />
+      <NavBar2 />
+      {/* {props.children} */}
+      {/* <Footer /> */}
+    </div>
   );
 }
 

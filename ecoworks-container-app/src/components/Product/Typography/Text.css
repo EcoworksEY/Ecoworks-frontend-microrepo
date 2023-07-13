@@ -1,0 +1,12 @@
+.largeTextDarkThin {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.text_centered {
+    text-align: center;
+}

@@ -1,0 +1,271 @@
+/* TOP PINK BAR */
+.navbar{
+    position: sticky;
+    display: flex;
+    height: 45px;
+}
+.navbar_rectangle1 {
+    float: left;
+    width: 75%;
+    height: 45px;
+    left: 0px;
+    top: 0px;
+    background: #D6C6C6;
+}
+
+.navbar_message {
+    position: relative;
+    text-align: right;
+    height: 27px;
+    top: 10px;
+    right: 25%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.navbar_icons_top_layer{
+    width: 25%;
+    display: flex;
+    float: left;
+    height: 45px;
+    left: 0px;
+    top: 0px;
+    background: #D6C6C6;
+}
+
+.navbar_ecoworks_blog{
+    position: relative;
+    height: 27px;
+    top: 10px;
+    left: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.navbar_ecoworks_blog_logo{
+    position: relative;
+    align-items: right;
+    height: 25px;
+    top: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+}
+
+.navbar_search {
+  position: relative;
+  align-items: right;
+  height: 25px;
+  top: 12px;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor: pointer;
+}
+
+/* SECOND LAYER */
+.navbar2{
+  /* position: relative; */
+  display: flex;
+  height: 90px;
+}
+.navbar2_hovering{
+  /* position: relative; */
+  background-color: #fff;
+}
+
+.ecoworks_logo{
+    position: relative;
+   
+    width: 219px;
+    float: left;
+    height: 58px;
+    left: 50px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.ecoworks_menu_options{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    float: center;
+    /* margin-top: 2%; */
+    margin-left: 12.5%;
+}
+
+/* .ecoworks_menu_options li:hover {
+  background-color: #fff;
+  color: #B59494;
+} */
+
+.ecoworks_menu_options_text{
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    padding:15px;
+    padding-top: 30px;
+}
+.hovering_menu_option_text{
+  color: #B59494;
+}
+.hovering_menu_option_rectangle{
+  margin-top: 8px;
+  width: 65%;
+  height: 10px;
+  border-radius: 18px;
+  margin-left: 17.5%;
+  margin-right: 17.5%;
+  background: #B59494;
+}
+
+.hovering_line{
+  position:absolute;
+  top:100%;
+  margin-left:-53%;
+  width: 197.7%;
+  left: 0px;
+  height: 1px;
+  background: rgba(225, 223, 222, 0.80);
+}
+
+.hovering_container{
+  position:absolute;
+  /* top:109px; */
+  margin-left:-53%;
+  margin-top: 1.3%;
+  left:0px;
+  width: 197.7%;
+  height: auto;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+.not_hovering_container{
+  display: none;
+}
+
+.navbar_menu_options_icons{
+  position: relative;
+  width: 15%;
+  margin-left: 12.5%;
+  display: flex;
+  justify-content: space-between;
+
+  height: 45px;
+  top: 20%;
+}
+.options {
+cursor: pointer;
+display: flex;
+width: 100%
+}
+
+/* @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+  
+    50% {
+      transform: scale(1.25);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .heart {
+    position: relative;
+    align-items: right;
+    height: 25px;
+    top: 12px;
+    padding-left: 5%;
+    padding-right: 5%;
+    cursor: pointer;
+  }
+  
+  .heart:hover {
+    animation: heartbeat 1s infinite;
+    fill: #D6C6C6;
+    color: #D6C6C6;
+    opacity: 1;
+    transition: opacity 500ms;
+  } */
+  .search-bar {
+    position: relative;
+    display: inline-block;
+    margin-left: -20%;
+  }
+  
+  .search-icon {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+  }
+  
+  .search-icon.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .search-input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 0px;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    transform: translate(-35%, -45%);
+    transition: all 0.5s ease;
+    visibility: hidden;
+  }
+  
+  .search-input.visible {
+    width: 200px;
+    visibility: visible;
+  }
+
+.cross-icon{
+  position: relative;
+  align-items: right;
+  height: 30px;
+  top: -15px;
+  left:200%;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.5s ease;
+  }
+
+  .cross-icon.visible{
+    visibility: visible;
+    opacity: 100;
+    }
+
+.search_bar_flex{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+  

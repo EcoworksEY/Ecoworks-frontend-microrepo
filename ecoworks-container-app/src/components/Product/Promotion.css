@@ -1,0 +1,54 @@
+.promotions{
+    display: flex;
+}
+.rectangle1 {
+    /* flex-direction: column; */
+    /* text-align: center; */
+    width: 40%;
+    margin-left: 5%;
+    margin-top: 4%;
+    background: #F5F5F5;
+}
+
+.rectangle2{
+    width: 50.4%;
+    height: 38.5%;
+    margin-top: 4%;
+}
+
+.text {
+    width: 54.3%;
+    margin-left: 25.5%;
+    margin-top: 14%;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 44px;
+
+    color: #000000;
+}
+
+.button_promo {
+    width: 24%;
+    height: 12%;
+    margin-left: 25.5%;
+    margin-top: 5%;
+
+    background: #C8B6AA;
+    border-radius: 68px;
+    cursor: pointer;
+}
+
+.button_text_promo {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    /* identical to box height */
+
+    text-align: center;
+
+    color: #000000;
+}
+

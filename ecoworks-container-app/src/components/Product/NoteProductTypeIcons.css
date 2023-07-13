@@ -1,0 +1,17 @@
+.products_home_text {
+    position: relative;
+    /* width: 8.1%; */
+    height: 36px;
+    margin-left: 5%;
+    margin-top: 2.4% ;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+
+    text-align: left;
+
+    color: #000000;
+}

@@ -1,0 +1,19 @@
+.medium_text_dark_v_heavy {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.medium_text_dark {
+    color: rgba(0, 0, 0, 0.71);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.medium_text_dark:hover {
+    text-decoration: underline;
+}

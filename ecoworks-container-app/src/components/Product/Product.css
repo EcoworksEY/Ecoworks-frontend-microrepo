@@ -1,0 +1,102 @@
+.product_image_container_products_page{
+    position: relative;
+    cursor: pointer;
+    
+}
+.product_image_products_page {
+    width: 325px;
+    height: 325px;
+    align-items : center;
+    background-color: #E1DFDE;
+    cursor: pointer;
+}
+
+.product_image_hover_products_page {
+    position: absolute;
+    width: 325px;
+    align-items : center;
+    background-color: #E1DFDE;
+    left: 10;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product_image_hover_products_page:hover {
+    opacity: 1;
+    background-color: #E1DFDE;
+}
+
+.product_title_text_products_page {
+    /* position: relative; */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    color: #000000;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.product_line_products_page{
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_line_last_products_page{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10%;
+    margin-top: 4%;
+}
+
+.product_icon_new_arrivals_products_page{
+    width: 8%;
+    cursor: pointer;
+}
+   
+.product_price_text_products_page{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 5%;
+}
+
+.product_colours_container_products_page{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.product_colour_circle_products_page{
+    /* box-sizing: border-box; */
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    background: #304043;
+    border: 1px solid #FFFFFF;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.product_colour_selected_circle_products_page {
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    margin-right: 6px;
+    border: 1.5px solid #000000;
+    border-radius: 40px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.selected_products_page{
+    width: 21px;
+    height: 21px;
+    margin-left: 5%;
+    margin-top: 5%;
+}
