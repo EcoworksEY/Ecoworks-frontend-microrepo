@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'development',
   devServer: {
-    port: 8083,
+    port: 4040,
     historyApiFallback: true
   },
   output: {
@@ -46,9 +46,13 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin(
       {
-        name: 'ContainerApplication',
+        name: 'ProductApplication',
         filename:
-          'remoteEntry.js'
+          'remoteEntry.js',
+        remotes: {
+          MFE1: 
+          'MFE1@http://localhost:8082/remoteEntry.js',
+        }
       }
     ),
     new HtmlWebpackPlugin({

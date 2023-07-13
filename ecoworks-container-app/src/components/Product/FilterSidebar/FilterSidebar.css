@@ -1,0 +1,153 @@
+.sidebar { 
+    position:fixed;
+    width: 34.5%;
+    background: rgba(255, 255, 255, 0.99);
+    border: 1px solid rgba(184, 179, 179, 0.82);
+    height: 95%;
+    left: 0px;
+    top: 5%; /* CHANGE HERE -- IF WANT TO MAKE IT GO TO THE TOP*/
+    padding-top:2%;
+    z-index: 3;
+}
+
+.sidebar_close{
+    /* z-index: -2;
+    opacity: 0; */
+    display: none;
+}
+.sidebar2 { 
+    position:fixed;
+    width: 34.5%;
+    background: rgba(255, 255, 255, 0.99);
+    border: 1px solid rgba(184, 179, 179, 0.82);
+    height: 95%;
+    left: 0px;
+    top: 5%; /* CHANGE HERE -- IF WANT TO MAKE IT GO TO THE TOP*/
+    padding-top:2%;
+    z-index: 4;
+}
+
+.sidebar_cross_button{
+    /* position: absolute; */
+    float: right;
+    cursor: pointer;
+    margin-top: -5%;
+    margin-right: 5%
+}
+.sidebar_arrow_button{
+    /* position: absolute; */
+    cursor: pointer;
+    margin-top: -5%;
+    margin-left: 5%;
+    rotate: 180deg;
+}
+
+.divider_line {
+    height: 1px;
+    margin-top: 4%;
+    width: 100%;
+    background: rgba(184, 179, 179, 0.82);
+}
+.filter_option_container{
+    margin-top: 4%;
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.filter_option_container_selected{
+    margin-top: 4%;
+    margin-left: 6.5%;
+    margin-right: 6.5%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.filter_option_container:hover{
+    text-decoration: underline;
+}
+
+.filter_buttons_container{
+    position: absolute;
+    /* height: 200px; */
+    width: 100%;
+    bottom: 2%;
+    /* flex-direction: column;
+    justify-content:flex-end; */
+}
+
+.close_object{
+    display: none;
+}
+
+.filter_sub_option_container{
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* padding-bottom:4%; */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+.filter_sub_option_container_selected {
+    padding-left: 6.5%;
+    padding-right: 6.5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    /* padding-bottom:4%; */
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    background: #DEDEDE;
+    text-decoration: underline;
+}
+.filter_sub_option_text {
+    margin-left: 10%;
+}
+.filter_sub_option_container:hover{
+    text-decoration: underline;
+    background-color: #DEDEDE;
+}
+
+.divider_line_sub_option {
+    height: 1px;
+    width: 100%;
+    background: rgba(184, 179, 179, 0.82);
+}
+
+.selected_filter_names {
+    display: flex;
+    margin-bottom:-12px;
+    color: #000;
+    text-align: center;   
+    overflow: hidden;
+    width: 125%;
+}
+
+.selected_filter_text {    
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    margin-right: 5%;
+}
+.icon_sub_option{
+    width: 45px;
+    height: 44px;
+}
+.sidebar_sub_option_cross{
+    position: absolute;
+    margin-left: 85%;    
+}
+.sidebar_sub_option_cross_{
+    position: absolute;
+    margin-left: 85%;    
+}

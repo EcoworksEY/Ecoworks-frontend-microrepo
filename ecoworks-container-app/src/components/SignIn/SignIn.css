@@ -1,0 +1,67 @@
+.sidebar_sign_in { 
+    position:fixed;
+    width: 37%;
+    background: rgba(255, 255, 255, 0.99);
+    border: 1px solid rgba(184, 179, 179, 0.82);
+    height: 95%;
+    right: 0px;
+    top: 5%; /* CHANGE HERE -- IF WANT TO MAKE IT GO TO THE TOP*/
+    padding-left: 2.3%;
+    padding-right: 2.3%;
+    padding-top:2%;
+}
+
+.sidebar_close_sign_in{
+    z-index: -2;
+    opacity: 0;
+}
+
+.sidebar_cross_button_sign_in{
+    float: right;
+    cursor: pointer;
+}
+
+.signin_form_container{
+    margin-top: 27.5%;
+    height: 60%;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.signin_page_form_container{
+    margin-top: 1.5%;
+    background: #FFF;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left:5%;
+    padding-right: 5%;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 18.8%;
+    margin-right: 18.8%;
+}
+.create_an_account_container{
+    /* width: 60%; */
+    margin-top: 1.5%;
+    background: #FFF;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left:4%;
+    padding-right: 4%;
+}
+
+
+.signin_remember_me_forgot_container{
+    width: 95%;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 8%;
+    align-items: center;
+    margin-left: 2.5%;
+}
+
+.forgot_password{
+    cursor: pointer;
+}

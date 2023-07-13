@@ -1,0 +1,28 @@
+.margin-left{
+    padding-left: 18.8%;
+    padding-top: 2%;
+    padding-right: 18.8%;
+    padding-bottom: 2.5%;
+}
+
+.create_an_account_container{
+    /* width: 60%; */
+    margin-top: 1.5%;
+    background: #FFF;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left:4%;
+    padding-right: 4%;
+}
+
+.text_align_center{
+    text-align: center;
+    margin-bottom: 2%
+}
+
+.form_container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 2.5%;
+    margin-bottom: 1%;
+}

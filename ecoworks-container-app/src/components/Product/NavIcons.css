@@ -1,0 +1,12 @@
+.nav_container1{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    margin-top: 2%;
+}
+.nav_container2{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    margin-left:5%
+}
