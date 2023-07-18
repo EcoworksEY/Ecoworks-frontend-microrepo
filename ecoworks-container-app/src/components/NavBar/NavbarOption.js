@@ -28,7 +28,7 @@ const NavBarOption = (props) => {
       <div className={`${hovering ? "hovering_menu_option_rectangle" : ""}`}>
         <div
           className={`${
-            hovering ? "hovering_container" : "not_hovering_container"
+            hovering ? "hovering_container_navbar" : "not_hovering_container_navbar"
           }`}
         >
           <NavBarSubMenu featuredList = {props.featuredList} typeList = {props.typeList} image = {props.image}/>

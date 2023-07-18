@@ -1,20 +1,40 @@
-import React from 'react';
-import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg"
-import ecoworksShoppingBagIcon from "../../../../assets/VectorShoppingBag.svg"
-import tempProduct from "../../../../assets/tempProduct.svg"
-import "../ProductSection/Product.css"
+import React from "react";
+import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg";
+import AddToCart from "../../../Common/AddToCart/AddToCart";
+import { useNavigate } from "react-router-dom";
+import "../ProductSection/Product.css";
 
 export default function NewArrivalsProduct1(props) {
-        return(
-                <div className='product'>
-                    <img className='new_arrivals_image' src = {tempProduct} alt=''/>
-                    <p className='new_arrivals_text'>{props.name}</p>
-                    <div className='product_price_new_arrivals'>
-                        <p className='product_price_text'>${props.price}</p>
-                        <div className='product_icons_new_arrivals'>
-                            <img className='product_icon_new_arrivals' src = {ecoworksFavouriteIcon} alt='' />
-                            <img className='product_icon_new_arrivals' src = {ecoworksShoppingBagIcon} alt='' />
-                        </div>
-                    </div>
-                </div> 
-)}
+  const navigate = useNavigate();
+  const navigateToProduct = () => {
+    navigate(`/products/${props.product.id}`);
+  };
+  return (
+    <div className="product_landing_page">
+      <img
+        className="new_arrivals_image"
+        src={props.product.images[0]}
+        alt=""
+        onClick={() => navigateToProduct()}
+      />
+      <p className="new_arrivals_text"  onClick={() => navigateToProduct()} >{props.product.title}</p>
+      <div className="product_price_new_arrivals">
+        <p className="product_price_text">${props.product.price}</p>
+        <div className="product_icons_new_arrivals">
+          <img
+            className="product_icon_new_arrivals"
+            src={ecoworksFavouriteIcon}
+            alt=""
+          />
+          <AddToCart
+            type="icon"
+            id={props.product.id}
+            quantity={1}
+            selectedColour={props.product.colours[0]}
+            product={props.product}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Cross from "../../../assets/VectorCross.svg";
+import Cross from "../../../assets/Navigation/VectorCross.svg";
 import "./FilterSidebar.css";
 
 import LargeTextDarkThin from "../Typography/LargeTextDarkThin";

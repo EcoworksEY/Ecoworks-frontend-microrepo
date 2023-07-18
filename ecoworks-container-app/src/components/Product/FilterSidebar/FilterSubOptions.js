@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LargeTextDarkThin from "../Typography/LargeTextDarkThin";
-import Cross from "../../../assets/VectorCross.svg";
+import Cross from "../../../assets/Navigation/VectorCross.svg";
 
 
 const FilterSubOptions = (props) => {

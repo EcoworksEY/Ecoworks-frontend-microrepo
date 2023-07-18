@@ -9,12 +9,19 @@ import { RxCross1 } from "react-icons/Rx";
 
 import NavBarOption from "./NavbarOption";
 import menuOptions from "./NavbarMenuOptions";
+import { useCartContext } from "../../context/CartContext";
 
 export default function NavBar2(props) {
+  const {cart} = useCartContext();
+  const cartTotalItem = cart.length;
+
   const navigate = useNavigate();
 
   const navigateToHome = () => {
     navigate("/home");
+  };
+  const navigateToCart = () => {
+    navigate("/cart");
   };
 
   const [expanded, setExpanded] = useState(false);
@@ -84,11 +91,17 @@ export default function NavBar2(props) {
           src={ecoworksFavouriteIcon}
           alt=""
         />
-        <img
+        
+          <img
+          onClick={() => navigateToCart()}
           class="navbar_ecoworks_blog_logo"
           src={ecoworksShoppingBagIcon}
           alt=""
         />
+        <div className="cart_total_icon">
+        {cartTotalItem}
+        </div>
+        
       </div>
     </div>
   );

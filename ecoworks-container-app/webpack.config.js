@@ -37,6 +37,14 @@ module.exports = {
         test: /\.svg$/, // to import images and fonts
         loader: "svg-url-loader",
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
         {
             test: /\.css$/i,
             use:['style-loader', 'css-loader', 'postcss-loader'],

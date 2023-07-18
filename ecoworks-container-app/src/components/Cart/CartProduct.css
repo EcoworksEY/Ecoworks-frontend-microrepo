@@ -65,3 +65,7 @@
 .title_margin_cart{
     margin-left: 2.9%;
 }
+
+.closed {
+    display: none;
+}

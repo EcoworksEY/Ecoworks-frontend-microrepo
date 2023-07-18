@@ -1,7 +1,7 @@
 import React from "react";
 import "./SignIn.css";
 
-import Cross from "../../assets/VectorCross.svg"
+import Cross from "../../assets/Navigation/VectorCross.svg"
 import SignInForm from "./SignInForm";
     
 const SignInSidebar = (props) => {

@@ -9,16 +9,20 @@ import afterpayLogo from "../../../assets/SingleProduct/VectorAfterPay.svg";
 import KlarnaIcon from "../../../assets/SingleProduct/VectorKlarna.svg";
 import infoIcon from "../../../assets/SingleProduct/VectorInfoIcon.svg";
 import returnsIcon from "../../../assets/SingleProduct/VectorReturnsIcon.svg";
+// import { useCartContext } from '../../../context/CartContext';
 
 import SuggestedProductList from './SuggestedProductsList';
 import Description from './Description';
+import AddToCart from "../../Common/AddToCart/AddToCart"
 
 
 export default function SingleProduct (props){
-    const [selectedColour, setselectedColour] = useState(props.productColours[0]);
+    // const {addToCart} = useCartContext();
+
+    const [selectedColour, setselectedColour] = useState(props.colours[0]);
     const [quantity, setQuantity] = useState(1);
     const [mainImageIndex, setMainImageIndex] = useState(0);
-    const [mainImage, setMainImage] = useState(props.productImages[mainImageIndex]);
+    const [mainImage, setMainImage] = useState(props.images[mainImageIndex]);
 
     const handleIncrease = () => {
         setQuantity(quantity+1);
@@ -32,24 +36,24 @@ export default function SingleProduct (props){
 
     const handleImageClick = (index) => {
         setMainImageIndex(index);
-        setMainImage(props.productImages[index]);
+        setMainImage(props.images[index]);
     }
 
     const handleRightClick = () => {
-        if (props.productImages.length - 1 > mainImageIndex){
+        if (props.images.length - 1 > mainImageIndex){
             let new_index = mainImageIndex+1;
             setMainImageIndex(new_index);
             console.log(new_index)
-            setMainImage(props.productImages[new_index]);
+            setMainImage(props.images[new_index]);
         }
     }
 
     const handleLeftClick = () => {
-        if (mainImageIndex > 0 && props.productImages.length > 1){
+        if (mainImageIndex > 0 && props.images.length > 1){
             let new_index = mainImageIndex-1;
             setMainImageIndex(new_index);
             console.log(new_index)
-            setMainImage(props.productImages[new_index]);
+            setMainImage(props.images[new_index]);
         }
     }
 
@@ -66,14 +70,14 @@ export default function SingleProduct (props){
                 <div className='left_container'>
                     <div className='images_container'>
                         <div className ='single_products_images_boxes'>
-                            {props.productImages.map ((image, index) => ( 
+                            {props.images.map ((image, index) => ( 
                                 <img className='single_product_images_box' src = {image} alt='' onClick = {() => handleImageClick(index)}></img>
                             ))}
                         </div>
                         <div className='single_product_main_image_container'>
                             <img className = {mainImageIndex === 0 ? 'single_product_left_arrow arrow_hidden' : 'single_product_left_arrow'}src = {arrow} alt = '' onClick = {handleLeftClick}></img>
                             <img className = 'single_prduct_main_image' src = {mainImage} alt = '' ></img>
-                            <img className = {mainImageIndex === props.productImages.length - 1  ? 'single_product_right_arrow arrow_hidden' : 'single_product_right_arrow'} src = {arrow} alt = '' onClick={handleRightClick}></img>
+                            <img className = {mainImageIndex === props.images.length - 1  ? 'single_product_right_arrow arrow_hidden' : 'single_product_right_arrow'} src = {arrow} alt = '' onClick={handleRightClick}></img>
                         </div>
                     </div>
                     
@@ -81,14 +85,14 @@ export default function SingleProduct (props){
                     <SuggestedProductList  suggestedProductsList = {props.suggestedProducts}/>
                 </div>
                 <div className='description_container'>
-                    <p className='single_product_name'>{props.productName}</p>
+                    <p className='single_product_name'>{props.title}</p>
                     <p className='single_product_add_context'>{props.addInfo}</p>
-                    <p className='single_product_name'>${props.productPrice}</p>
+                    <p className='single_product_name'>${props.price}</p>
                     <p className='single_product_colour_text'>Colour: {selectedColour.name}</p>
 
                
                     <div className='single_product_colour_boxes_container'>
-                        {props.productColours.map ((colourCode, index) => ( 
+                        {props.colours.map ((colourCode, index) => ( 
                              <div className={selectedColour === colourCode ? 'single_product_selected_colour_box' : ''}>
                                 <div className={selectedColour === colourCode ? 'single_product_colour_box selected_square' : 'single_product_colour_box'} style={{'background-color' : colourCode.code}} onClick={()=>setselectedColour(colourCode)}></div>
                              </div>
@@ -107,7 +111,7 @@ export default function SingleProduct (props){
                             <img className = 'wishlist_icon'src = {ecoworksFavouriteIcon} alt=''/>
                         </div>
                     </div>
-                    <div className='add_to_bag_button'>ADD TO BAG</div>
+                    <AddToCart type = "button_dark"  id = {props.id} quantity = {quantity} selectedColour = {selectedColour} product={props} />
                     <Description />
                     <div className='single_product_general_button'>
                         <p></p>

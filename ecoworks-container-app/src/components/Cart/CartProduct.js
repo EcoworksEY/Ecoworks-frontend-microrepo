@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+
 import UpperSmallTextDark from "../Common/UpperSmallTextDark";
 import SmallTextLight from "../Common/SmallTextLight";
 import MediumTextDark from "../Common/MediumTextDark";
 import LargeTextDark from "../Common/LargeTextDark";
+import {useCartContext} from "../../context/CartContext"
+
 import "./CartProduct.css";
+
 import {useNavigate} from 'react-router-dom';
 
 
@@ -12,8 +16,14 @@ import plus from "../../assets/VectorPlus.svg";
 import bin from "../../assets/VectorBin.svg";
 
 const CartProduct = (props) => {
-  const [selectedColour, setselectedColour] = useState(props.colors[0]);
+  const [selectedColour, setselectedColour] = useState(props.selectedColour);
+  const {setColour} = useCartContext();
+  const handleChangeColour = (colour) => {
+    console.log(colour)
+    setselectedColour(colour);
+    setColour(props.id, colour)
 
+  }
   const navigate = useNavigate();
   const navigateToProduct = () => {
     navigate(`/products/${props.id}`)
@@ -23,9 +33,10 @@ const CartProduct = (props) => {
     <div>
       <div className="mt-4 flex justify-between">
         <div className="w-1/2 flex">
+          
           <img
             className="w-40 h-52"
-            src={props.image[0]}
+            src={props.image}
             alt={props.title}
           ></img>
           <div className="mt-20">
@@ -46,7 +57,7 @@ const CartProduct = (props) => {
                   <div
                     key = {index}
                     className={`${
-                      selectedColour === colourCode
+                      selectedColour.code === colourCode.code
                         ? "single_product_selected_colour_box_cart"
                         : ""
                     }`}
@@ -54,11 +65,11 @@ const CartProduct = (props) => {
                     <div
                       key={index}
                       className=
-                        {`${selectedColour === colourCode
-                          ? "single_product_colour_box selected_square_cart"
+                        {`${selectedColour.code === colourCode.code
+                          ? "single_product_colour_box_cart selected_square_cart"
                           : "single_product_colour_box_cart"}`}
                       style={{ "backgroundColor": colourCode.code }}
-                      onClick={() => setselectedColour(colourCode)}
+                      onClick={() => handleChangeColour(colourCode)}
                     ></div>
                   </div>
                 ))}

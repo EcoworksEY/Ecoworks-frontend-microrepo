@@ -1,92 +1,48 @@
-import React from 'react';
-import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg"
-import ecoworksShoppingBagIcon from "../../../../assets/VectorShoppingBag.svg"
-import tempProduct from "../../../../assets/tempProduct.svg"
-import "./Product.css"
-// import UseAnimations from 'react-useanimations';
-// import heart from 'react-useanimations/lib/heart'
+import React from "react";
+import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg";
+import "./Product.css";
+import AddToCart from "../../../Common/AddToCart/AddToCart";
+import sugProd1 from "../../../../assets/SampleProduct/suggestedProd1.svg";
+import { useNavigate } from "react-router-dom";
 
+// INTEGRATION WITH BACKEND
+// Suggested Products -> list of popular products ->
+const productsList = [
+  {
+    id: "Product from Main Page Section 1",
+    images: [sugProd1],
+    title: "Lined Notebook Black Marble ",
+    price: "18.89",
+    category: "A5",
+    colours: [ { code: "#0E2C77", name: "Blue" },
+    { code: "#000000", name: "Black" },],
+  },
+];
 
 export default function Product(props) {
-    const handleHeartClick = () => {
-        console.log("HELLOW");
-    }
-
-
-    return (
-        <div className='container'>
-            <div className='product'>
-                <img className='product_image' src = {tempProduct} alt=''/>
-                <p className='product_text'>Recycled notebook Light Grey A5</p>
-                <div className='product_price'>
-                    <p className='product_price_text'>$20202</p>
-                    <div className='product_icons'>
-                        <img className='product_icon' src = {ecoworksFavouriteIcon} alt='' />
-                        {/* <UseAnimations className = 'product_icon_heart' animation={heart} size = {40} onClick = {handleHeartClick}/> */}
-                        <img className='product_icon' src = {ecoworksShoppingBagIcon} alt='' />
-                    </div>
-                </div>
+  const navigate = useNavigate();
+  const navigateToProduct = (id) => {
+    navigate(`/products/${id}`)
+  } 
+  return (
+    <div className="container_product_landing_page">
+      {productsList.map((product, index) => 
+          <div className="product_landing_page">
+            <img className="product_image" src={product.images[0]} alt="" onClick={() => navigateToProduct(product.id)}/>
+            <p className="product_text" onClick={() => navigateToProduct(product.id)}>{product.title} </p>
+            <div className="product_price">
+              <p className="product_price_text">${product.price}</p>
+              <div className="product_icons">
+                <img
+                  className="product_icon"
+                  src={ecoworksFavouriteIcon}
+                  alt=""
+                />
+                <AddToCart type="icon" id = {product.id} quantity = {1} selectedColour = {product.colours[0]} product={product}/>
+              </div>
             </div>
-
-            <div className='product'>
-                <img className='product_image' src = {tempProduct} alt=''/>
-                <p className='product_text'>Recycled notebook Light Grey A5</p>
-                <div className='product_price'>
-                    <p>$20202</p>
-                    <div className='product_icons'>
-                        <img className='product_icon' src = {ecoworksFavouriteIcon} alt='' />
-                        <img className='product_icon' src = {ecoworksShoppingBagIcon} alt='' />
-                    </div>
-                </div>
-            </div>
-
-            <div className='product'>
-                <img className='product_image' src = {tempProduct} alt=''/>
-                <p className='product_text'>Recycled notebook Light Grey A5</p>
-                <div className='product_price'>
-                    <p>$20202</p>
-                    <div className='product_icons'>
-                        <img className='product_icon' src = {ecoworksFavouriteIcon} alt='' />
-                        <img className='product_icon' src = {ecoworksShoppingBagIcon} alt='' />
-                    </div>
-                </div>
-            </div>
-
-            <div className='product'>
-                <img className='product_image' src = {tempProduct} alt=''/>
-                <p className='product_text'>Recycled notebook Light Grey A5</p>
-                <div className='product_price'>
-                    <p>$20202</p>
-                    <div className='product_icons'>
-                        <img className='product_icon' src = {ecoworksFavouriteIcon} alt='' />
-                        <img className='product_icon' src = {ecoworksShoppingBagIcon} alt='' />
-                    </div>
-                </div>
-            </div>
-
-            <div className='product'>
-                <img className='product_image' src = {tempProduct} alt=''/>
-                <p className='product_text'>Recycled notebook Light Grey A5</p>
-                <div className='product_price'>
-                    <p>$20202</p>
-                    <div className='product_icons'>
-                        <img className='product_icon' src = {ecoworksFavouriteIcon} alt='' />
-                        <img className='product_icon' src = {ecoworksShoppingBagIcon} alt='' />
-                    </div>
-                </div>
-            </div>
-
-            <div className='product'>
-                <img className='product_image' src = {tempProduct} alt=''/>
-                <p className='product_text'>Recycled notebook Light Grey A5</p>
-                <div className='product_price'>
-                    <p>$20202</p>
-                    <div className='product_icons'>
-                        <img className='product_icon' src = {ecoworksFavouriteIcon} alt='' />
-                        <img className='product_icon' src = {ecoworksShoppingBagIcon} alt='' />
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
+          </div>
+      )}
+    </div>
+  );
 }

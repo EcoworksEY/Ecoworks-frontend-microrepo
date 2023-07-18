@@ -38,6 +38,9 @@
     margin-top: 5%;
     cursor: pointer;
 }
+.product_title_text_products_page:hover{
+    text-decoration: underline;
+}
 
 .product_line_products_page{
     display: flex;

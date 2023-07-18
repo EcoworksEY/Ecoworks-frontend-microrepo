@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./FilterSidebar.css";
-import Cross from "../../../assets/VectorCross.svg";
+import Cross from "../../../assets/Navigation/VectorCross.svg";
 import ArrowRight from "../../../assets/Navigation/VectorRight.svg";
 
 import LargeTextDarkThin from "../Typography/LargeTextDarkThin";
