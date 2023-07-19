@@ -6,12 +6,12 @@ import Cross from "../../../assets/Navigation/VectorCross.svg";
 const FilterSubOptions = (props) => {
   const [selected, setSelected] = useState(false);
 
-  // useEffect(() => {
+  useEffect(() => {
     console.log(props.filterSelected);
-    // if (props.filterSelected.includes(props.filterOptionTitle)) {
-    //   setSelected(true);}
-  //   }
-  // }, [setSelected, props.filterSelected, props.filterOptionTitle]);
+    if (props.filterSelected.includes(props.filterOptionTitle)) {
+      setSelected(true);
+    }
+  }, [setSelected, props.filterSelected, props.filterOptionTitle]);
 
   return (
     <div>
@@ -31,7 +31,7 @@ const FilterSubOptions = (props) => {
         className={`${
           props.filterSelected.includes(props.filterOptionTitle)
             ? "sidebar_sub_option_cross"
-            : "sidebar_sub_option_cross"
+            : "closed"
         }`}
         src={Cross}
         alt="Close"

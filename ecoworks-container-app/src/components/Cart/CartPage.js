@@ -4,10 +4,6 @@ import SignInSidebar from "..//SignIn/SignInSidebar";
 import TitleText from "..//Common/TitleText";
 import Cart from "./Cart";
 
-import NavBar1 from "../NavBar/NavBar1";
-import NavBar2 from "../NavBar/NavBar2";
-import Footer from "../Footer/Footer";
-
 
 const CartPage = () => {
   /* DYNAMIC PRODUCT LIST -> That will updated dynamically */
@@ -24,14 +20,12 @@ const CartPage = () => {
 
   return (
     <div>
-      <NavBar1 />
-      <NavBar2 />
       <SignInSidebar displayed={signInSidebarOpen} onClickClose = {onClickClose} />
-      <div className="bg-light-purple-theme py-8 px-11">
+      <div className="bg-light-purple-theme py-8 px-11 mt-10">
         <TitleText text="Shopping bag" />
         <Cart onClickSignIn={onClickSignIn} />
       </div>
-      <Footer />
+      
     </div>
   );
 };

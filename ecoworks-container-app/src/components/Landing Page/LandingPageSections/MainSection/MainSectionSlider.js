@@ -9,26 +9,20 @@ import arrow from "../../../../assets/VectorArrowMainSection.svg"
 import "./MainSectionSlider.css";
 import "./MainSection.css"
 
-const promotions = [
-    { 
-        promoImage: Image1, 
-        title: "20%OFF", 
-        subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 July. T&C apply"
-    },
-    { 
-        promoImage:Image2, 
-        title: "50%OFF", 
-        subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 July. T&C apply"
-    },
-    { 
-        promoImage: Image3, 
-        title: "60%OFF", 
-        subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 July. T&C apply"
-    }
-]
+const scrollDownToNewArrivals = () => {
+  window.scrollTo({
+      left: 0,
+      top: 2300,
+      behavior: 'smooth'
+  });
+}
+const scrollDownToPopular = () => {
+  window.scrollTo({
+      left: 0,
+      top: 850,
+      behavior: 'smooth'
+  });
+}
 const delay = 5000;
 
 export default function MainSectionSlider (props) {
@@ -40,6 +34,30 @@ export default function MainSectionSlider (props) {
   const navigateToProducts = () => {
     navigate("/products");
   };
+
+  const promotions = [
+    { 
+        promoImage: Image1, 
+        title: "20%OFF", 
+        subtitle:"Notebooks & Pencils",
+        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 August. T&C apply",
+        onClickFunction: navigateToProducts,
+    },
+    { 
+        promoImage:Image2, 
+        title: "Popular!", 
+        subtitle:"Notebooks & Pencils",
+        additionalText: "Shop our most popular selection of Notebooks & Pencils",
+        onClickFunction: scrollDownToPopular,
+    },
+    { 
+        promoImage: Image3, 
+        title: "Brand New!", 
+        subtitle:"Notebooks & Pencils",
+        additionalText: "Shop our latest selection of Notebooks and Pencils",
+        onClickFunction: scrollDownToNewArrivals,
+    }
+]
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -60,7 +78,7 @@ export default function MainSectionSlider (props) {
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [index, promotions.length]);
 
     return (
             
@@ -76,7 +94,7 @@ export default function MainSectionSlider (props) {
                     <p class = "subtitle">{promo.subtitle}</p>
                     <p class = "text_main_section">{promo.additionalText}</p>
                 </div>
-                <div class = "main_section_rectangle4" onClick={() => navigateToProducts()}>
+                <div class = "main_section_rectangle4" onClick={() => promo.onClickFunction()}>
                     <p class ="shop_now" >SHOP NOW</p>
                     <img class = "icon" src = {arrow} alt =""></img> 
                 </div>

@@ -76,27 +76,22 @@ const FilterSubOptions = [
       {
         id: 1,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "A4",
       },
       {
         id: 2,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "A5",
       },
       {
         id: 3,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "B5",
       },
       {
         id: 4,
         icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 5,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "Pocket",
       },
     ],
     selected: []
@@ -140,27 +135,27 @@ const FilterSubOptions = [
       {
         id: 1,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "0 - 10",
       },
       {
         id: 2,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "10 - 50",
       },
       {
         id: 3,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "50 - 100",
       },
       {
         id: 4,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "100 - 150",
       },
       {
         id: 5,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "150 - 199",
       },
     ],
     selected: []

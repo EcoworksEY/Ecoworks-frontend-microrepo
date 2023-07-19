@@ -1,4 +1,8 @@
-.margin-left{
+.account_container{
+    margin-top: 2.5%;;
+}
+
+.margin-left_account{
     padding-left: 18.8%;
     padding-top: 2%;
     padding-right: 18.8%;
@@ -13,6 +17,7 @@
     padding-bottom: 2%;
     padding-left:4%;
     padding-right: 4%;
+    margin-bottom: 4%;
 }
 
 .text_align_center{

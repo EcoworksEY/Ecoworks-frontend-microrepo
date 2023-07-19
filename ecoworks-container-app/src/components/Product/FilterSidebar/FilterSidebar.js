@@ -50,7 +50,7 @@ const FilterSidebar = (props) => {
           filterName={filter.filter}
           onClickCloseEntireMenu={onClickCloseEntireMenu}
           filterSubOptions={filter.filterOptions}
-          onFilterSubOptionClick={onFilterSubOptionClick}
+          onFilterSubOptionClick={() => onFilterSubOptionClick()}
           filterSelected={filter.selected}
         />
       ))}

@@ -9,11 +9,11 @@ import Footer from "../Footer/Footer";
 const ProductListPage = (props) => {
     return (
         <div>
-            <NavBar1 />
-            <NavBar2 />
+            
+            
             <Promotion/>
             <ProductList/>
-            <Footer />
+            
         </div>
         )
 }

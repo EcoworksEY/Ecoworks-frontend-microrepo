@@ -63,8 +63,8 @@ const SingleProductPage = (props) => {
 
   return (
     <div>
-      <NavBar1 />
-      <NavBar2 />
+      
+      
       <SingleProduct
         id={id}
         category={category}
@@ -76,7 +76,7 @@ const SingleProductPage = (props) => {
         images={images}
         suggestedProducts={suggestedProducts}
       />
-      <Footer />
+      
     </div>
   );
 };

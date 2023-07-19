@@ -12,6 +12,10 @@ const NavBarOption = (props) => {
       setHovering(false);
       props.setHovering(false);
     };
+    const handleClick = () => {
+      props.navigate(props.route);
+      handleHoverEnd();
+    }
 
   return (
     <div onMouseOver={handleHover} onMouseLeave={handleHoverEnd}>
@@ -21,7 +25,7 @@ const NavBarOption = (props) => {
             ? "hovering_menu_option_text ecoworks_menu_options_text"
             : "ecoworks_menu_options_text"
         }`}
-        onClick={() => props.navigate(props.route)}
+        onClick={() => handleClick()}
       >
         {props.title}
       </p>
