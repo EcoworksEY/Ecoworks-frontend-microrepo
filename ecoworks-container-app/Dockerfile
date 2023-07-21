@@ -14,6 +14,6 @@ RUN npm install --legacy-peer-deps
 COPY . .
 
 # Expose the port on which your Express app runs (change it to your app's port)
-EXPOSE 4040
+EXPOSE 80
 # Set the default command to run when the container starts
 CMD [ "npm", "run", "serve" ]
