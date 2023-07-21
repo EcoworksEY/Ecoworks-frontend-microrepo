@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
 import LargeTextDarkThin from "../Typography/LargeTextDarkThin";
 import Cross from "../../../assets/Navigation/VectorCross.svg";
+import { useProductFilterContext } from "../../../context/ProductFilterContext";
 
 
 const FilterSubOptions = (props) => {
-  const [selected, setSelected] = useState(false);
+  const {updateFilterValue} = useProductFilterContext();
+  // useEffect(() => {
+    // if (props.filterSelected.includes(props.filterOptionTitle)) {
+    //   setSelected(true);}
+  //   }
+  // }, [setSelected, props.filterSelected, props.filterOptionTitle]);
+  const onClickFilterSubOption = (e) => {
+    props.onClickFilterSubOption(props.filterOptionTitle);
+    var name = (e.target.getAttribute('name'))
+    console.log(name);
+    updateFilterValue(e)
 
-  useEffect(() => {
-    console.log(props.filterSelected);
-    if (props.filterSelected.includes(props.filterOptionTitle)) {
-      setSelected(true);
-    }
-  }, [setSelected, props.filterSelected, props.filterOptionTitle]);
-
+  }
   return (
     <div>
       <div
@@ -21,7 +26,9 @@ const FilterSubOptions = (props) => {
             ? "filter_sub_option_container_selected"
             : "filter_sub_option_container"
         }`}
-        onClick={() => props.onClickFilterSubOption(props.filterOptionTitle)}
+        name = {props.filterName}
+        value = {[]}
+        onClick={(e) => onClickFilterSubOption(e)}
       >
         <img className = "icon_sub_option" src={props.icon} alt="" />
         <div className="filter_sub_option_text">

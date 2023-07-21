@@ -6,10 +6,18 @@ import NavIcons from "./NavIcons";
 import FilterSidebar from "./FilterSidebar/FilterSidebar";
 
 import { useProductContext } from "../../context/ProductContext";
+import { useProductFilterContext } from "../../context/ProductFilterContext";
 
 export default function ProductList(props) {
   const [filterBarVisible, setFilterBarVisible] = useState(false);
+
   const {products} = useProductContext();
+  const {filters} = useProductFilterContext();
+  let productTypeSelectedVisible = false;
+  if (filters.productType.length > 0){
+    productTypeSelectedVisible = true;
+    console.log(productTypeSelectedVisible)
+  }
 
   const handleFilterClick = () => {
     setFilterBarVisible(true);
@@ -21,7 +29,7 @@ export default function ProductList(props) {
 
   return (
     <div>
-      <NoteProductTypeIcons />
+      <NoteProductTypeIcons productTypeSelected={filters.productType}/>
       <NavIcons handleFilterClick={handleFilterClick} />
       <p className="title_text"> Notebooks for you!</p>
       <div className="container_products">
@@ -32,8 +40,11 @@ export default function ProductList(props) {
             images={data.images}
             title={data.title}
             price={data.price}
+            subCategory = {data.subCategory}
+            productType = {data.productType}
             category={data.category}
             colours={data.colors}
+            productTypeSelectedVisible={productTypeSelectedVisible}
           />
         ))}
       </div>

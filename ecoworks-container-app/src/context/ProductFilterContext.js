@@ -7,16 +7,14 @@ const ProductFilterContext = createContext();
 const initialState = {
   filter_products: [],
   all_products: [],
-  grid_view: true,
-  sorting_value: "lowest",
   filters: {
     text: "",
-    category: "all",
-    company: "all",
-    color: "all",
-    maxPrice: 0,
-    price: 0,
-    minPrice: 0,
+    productType: [],
+    colour: [],
+    size: [],
+    price: [],
+    // layout: "",
+    // brand: ""
   },
 };
 
@@ -35,6 +33,7 @@ export const ProductFilterContextProvider = ({ children }) => {
   const updateFilterValue = (event) => {
     let name = event.target.name;
     let value = event.target.value;
+    console.log(value);
 
     return dispatch({ type: "UPDATE_FILTERS_VALUE", payload: { name, value } });
   };

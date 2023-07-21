@@ -6,6 +6,10 @@
     margin-top: 1.2%;
     justify-content: center;
 }
+.filters_icon_container:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 .filters_icon_container {
     margin-left: 8%;
@@ -18,6 +22,19 @@
     width: 110px;
     background: rgba(207, 221, 249, 0.56);
     border-radius: 68px;
+}
+
+.filters_icon_image_background_selected{
+    display: flex;
+    width: 110px;
+    background: rgba(55, 109, 216, 0.56);
+    border-radius: 68px;
+}
+
+
+.filters_icon_image_background:hover {
+    background: rgba(55, 109, 216, 0.56);
+    cursor:pointer;
 }
 
 .filters_icon_image {
@@ -37,4 +54,14 @@
     text-align: center;
 
     color: #000000;
+}
+
+.filter_icon_selected_rect{
+    align-self: center;
+    margin-left: 22px;
+    margin-right: 22px;
+    height: 10px;
+    border-radius: 18px;
+    background: #8FADE9;
+    margin-top: -10%;
 }

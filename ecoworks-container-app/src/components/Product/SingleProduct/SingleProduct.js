@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import "./SingleProduct.css";
 import minus from "../../../assets/VectorMinus.svg";
 import plus from "../../../assets/VectorPlus.svg";
@@ -18,7 +20,11 @@ import AddToCart from "../../Common/AddToCart/AddToCart"
 
 export default function SingleProduct (props){
     // const {addToCart} = useCartContext();
+    const navigate = useNavigate();
 
+    const navigateToHome = () => {
+      navigate("/home");
+    };
     const [selectedColour, setselectedColour] = useState(props.colours[0]);
     const [quantity, setQuantity] = useState(1);
     const [mainImageIndex, setMainImageIndex] = useState(0);
@@ -60,7 +66,7 @@ export default function SingleProduct (props){
     return (
         <div>
             <div class = "single_product_categories_text_group">
-                <p className = "single_product_categories_text" >Home |</p>
+                <p className = "single_product_categories_text" onClick={() => navigateToHome()}>Home |</p>
                 &nbsp;
                 <p className = "single_product_categories_text" > {props.category}  | </p>
                 &nbsp;

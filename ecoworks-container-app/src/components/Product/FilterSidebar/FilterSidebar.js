@@ -17,6 +17,7 @@ const FilterSidebar = (props) => {
   //if the length of each of the filter type is 0, then isFilterSelected = false
   //
   const [isFilterSelected, setisFilterSelected] = useState(false);
+
   const onClickCloseEntireMenu = props.onClickClose;
   const onFilterSubOptionClick = (filterId, filterSubOption) => {
     setisFilterSelected(true);
@@ -50,7 +51,7 @@ const FilterSidebar = (props) => {
           filterName={filter.filter}
           onClickCloseEntireMenu={onClickCloseEntireMenu}
           filterSubOptions={filter.filterOptions}
-          onFilterSubOptionClick={() => onFilterSubOptionClick()}
+          onFilterSubOptionClick={onFilterSubOptionClick}
           filterSelected={filter.selected}
         />
       ))}

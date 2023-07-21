@@ -26,6 +26,7 @@ export const noteIcons = [
 ]
 
 export default function NoteIconsList (props) {
+    console.log(props.productTypeSelected)
     return (
         <div className="filters_container">
             {noteIcons.map ((data, index) => ( 
@@ -33,7 +34,7 @@ export default function NoteIconsList (props) {
                     key = {index}
                     image = {data.image}
                     title = {data.title}
-                    
+                    productTypeSelected = {props.productTypeSelected}
                     />
             ))}
         </div>

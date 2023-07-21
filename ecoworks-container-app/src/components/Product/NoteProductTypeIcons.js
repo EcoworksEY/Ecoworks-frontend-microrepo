@@ -6,7 +6,7 @@ export default function NoteProductTypeIcons(props) {
     return (
        <div>
             <p className="products_home_text">Home  |  Note</p>
-            <NoteIconsList />
+            <NoteIconsList productTypeSelected={props.productTypeSelected}/>
        </div>
     )
 } 

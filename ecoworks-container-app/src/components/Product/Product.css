@@ -27,6 +27,22 @@
     background-color: #E1DFDE;
 }
 
+.products_sub_category_container{
+    display: flex;
+    margin-top: 5%;
+}
+
+.product_type_container{
+    background: rgba(55, 109, 216, 0.56);
+    width: auto;
+    text-align:center;
+    border-radius: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+}
+
+
 .product_title_text_products_page {
     /* position: relative; */
     font-style: normal;
@@ -35,7 +51,6 @@
     line-height: 22px;
     text-align: left;
     color: #000000;
-    margin-top: 5%;
     cursor: pointer;
 }
 .product_title_text_products_page:hover{
