@@ -94,7 +94,7 @@ const ProductFilterReducer = (state, action) => {
 
       if (colour.length !== 0) {
         tempFilterProduct = tempFilterProduct.filter((curElem) =>
-          colour.some((r) => curElem.colors.includes(r))
+          colour.some((r) => curElem.colours.includes(r))
         );
       }
 

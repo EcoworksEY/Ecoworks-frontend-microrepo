@@ -14,7 +14,7 @@ import ButtonTextOnly from "../../Product/Button/ButtonTextOnly";
 // WILL TAKE PROPS.TYPE as an inpuit and have button type based on that
 
 //EXPECTED PROPS -->
-// type="icon" id = {product.id} quantity = {1} selectedColour = {product.colors[0]} product={product}
+// type="icon" id = {product.id} quantity = {1} selectedColour = {product.colours[0]} product={product}
 const AddToCart = (props) => {
   const { cart, removeItem, addToCart } = useCartContext();
 
@@ -25,7 +25,13 @@ const AddToCart = (props) => {
 
   const handlePopupOpen = () => {
     addToCart(props.id, props.selectedColour, props.quantity, props.product);
+    // if (props.wishlistId){
+    //   props.handleDelete();
+    // }
     setVisible(true);
+    setTimeout(() => {
+      setVisible(false);
+    }, 8000);
   };
   const [subTotal, setSubTotal] = useState(0);
   useEffect(() => {
@@ -35,9 +41,6 @@ const AddToCart = (props) => {
       totalProductPrice += Number(product.quantity * product.price);
     }
     setSubTotal(totalProductPrice.toFixed(2));
-    // if (cart.length < 1){
-    //     setVisible(false)
-    // }
   }, [cart]);
 
   const onClickDelete = (id) => {
@@ -90,7 +93,7 @@ const AddToCart = (props) => {
             title={data.title}
             price={data.price}
             category={data.category}
-            colors={data.colors}
+            colours={data.colours}
             quantity={data.quantity}
             selectedColour={data.selectedColour}
             onClickDelete={onClickDelete}

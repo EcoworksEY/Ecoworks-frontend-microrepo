@@ -8,6 +8,7 @@ const FilterSubOptions = [
   {
     id:1,
     filter: "Product Type",
+    filterNameContext: "productType",
     filterOptions: [
       {
         id: 1,
@@ -35,6 +36,7 @@ const FilterSubOptions = [
   {
     id:2,
     filter: "Colour",
+    filterNameContext: "colour",
     filterOptions: [
       {
         id: 1,
@@ -72,6 +74,7 @@ const FilterSubOptions = [
   {
     id:3,
     filter: "Size",
+    filterNameContext: "size",
     filterOptions: [
       {
         id: 1,
@@ -99,6 +102,7 @@ const FilterSubOptions = [
   {
     id:4,
     filter: "Layout",
+    filterNameContext: "layout",
     filterOptions: [
       {
         id: 1,
@@ -131,6 +135,7 @@ const FilterSubOptions = [
   {
     id:5,
     filter: "Price",
+    filterNameContext: "price",
     filterOptions: [
       {
         id: 1,
@@ -163,6 +168,7 @@ const FilterSubOptions = [
   {
     id:6,
     filter: "Brand",
+    filterNameContext: "brand",
     filterOptions: [
       {
         id: 1,

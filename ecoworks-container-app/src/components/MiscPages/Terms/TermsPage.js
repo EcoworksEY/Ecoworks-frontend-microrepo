@@ -18,7 +18,7 @@ const termsPageData = {
     "Amendments:",
   ],
   subSectionText: [
-    "We strive to provide accurate and up-to-date product information, including descriptions, images, and prices. However, we cannot guarantee the complete absence of errors, omissions, or inaccuracies. Product colors may appear differently due to variations in display settings. Please read product descriptions carefully before making a purchase.",
+    "We strive to provide accurate and up-to-date product information, including descriptions, images, and prices. However, we cannot guarantee the complete absence of errors, omissions, or inaccuracies. Product colours may appear differently due to variations in display settings. Please read product descriptions carefully before making a purchase.",
     "All prices on our website are in AUD, inclusive of applicable taxes, unless otherwise stated. We accept payments through secure and trusted payment gateways. By making a purchase, you agree to pay the total amount specified at the time of checkout.",
     "Once an order is placed, we will process it promptly and strive to ship it within the specified timeframe. Shipping times may vary depending on the delivery location and other factors beyond our control. Ecoworks is not responsible for any delays caused by third-party shipping carriers.",
     "We take pride in the quality of our products. If you are not satisfied with your purchase, you may request a return or exchange within 28 days from the date of delivery. The product must be unused, in its original packaging, and in resalable condition. Customers are responsible for return shipping costs, unless the return is due to an error on our part.",

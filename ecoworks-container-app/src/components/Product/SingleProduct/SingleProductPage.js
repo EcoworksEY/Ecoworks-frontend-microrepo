@@ -43,21 +43,21 @@ const SingleProductPage = (props) => {
       title: "Lined Notebook Black Marble ",
       price: "18.89",
       category: "A5",
-      colors: ["#000000", "#6C6940"],
+      colours: ["#000000", "#6C6940"],
     },
     {
       image: sugProd2,
       title: "M16 Ballpoint Pen Refill",
       price: "15.99",
       category: "F,M,B",
-      colors: ["#1881E0", "#2B292A"],
+      colours: ["#1881E0", "#2B292A"],
     },
     {
       image: sugProd3,
       title: "Recycled Lined Notebook Bright Yellow",
       price: "20.89",
       category: "A5",
-      colors: ["#F6D324"],
+      colours: ["#F6D324"],
     },
   ];
 

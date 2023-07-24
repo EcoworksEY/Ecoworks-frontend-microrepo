@@ -34,6 +34,7 @@ const SelectedFilterSidebar = (props) => {
           onClickFilterSubOption={props.onClickFilterSubOption}
           filterSelected = {props.filterSelected}
           filterName = {props.filterName}
+          filterNameContext = {props.filterNameContext}
         />
       ))}
       <div className="filter_buttons_container">

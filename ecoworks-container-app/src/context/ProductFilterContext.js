@@ -9,7 +9,7 @@ const initialState = {
   all_products: [],
   filters: {
     text: "",
-    productType: [],
+    productType: ["Dot Grit Notebooks"],
     colour: [],
     size: [],
     price: [],

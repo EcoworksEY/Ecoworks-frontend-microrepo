@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.svg";
 import ecoworksSearchIcon from "../../assets/VectorSearch.svg";
-import ecoworksFavouriteIcon from "../../assets/VectorFavorite.svg";
 import ecoworksShoppingBagIcon from "../../assets/VectorShoppingBag.svg";
 import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +9,7 @@ import { RxCross1 } from "react-icons/Rx";
 import NavBarOption from "./NavbarOption";
 import menuOptions from "./NavbarMenuOptions";
 import { useCartContext } from "../../context/CartContext";
+import AddToWishlist from "../Common/AddToCart/AddToWishlist"
 
 export default function NavBar2(props) {
   const {cart} = useCartContext();
@@ -86,11 +86,12 @@ export default function NavBar2(props) {
             />
           </div>
         </div>
-        <img
+        {/* <img
           class="navbar_ecoworks_blog_logo"
           src={ecoworksFavouriteIcon}
           alt=""
-        />
+        /> */}
+        <AddToWishlist type ="icon-onlyToOpen" />
         
           <img
           onClick={() => navigateToCart()}

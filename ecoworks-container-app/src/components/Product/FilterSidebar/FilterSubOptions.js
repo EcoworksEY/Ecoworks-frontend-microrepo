@@ -1,22 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import LargeTextDarkThin from "../Typography/LargeTextDarkThin";
 import Cross from "../../../assets/Navigation/VectorCross.svg";
-import { useProductFilterContext } from "../../../context/ProductFilterContext";
-
+import {useProductFilterContext} from "../../../context/ProductFilterContext";
 
 const FilterSubOptions = (props) => {
-  const {updateFilterValue} = useProductFilterContext();
-  // useEffect(() => {
-    // if (props.filterSelected.includes(props.filterOptionTitle)) {
-    //   setSelected(true);}
-  //   }
-  // }, [setSelected, props.filterSelected, props.filterOptionTitle]);
+  const {filters} = useProductFilterContext();
+  // const filterType = eval(props.filterNameContext);
+
   const onClickFilterSubOption = (e) => {
     props.onClickFilterSubOption(props.filterOptionTitle);
-    var name = (e.target.getAttribute('name'))
-    console.log(name);
-    updateFilterValue(e)
-
+    console.log(props.filterName);
+    if (props.filterNameContext === "productType"){
+      // console.log(filterType);
+      console.log(filters.eval(props.filterNameContext));
+      console.log("reached");
+    }
   }
   return (
     <div>

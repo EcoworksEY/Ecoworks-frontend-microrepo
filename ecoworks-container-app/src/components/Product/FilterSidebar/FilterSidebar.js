@@ -49,6 +49,7 @@ const FilterSidebar = (props) => {
           key={filter.id}
           id={filter.id}
           filterName={filter.filter}
+          filterNameContext={filter.filterNameContext}
           onClickCloseEntireMenu={onClickCloseEntireMenu}
           filterSubOptions={filter.filterOptions}
           onFilterSubOptionClick={onFilterSubOptionClick}

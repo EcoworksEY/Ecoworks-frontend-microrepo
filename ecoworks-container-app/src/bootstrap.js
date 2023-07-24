@@ -8,13 +8,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ProductProvider } from "./context/ProductContext";
 import { ProductFilterContextProvider } from "./context/ProductFilterContext";
+import { WishlistProvider } from "./context/WishlistContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ProductProvider>
     <ProductFilterContextProvider>
       <CartProvider>
+        <WishlistProvider>
         <App />
+        </WishlistProvider>
       </CartProvider>
     </ProductFilterContextProvider>
   </ProductProvider>

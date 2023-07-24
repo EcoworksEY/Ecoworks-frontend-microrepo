@@ -43,7 +43,7 @@ export default function ProductList(props) {
             subCategory = {data.subCategory}
             productType = {data.productType}
             category={data.category}
-            colours={data.colors}
+            colours={data.colours}
             productTypeSelectedVisible={productTypeSelectedVisible}
           />
         ))}

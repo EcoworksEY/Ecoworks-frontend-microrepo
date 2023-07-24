@@ -32,7 +32,7 @@ var productsDummy = [
       productType: "Dot Grit",
       category: "Note",
       subCategory: "A5",
-      colors: [
+      colours: [
         { code: "#0E2C77", name: "Blue" },
         { code: "#000000", name: "Black" },
         { code: "#B8B3B3", name: "Light Grey" },
@@ -47,7 +47,7 @@ var productsDummy = [
       productType: "Dot Grit",
       category: "Note",
       subCategory: "A4",
-      colors: [
+      colours: [
         { code: "#0E2C77", name: "Blue" },
         { code: "#000000", name: "Black" },
         { code: "#B8B3B3", name: "Light Grey" },
@@ -62,7 +62,7 @@ var productsDummy = [
       productType: "Dot Grit",
       category: "Note",
       subCategory: "A5",
-      colors: [
+      colours: [
         { code: "#0E2C77", name: "Blue" },
         { code: "#000000", name: "Black" },
         { code: "#B8B3B3", name: "Light Grey" },
@@ -77,7 +77,7 @@ var productsDummy = [
       productType: "Lined",
       category: "Note",
       subCategory: "A5",
-      colors: [
+      colours: [
         { code: "#0E2C77", name: "Blue" },
         { code: "#000000", name: "Black" },
         { code: "#B8B3B3", name: "Light Grey" },
@@ -92,7 +92,7 @@ var productsDummy = [
       productType: "Lined",
       category: "Note",
       subCategory: "A5",
-      colors: [
+      colours: [
         { code: "#0E2C77", name: "Blue" },
         { code: "#000000", name: "Black" },
         { code: "#B8B3B3", name: "Light Grey" },
@@ -107,7 +107,7 @@ var productsDummy = [
       productType: "Dot Grit",
       category: "Note",
       subCategory: "A5",
-      colors: [
+      colours: [
         { code: "#0E2C77", name: "Blue" },
         { code: "#000000", name: "Black" },
         { code: "#B8B3B3", name: "Light Grey" },

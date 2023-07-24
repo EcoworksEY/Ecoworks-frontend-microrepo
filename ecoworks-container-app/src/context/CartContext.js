@@ -1,12 +1,10 @@
-import React from "react";
-import { createContext, useContext, useReducer, useEffect } from "react";
+import React, { createContext, useContext, useReducer, useEffect } from "react";
 import cartReducer from "../reducers/CartReducer";
 
 const CartContext = createContext();
 
 const getLocalCartData = () => {
   let localCartData = localStorage.getItem("ecoworksCart");
-  console.log(localCartData)
     if (localCartData){
       return JSON.parse(localCartData);
     }
@@ -27,7 +25,6 @@ const initialState = {
 
 const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(cartReducer, initialState);
-  console.log(state);
 
   const addToCart = (id, selectedColour, quantity, props) => {
     dispatch({ type: "ADD_TO_CART", payload: { id, selectedColour, quantity, props } });

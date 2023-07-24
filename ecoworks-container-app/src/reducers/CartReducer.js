@@ -33,14 +33,13 @@ const cartReducer = (state, action) => {
           id: id+selectedColour.code,
           productId: id,
           title: props.title,
-          colors: props.colours,
+          colours: props.colours,
           selectedColour: selectedColour,
           quantity: quantity,
           category: props.category,
           image: props.images[0],
           price: props.price,
         };
-        console.log(cartProduct);
   
         return {
           ...state,

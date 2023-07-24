@@ -4,6 +4,7 @@ import ecoworksFavouriteIcon from "../../assets/VectorFavorite.svg";
 import { useNavigate } from "react-router-dom";
 
 import AddToCart from "../Common/AddToCart/AddToCart";
+import AddToWishlist from "../Common/AddToCart/AddToWishlist";
 
 export default function Product(props) {
   const [selectedColour, setselectedColour] = useState(props.colours[0]);
@@ -45,11 +46,17 @@ export default function Product(props) {
             {props.productType}
           </div>
         </div>
-        <img
+        <AddToWishlist  
+          type="icon"
+          id={props.id}
+          quantity={1}
+          selectedColour={selectedColour}
+          product={props} />
+        {/* <img
           className="product_icon_new_arrivals_products_page"
           src={ecoworksFavouriteIcon}
           alt=""
-        />
+        /> */}
       </div>
       <p className="product_price_text_products_page">${props.price}</p>
       <div className="product_line_last_products_page">

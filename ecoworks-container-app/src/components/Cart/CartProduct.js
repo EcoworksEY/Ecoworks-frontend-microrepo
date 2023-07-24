@@ -53,7 +53,7 @@ const CartProduct = (props) => {
               </div>
 
               <div className="single_product_colour_boxes_container_cart">
-                {props.colors.map((colourCode, index) => (
+                {props.colours.map((colourCode, index) => (
                   <div
                     key = {index}
                     className={`${
