@@ -3,6 +3,7 @@ import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg";
 import AddToCart from "../../../Common/AddToCart/AddToCart";
 import { useNavigate } from "react-router-dom";
 import "../ProductSection/Product.css";
+import AddToWishlist from "../../../Common/AddToCart/AddToWishlist";
 
 export default function NewArrivalsProduct1(props) {
   const navigate = useNavigate();
@@ -21,10 +22,12 @@ export default function NewArrivalsProduct1(props) {
       <div className="product_price_new_arrivals">
         <p className="product_price_text">${props.product.price}</p>
         <div className="product_icons_new_arrivals">
-          <img
-            className="product_icon_new_arrivals"
-            src={ecoworksFavouriteIcon}
-            alt=""
+          <AddToWishlist
+            type="icon"
+            id={props.product.id}
+            quantity={1}
+            selectedColour={props.product.colours[0]}
+            product={props.product}
           />
           <AddToCart
             type="icon"

@@ -1,7 +1,10 @@
 import React from "react";
 import ecoworksFavouriteIcon from "../../../../assets/VectorFavorite.svg";
 import "./Product.css";
+
 import AddToCart from "../../../Common/AddToCart/AddToCart";
+import AddToWishlist from "../../../Common/AddToCart/AddToWishlist"
+
 import sugProd1 from "../../../../assets/SampleProduct/suggestedProd1.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -33,11 +36,7 @@ export default function Product(props) {
             <div className="product_price">
               <p className="product_price_text">${product.price}</p>
               <div className="product_icons">
-                <img
-                  className="product_icon"
-                  src={ecoworksFavouriteIcon}
-                  alt=""
-                />
+                <AddToWishlist type="icon" id = {product.id} quantity = {1} selectedColour = {product.colours[0]} product={product}/>
                 <AddToCart type="icon" id = {product.id} quantity = {1} selectedColour = {product.colours[0]} product={product}/>
               </div>
             </div>

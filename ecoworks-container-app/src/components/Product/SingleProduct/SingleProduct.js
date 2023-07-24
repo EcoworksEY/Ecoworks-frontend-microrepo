@@ -4,22 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import "./SingleProduct.css";
 import minus from "../../../assets/VectorMinus.svg";
 import plus from "../../../assets/VectorPlus.svg";
-import ecoworksFavouriteIcon from "../../../assets/VectorFavorite.svg"
 import arrow from "../../../assets/VectorArrowMainSection.svg";
 import buyNowIcon from "../../../assets/SingleProduct/VectorBuyNow.svg";
 import afterpayLogo from "../../../assets/SingleProduct/VectorAfterPay.svg";
 import KlarnaIcon from "../../../assets/SingleProduct/VectorKlarna.svg";
 import infoIcon from "../../../assets/SingleProduct/VectorInfoIcon.svg";
 import returnsIcon from "../../../assets/SingleProduct/VectorReturnsIcon.svg";
-// import { useCartContext } from '../../../context/CartContext';
 
 import SuggestedProductList from './SuggestedProductsList';
 import Description from './Description';
 import AddToCart from "../../Common/AddToCart/AddToCart"
+import AddToWishlist from "../../Common/AddToCart/AddToWishlist"
 
 
 export default function SingleProduct (props){
-    // const {addToCart} = useCartContext();
     const navigate = useNavigate();
 
     const navigateToHome = () => {
@@ -114,7 +112,7 @@ export default function SingleProduct (props){
                             <p className='wishlist_text'>Wishlist </p>
                             &nbsp;
                             &nbsp;
-                            <img className = 'wishlist_icon'src = {ecoworksFavouriteIcon} alt=''/>
+                            <AddToWishlist type = "icon"  id = {props.id} quantity = {quantity} selectedColour = {selectedColour} product={props} />
                         </div>
                     </div>
                     <AddToCart type = "button_dark"  id = {props.id} quantity = {quantity} selectedColour = {selectedColour} product={props} />
