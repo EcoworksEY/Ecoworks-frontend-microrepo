@@ -10,7 +10,7 @@ const menuOptions = [
   {
     id: 1,
     title: "Write",
-    route: "/products",
+    route: "/notes",
     featuredList: [
       "New Arrivals",
       "Online Exclusives",
@@ -28,7 +28,7 @@ const menuOptions = [
   {
     id: 1,
     title: "Note",
-    route: "/products",
+    route: "/notes",
     featuredList: [
       "New Arrivals",
       "Online Exclusives",
@@ -46,7 +46,7 @@ const menuOptions = [
   {
     id: 1,
     title: "Plan",
-    route: "/products",
+    route: "/notes",
     featuredList: [
       "New Arrivals",
       "Online Exclusives",
@@ -64,7 +64,7 @@ const menuOptions = [
   {
     id: 1,
     title: "Art Supplies",
-    route: "/products",
+    route: "/notes",
     featuredList: [
       "New Arrivals",
       "Online Exclusives",
@@ -82,7 +82,7 @@ const menuOptions = [
   {
     id: 1,
     title: "Carry",
-    route: "/products",
+    route: "/notes",
     featuredList: [
       "New Arrivals",
       "Online Exclusives",
@@ -100,7 +100,7 @@ const menuOptions = [
   {
     id: 1,
     title: "Refills",
-    route: "/products",
+    route: "/notes",
     featuredList: [
       "New Arrivals",
       "Online Exclusives",
@@ -118,7 +118,7 @@ const menuOptions = [
   {
     id: 1,
     title: "Sale",
-    route: "/products",
+    route: "/notes",
     featuredList: [
       "New Arrivals",
       "Online Exclusives",

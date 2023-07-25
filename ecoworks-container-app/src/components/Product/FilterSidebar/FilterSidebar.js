@@ -33,7 +33,6 @@ const FilterSidebar = (props) => {
 
   const onFilterSubOptionClick = (filterId, filterSubOption) => {
     setisFilterSelected(true);
-    console.log(filterId, filterSubOption);
     FilterSubOptions.filter((filter) => filter.id === filterId).filter(
       (subOpt) => {
         if (subOpt.selected.indexOf(filterSubOption) === -1) {
@@ -57,7 +56,6 @@ const FilterSidebar = (props) => {
     scrollDown();
   };
     if (filters.productType.length > 0){
-      console.log(filters.productType);
       FilterSubOptions[0].selected = filters.productType;
     }
 

@@ -135,13 +135,14 @@ const ProductProvider = ({ children }) => {
 
 
   // TRIGERRED FROM THE SINGLE PRODUCT PAGE
-  const getSingleProduct = async (url) => {
+  const getSingleProduct = (id) => {
     // dispatch({ type: "SET_SINGLE_LOADING" });
     // try {
     //   const res = await axios.get(url);
     //   const singleProduct = await res.data;
-    //   dispatch({ type: "SET_SINGLE_PRODUCT", payload: singleProduct });
-    // } catch (error) {
+      dispatch({ type: "SET_SINGLE_PRODUCT", payload: productsDummy.filter((product) => id === product.id) });
+      
+      // } catch (error) {
     //   dispatch({ type: "SET_SINGLE_ERROR" });
     // }
   };

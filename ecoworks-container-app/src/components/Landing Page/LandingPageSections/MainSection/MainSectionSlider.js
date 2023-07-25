@@ -32,7 +32,7 @@ export default function MainSectionSlider (props) {
   const navigate = useNavigate();
 
   const navigateToProducts = () => {
-    navigate("/products");
+    navigate("/notes");
   };
 
   const promotions = [

@@ -106,9 +106,9 @@ const ProductFilterReducer = (state, action) => {
         tempFilterSelected = true;
       }
 
-      if (coverType !== 0){
-        console.log("This can be implemented in the future")
-      }
+      // if (coverType !== 0){
+      //   console.log("This can be implemented in the future")
+      // }
 
       return {
         ...state,

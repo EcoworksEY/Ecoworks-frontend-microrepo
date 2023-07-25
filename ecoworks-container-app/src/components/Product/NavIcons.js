@@ -8,7 +8,7 @@ export default function NavIcons(props) {
   return (
     <div className="nav_container1">
       <div className="nav_container2">
-        <Button title={"Notebook Types"} image={Down} />
+        <Button title={"Notebook Types"} image={Down} handleFilterClick = {props.handleFilterClick}/>
         <Button
           title={"All Filters"}
           image={Filters}

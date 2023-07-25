@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import "./SingleProduct.css";
@@ -24,12 +24,16 @@ export default function SingleProduct (props){
       navigate("/home");
     };
     const navigateToProducts = () => {
-        navigate("/products");
+        navigate("/notes");
       };
-    const [selectedColour, setselectedColour] = useState(props.colours[0]);
+      const [selectedColour, setselectedColour] = useState(props.colours[0]);
     const [quantity, setQuantity] = useState(1);
     const [mainImageIndex, setMainImageIndex] = useState(0);
     const [mainImage, setMainImage] = useState(props.images[mainImageIndex]);
+      useEffect(() => {
+        setMainImage(props.images[mainImageIndex]);
+        setselectedColour(props.colours[0])
+      }, [props])
 
     const handleIncrease = () => {
         setQuantity(quantity+1);
@@ -69,7 +73,7 @@ export default function SingleProduct (props){
             <div class = "single_product_categories_text_group">
                 <p className = "single_product_categories_text" onClick={() => navigateToHome()}>Home |</p>
                 &nbsp;
-                <p className = "single_product_categories_text" onClick={() => navigateToHome()}> {props.category}  | </p>
+                <p className = "single_product_categories_text" onClick={() => navigateToProducts()}> {props.category}  | </p>
                 &nbsp;
                 <p className = "single_product_categories_text" >{props.subCategory}</p>
             </div>
