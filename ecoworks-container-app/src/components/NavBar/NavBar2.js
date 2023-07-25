@@ -4,7 +4,7 @@ import ecoworksSearchIcon from "../../assets/VectorSearch.svg";
 import ecoworksShoppingBagIcon from "../../assets/VectorShoppingBag.svg";
 import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
-import { RxCross1 } from "react-icons/Rx";
+// import { RxCross1 } from "react-icons/Rx";
 
 import NavBarOption from "./NavbarOption";
 import menuOptions from "./NavbarMenuOptions";
@@ -79,11 +79,11 @@ export default function NavBar2(props) {
               placeholder="Search ... "
             />
             {/* <img className={`cross-icon ${expanded ? 'visible' : ''}`} src = {ecoworksSearchIcon} alt ="" onClick = {handleSearchClick}/> */}
-            <RxCross1
+            {/* <RxCross1
               className={`cross-icon ${expanded ? "visible" : ""}`}
               alt=""
               onClick={handleSearchClick}
-            />
+            /> */}
           </div>
         </div>
         {/* <img
