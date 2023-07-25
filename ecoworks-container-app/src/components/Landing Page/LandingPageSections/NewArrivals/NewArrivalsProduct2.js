@@ -1,12 +1,16 @@
 import React from 'react';
-import tempProduct from "../../../../assets/tempProduct.svg"
+import { useNavigate } from 'react-router-dom';
 import "../ProductSection/Product.css"
 
 export default function NewArrivalsProduct2(props) {
+        const navigate = useNavigate();
+        const navigateToProduct = () => {
+            navigate(`/products/${props.id}`)
+        }
         return(
-            <div className='product'>
-                <img className='new_arrivals2_image' src = {tempProduct} alt=''/>
-                <p className='new_arrivals_text'>{props.name}</p>
+            <div className='product_new_arrivals_2' onClick = {() => navigateToProduct()}>
+                <img className='new_arrivals2_image' src = {props.product.images[0]} alt=''/>
+                <p className='new_arrivals_text'>{props.product.title}</p>
                 <p className='new_arrivals_text'>SHOP NOW</p>
             </div> 
 )}

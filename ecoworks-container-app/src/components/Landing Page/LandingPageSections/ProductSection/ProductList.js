@@ -7,7 +7,7 @@ import SideArrow from '../../../../assets/VectorSideArrow.svg'
 export default function ProductList(props) {
     const ref = useRef(null)
     const [expandedLeft, setexpandedLeft] = useState(false);
-    const [expandedRight, setExpandedRight] = useState(true);
+    const [expandedRight, setExpandedRight] = useState(false);
 
     const scrollRight = (scrollOffset) => {
         let previousScroll = ref.current.scrollLeft;

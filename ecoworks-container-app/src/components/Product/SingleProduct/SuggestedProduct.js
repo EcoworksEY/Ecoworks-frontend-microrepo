@@ -3,7 +3,7 @@ import "./SuggestedProducts.css";
 import ecoworksFavouriteIcon from "../../../assets/VectorFavorite.svg";
 
 const SuggestedProduct = (props) => {
-    const [selectedColor, setSelectedColor] = useState(props.suggestedProduct.colors[0]);
+    const [selectedColour, setselectedColour] = useState(props.suggestedProduct.colours[0]);
 
     return (
         <div className='suggested_product'>
@@ -13,9 +13,9 @@ const SuggestedProduct = (props) => {
             <p className='suggested_product_category_text'>{props.suggestedProduct.category}</p>
             <p className='suggsted_product_price_text'>${props.suggestedProduct.price}</p>
             <div className = 'product_colours_container'>
-                {props.suggestedProduct.colors.map ((data, index) => ( 
-                    <div className={selectedColor === data ? 'product_colour_selected_circle' : ''}>
-                        <div className={selectedColor === data ? 'product_colour_circle selected' : 'product_colour_circle'} style={{'background-color' : data}} onClick={() => setSelectedColor(data)}>
+                {props.suggestedProduct.colours.map ((data, index) => ( 
+                    <div className={selectedColour === data ? 'product_colour_selected_circle' : ''}>
+                        <div className={selectedColour === data ? 'product_colour_circle selected' : 'product_colour_circle'} style={{'background-color' : data}} onClick={() => setselectedColour(data)}>
                         </div>
                     </div>
                 ))}

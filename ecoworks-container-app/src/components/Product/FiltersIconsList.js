@@ -9,19 +9,23 @@ import NoteIcon from "./FiltersIcon";
 export const noteIcons = [
     {
         image: DotGritNote,
-        title: "Dot Grit Notebooks"
+        title: "Dot Grit Notebooks",
+        contextName: "productType"
     },
     {
         image: LinedPaper,
-        title: "Lined Paper Notebooks"
+        title: "Lined Paper Notebooks",
+        contextName: "productType"
     },
     {
         image: BulletJournals,
-        title: "Bullet Journals"
+        title: "Bullet Journals",
+        contextName: "productType"
     },
     {
         image: PopularItems,
-        title: "Popular Items"
+        title: "Popular Items",
+        contextName: "productType"
     }
 ]
 
@@ -30,10 +34,10 @@ export default function NoteIconsList (props) {
         <div className="filters_container">
             {noteIcons.map ((data, index) => ( 
                 <NoteIcon 
-                    key = {index}
+                    key = {data.title}
                     image = {data.image}
                     title = {data.title}
-                    
+                    productTypeSelected = {props.productTypeSelected}
                     />
             ))}
         </div>

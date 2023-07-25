@@ -1,34 +1,63 @@
 import React from 'react'
-import "./MainSection.css"
-import temp from "../../../../assets/temp1.svg"
-import arrow from "../../../../assets/VectorArrowMainSection.svg"
-import "./MainSectionSlider.css"
+import { useNavigate } from "react-router-dom";
 
-const promotions = [
-    { 
-        promoImage: {temp}, 
-        title: "20%OFF", 
-        subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 July. T&C apply"
-    },
-    { 
-        promoImage: {temp}, 
-        title: "50%OFF", 
-        subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 July. T&C apply"
-    },
-    { 
-        promoImage: {temp}, 
-        title: "60%OFF", 
-        subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 July. T&C apply"
-    }
-]
+import Image1 from "../../../../assets/MainSection/MainSection1.svg"
+import Image2 from "../../../../assets/MainSection/MainSection2.svg"
+import Image3 from "../../../../assets/MainSection/MainSection3.svg"
+import arrow from "../../../../assets/VectorArrowMainSection.svg"
+
+import "./MainSectionSlider.css";
+import "./MainSection.css"
+
+const scrollDownToNewArrivals = () => {
+  window.scrollTo({
+      left: 0,
+      top: 2300,
+      behavior: 'smooth'
+  });
+}
+const scrollDownToPopular = () => {
+  window.scrollTo({
+      left: 0,
+      top: 850,
+      behavior: 'smooth'
+  });
+}
 const delay = 5000;
 
 export default function MainSectionSlider (props) {
     const [index, setIndex] = React.useState(0);
   const timeoutRef = React.useRef(null);
+
+  const navigate = useNavigate();
+
+  const navigateToProducts = () => {
+    navigate("/products");
+  };
+
+  const promotions = [
+    { 
+        promoImage: Image1, 
+        title: "20%OFF", 
+        subtitle:"Notebooks & Pencils",
+        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 August. T&C apply",
+        onClickFunction: navigateToProducts,
+    },
+    { 
+        promoImage:Image2, 
+        title: "Popular!", 
+        subtitle:"Notebooks & Pencils",
+        additionalText: "Shop our most popular selection of Notebooks & Pencils",
+        onClickFunction: scrollDownToPopular,
+    },
+    { 
+        promoImage: Image3, 
+        title: "Brand New!", 
+        subtitle:"Notebooks & Pencils",
+        additionalText: "Shop our latest selection of Notebooks and Pencils",
+        onClickFunction: scrollDownToNewArrivals,
+    }
+]
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -49,7 +78,7 @@ export default function MainSectionSlider (props) {
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  }, [index, promotions.length]);
 
     return (
             
@@ -58,14 +87,14 @@ export default function MainSectionSlider (props) {
             {promotions.map((promo, index) => (
                 <div className='slide'>
                 <div class = "main_section_rectangle3">
-                    <img src = {temp} alt =""></img>                   
+                    <img src = {promo.promoImage} alt =""></img>                   
                 </div>
                 <div class = "main_section_rectangle3_text">
                     <p class = "title">{promo.title}</p>
                     <p class = "subtitle">{promo.subtitle}</p>
-                    <p class = "text">{promo.additionalText}</p>
+                    <p class = "text_main_section">{promo.additionalText}</p>
                 </div>
-                <div class = "main_section_rectangle4">
+                <div class = "main_section_rectangle4" onClick={() => promo.onClickFunction()}>
                     <p class ="shop_now" >SHOP NOW</p>
                     <img class = "icon" src = {arrow} alt =""></img> 
                 </div>

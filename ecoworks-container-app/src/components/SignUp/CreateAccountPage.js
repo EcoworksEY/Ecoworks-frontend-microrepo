@@ -8,8 +8,8 @@ import SubscribeBanner from "..//Common/SignUpForm/SubscribeBanner";
 
 const CreateAccountPage = () => {
     return (
-        <div>
-            <div className="margin-left bg-light-purple-theme">
+        <div className="account_container">
+            <div className="margin-left_account bg-light-purple-theme">
                 <TitleText text = "My Acccount" />
                 <CreateAccountForm />           
             </div>

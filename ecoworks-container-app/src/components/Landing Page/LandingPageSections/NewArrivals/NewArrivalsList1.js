@@ -3,38 +3,23 @@ import NewArrivalsProduct1 from "./NewArrivalsProduct1";
 import SideArrow from "../../../../assets/VectorSideArrow.svg"
 import "./NewArrivalsList.css"
 import "../ProductSection/Product.css"
+import sugProd1 from "../../../../assets/SampleProduct/suggestedProd1.svg";
+
+// INTEGRATION WITH BACKEND
+// At least 5 new Arrivals
+
+
 
 const newArrivalsData = [
     {
-        id:1,
-        name: "This is paper 1",
-        price: 20.22
-    },
-    {
-        id:2,
-        name: "This is paper 1",
-        price: 20.22
-    },
-    {
-        id:3,
-        name: "This is paper 1",
-        price: 20.22
-    },
-    {
-        id:4,
-        name: "This is paper 1",
-        price: 20.22
-    },
-    {
-        id:5,
-        name: "This is paper 1",
-        price: 20.22
-    },
-    {
-        id:16,
-        name: "This is paper 1",
-        price: 20.22
-    }
+        id: "Product from Main Page New Arrivals 1",
+        images: [sugProd1],
+        title: "Lined Notebook Black Marble ",
+        price: "18.89",
+        category: "A5",
+        colours: [ { code: "#0E2C77", name: "Blue" },
+        { code: "#000000", name: "Black" },],
+      },
 ]
 
 export default function NewArrivalsList1 (props) {
@@ -68,8 +53,7 @@ export default function NewArrivalsList1 (props) {
                 {newArrivalsData.map ((data, index) => ( 
                     <NewArrivalsProduct1
                         key = {data.id}
-                        name = {data.name}
-                        price = {data.price}
+                        product = {data}
                     />
                 ))}
             </div> 

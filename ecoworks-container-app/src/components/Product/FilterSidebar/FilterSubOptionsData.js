@@ -1,4 +1,19 @@
 import iconBlack from "../../../assets/Filters/Colour/Black.svg";
+import iconBlue from "../../../assets/Filters/Colour/Blue.svg";
+import iconGreen from "../../../assets/Filters/Colour/Green.svg";
+import iconRed from "../../../assets/Filters/Colour/Red.svg";
+import iconYellow from "../../../assets/Filters/Colour/Yellow.svg";
+import iconMulti from "../../../assets/Filters/Colour/Multicolour.svg";
+import iconWhite from "../../../assets/Filters/Colour/White.svg";
+
+
+import A4 from "../../../assets/Filters/Size/A4.svg";
+import A5 from "../../../assets/Filters/Size/A5.svg";
+import B5 from "../../../assets/Filters/Size/B5.svg";
+import Pocket from "../../../assets/Filters/Size/Pocket.svg";
+
+import Dollar from "../../../assets/Filters/Price/DollarSign.svg"
+
 import DotGritNote from "../../../assets/Notes/VectorDotGrit.svg";
 import LinedPaper from "../../../assets/Notes/VectorLinedpaper.svg";
 import BulletJournals from "../../../assets/Notes/VectorBulletJournals.svg";
@@ -8,6 +23,7 @@ const FilterSubOptions = [
   {
     id:1,
     filter: "Product Type",
+    filterNameContext: "productType",
     filterOptions: [
       {
         id: 1,
@@ -35,6 +51,7 @@ const FilterSubOptions = [
   {
     id:2,
     filter: "Colour",
+    filterNameContext: "colour",
     filterOptions: [
       {
         id: 1,
@@ -43,27 +60,27 @@ const FilterSubOptions = [
       },
       {
         id: 2,
-        icon: iconBlack,
+        icon: iconBlue,
         filterOptionTitle: "Blue",
       },
       {
         id: 3,
-        icon: iconBlack,
+        icon: iconGreen,
         filterOptionTitle: "Green",
       },
       {
         id: 4,
-        icon: iconBlack,
+        icon: iconRed,
         filterOptionTitle: "Red",
       },
       {
         id: 5,
-        icon: iconBlack,
+        icon: iconYellow,
         filterOptionTitle: "Yellow",
       },
       {
         id: 6,
-        icon: iconBlack,
+        icon: iconMulti,
         filterOptionTitle: "MultiColour",
       },
     ],
@@ -72,63 +89,60 @@ const FilterSubOptions = [
   {
     id:3,
     filter: "Size",
+    filterNameContext: "size",
     filterOptions: [
       {
         id: 1,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: A4,
+        filterOptionTitle: "A4",
       },
       {
         id: 2,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: A5,
+        filterOptionTitle: "A5",
       },
       {
         id: 3,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: B5,
+        filterOptionTitle: "B5",
       },
       {
         id: 4,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 5,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: Pocket,
+        filterOptionTitle: "Pocket",
       },
     ],
     selected: []
   },
   {
     id:4,
-    filter: "Layout",
+    filter: "Cover Type",
+    filterNameContext: "coverType",
     filterOptions: [
       {
         id: 1,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: iconWhite,
+        filterOptionTitle: "Hard",
       },
       {
         id: 2,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: iconWhite,
+        filterOptionTitle: "Refillable",
       },
       {
         id: 3,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: iconWhite,
+        filterOptionTitle: "Soft",
       },
       {
         id: 4,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: iconWhite,
+        filterOptionTitle: "Leather",
       },
       {
         id: 5,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: iconWhite,
+        filterOptionTitle: "Fabric",
       },
     ],
     selected: []
@@ -136,67 +150,36 @@ const FilterSubOptions = [
   {
     id:5,
     filter: "Price",
+    filterNameContext: "price",
     filterOptions: [
       {
         id: 1,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: Dollar,
+        filterOptionTitle: "0 - 10",
       },
       {
         id: 2,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: Dollar,
+        filterOptionTitle: "10 - 50",
       },
       {
         id: 3,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: Dollar,
+        filterOptionTitle: "50 - 100",
       },
       {
         id: 4,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: Dollar,
+        filterOptionTitle: "100 - 150",
       },
       {
         id: 5,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
+        icon: Dollar,
+        filterOptionTitle: "150 - 199",
       },
     ],
     selected: []
-  },
-  {
-    id:6,
-    filter: "Brand",
-    filterOptions: [
-      {
-        id: 1,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 2,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 3,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 4,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 5,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-    ],
-    selected: []
-  },
+  }
 ];
 
 export default FilterSubOptions;

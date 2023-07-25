@@ -1,20 +1,27 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.svg";
 import ecoworksSearchIcon from "../../assets/VectorSearch.svg";
-import ecoworksFavouriteIcon from "../../assets/VectorFavorite.svg";
 import ecoworksShoppingBagIcon from "../../assets/VectorShoppingBag.svg";
 import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
-import { RxCross1 } from "react-icons/Rx";
+// import { RxCross1 } from "react-icons/Rx";
 
 import NavBarOption from "./NavbarOption";
 import menuOptions from "./NavbarMenuOptions";
+import { useCartContext } from "../../context/CartContext";
+import AddToWishlist from "../Common/AddToCart/AddToWishlist"
 
 export default function NavBar2(props) {
+  const {cart} = useCartContext();
+  const cartTotalItem = cart.length;
+
   const navigate = useNavigate();
 
   const navigateToHome = () => {
     navigate("/home");
+  };
+  const navigateToCart = () => {
+    navigate("/cart");
   };
 
   const [expanded, setExpanded] = useState(false);
@@ -72,23 +79,30 @@ export default function NavBar2(props) {
               placeholder="Search ... "
             />
             {/* <img className={`cross-icon ${expanded ? 'visible' : ''}`} src = {ecoworksSearchIcon} alt ="" onClick = {handleSearchClick}/> */}
-            <RxCross1
+            {/* <RxCross1
               className={`cross-icon ${expanded ? "visible" : ""}`}
               alt=""
               onClick={handleSearchClick}
-            />
+            /> */}
           </div>
         </div>
-        <img
+        {/* <img
           class="navbar_ecoworks_blog_logo"
           src={ecoworksFavouriteIcon}
           alt=""
-        />
-        <img
+        /> */}
+        <AddToWishlist type ="icon-onlyToOpen" />
+        
+          <img
+          onClick={() => navigateToCart()}
           class="navbar_ecoworks_blog_logo"
           src={ecoworksShoppingBagIcon}
           alt=""
         />
+        <div className="cart_total_icon">
+        {cartTotalItem}
+        </div>
+        
       </div>
     </div>
   );

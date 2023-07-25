@@ -6,8 +6,8 @@ import SignInForm from "./SignInForm"
 
 const SignInPage = () => {
     return (
-        <div>
-            <div className="margin-left bg-light-purple-theme text-center">
+        <div className="account_container">
+            <div className="margin-left_account bg-light-purple-theme text-center">
                 <TitleText text = "Log into your account" />
                 <div className="signin_page_form_container">
                     <SignInForm /> 

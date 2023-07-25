@@ -125,9 +125,9 @@
     display: flex;
     margin-bottom:-12px;
     color: #000;
-    text-align: center;   
+    text-align: left;   
     overflow: hidden;
-    width: 125%;
+    width: 100%;
 }
 
 .selected_filter_text {    
@@ -137,7 +137,7 @@
     line-height: normal;
     text-decoration-line: underline;
     text-transform: uppercase;
-    margin-right: 5%;
+    margin-right: 10px;
 }
 .icon_sub_option{
     width: 45px;
@@ -145,7 +145,8 @@
 }
 .sidebar_sub_option_cross{
     position: absolute;
-    margin-left: 85%;    
+    margin-left: 85%;
+    z-index: 5;
 }
 .sidebar_sub_option_cross_{
     position: absolute;

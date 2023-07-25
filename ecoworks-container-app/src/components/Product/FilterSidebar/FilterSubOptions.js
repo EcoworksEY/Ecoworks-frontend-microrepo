@@ -1,17 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import LargeTextDarkThin from "../Typography/LargeTextDarkThin";
-import Cross from "../../../assets/VectorCross.svg";
-
+import Cross from "../../../assets/Navigation/VectorCross.svg";
 
 const FilterSubOptions = (props) => {
-  const [selected, setSelected] = useState(false);
-
-  // useEffect(() => {
-    console.log(props.filterSelected);
-    // if (props.filterSelected.includes(props.filterOptionTitle)) {
-    //   setSelected(true);}
-  //   }
-  // }, [setSelected, props.filterSelected, props.filterOptionTitle]);
+  let imageData = "";
+  if (props.icon){
+    imageData = <img className = "icon_sub_option" src={props.icon} alt="" />
+  }
 
   return (
     <div>
@@ -21,9 +16,11 @@ const FilterSubOptions = (props) => {
             ? "filter_sub_option_container_selected"
             : "filter_sub_option_container"
         }`}
-        onClick={() => props.onClickFilterSubOption(props.filterOptionTitle)}
+        name = {props.filterName}
+        value = {[]}
+        onClick={(e) => props.onClickFilterSubOption(props.filterOptionTitle)}
       >
-        <img className = "icon_sub_option" src={props.icon} alt="" />
+        {imageData}
         <div className="filter_sub_option_text">
           <LargeTextDarkThin content={props.filterOptionTitle} />
         </div>
@@ -31,11 +28,10 @@ const FilterSubOptions = (props) => {
         className={`${
           props.filterSelected.includes(props.filterOptionTitle)
             ? "sidebar_sub_option_cross"
-            : "sidebar_sub_option_cross"
+            : "closed"
         }`}
         src={Cross}
         alt="Close"
-        onClick={() => props.closeFilter()}
       />
       </div>
       <div className="divider_line_sub_option" />

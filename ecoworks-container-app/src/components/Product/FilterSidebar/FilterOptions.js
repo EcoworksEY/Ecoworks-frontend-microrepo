@@ -38,6 +38,7 @@ const FilterOption = (props) => {
         key = {props.id}
         displayed={filterMenuOpen}
         filterName={props.filterName}
+        filterNameContext={props.filterNameContext}
         filterSubOptions={props.filterSubOptions}
         onClickCloseEntireMenu={props.onClickCloseEntireMenu}
         closeFilter={onFilterClose}
