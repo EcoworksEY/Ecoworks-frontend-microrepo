@@ -5,7 +5,7 @@ module.exports = {
   devServer: {
     port: 80,
     historyApiFallback: true,
-    disableHostCheck: true
+    allowedHosts: "all"
   },
   output: {
     publicPath : '/',
