@@ -11,11 +11,14 @@ import PopupCheckoutButton from "./PopupCheckoutButton";
 import { useCartContext } from "../../../context/CartContext";
 import ButtonTextOnly from "../../Product/Button/ButtonTextOnly";
 
+import { useNavigate } from "react-router-dom";
+
 // WILL TAKE PROPS.TYPE as an inpuit and have button type based on that
 
 //EXPECTED PROPS -->
 // type="icon" id = {product.id} quantity = {1} selectedColour = {product.colours[0]} product={product}
 const AddToCart = (props) => {
+  const navigate = useNavigate();
   const { cart, removeItem, addToCart } = useCartContext();
 
   const [visible, setVisible] = useState(false);
@@ -46,6 +49,10 @@ const AddToCart = (props) => {
   const onClickDelete = (id) => {
     removeItem(id);
   };
+  const handleCheckoutButtonClick = () => {
+    navigate("/cart");
+    setVisible(false);
+  }
 
   let loadingData = "";
   if (props.type === "icon") {
@@ -105,7 +112,7 @@ const AddToCart = (props) => {
           <MediumTextDarkHeavy text={"$" + subTotal} />
         </div>
         <div className="cart_popup_line"></div>
-        <PopupCheckoutButton />
+        <PopupCheckoutButton handleCheckoutButtonClick={handleCheckoutButtonClick}/>
       </div>
     </div>
   );

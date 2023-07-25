@@ -101,33 +101,33 @@ const FilterSubOptions = [
   },
   {
     id:4,
-    filter: "Layout",
-    filterNameContext: "layout",
+    filter: "Cover Type",
+    filterNameContext: "coverType",
     filterOptions: [
       {
         id: 1,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "Hard",
       },
       {
         id: 2,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "Refillable",
       },
       {
         id: 3,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "Soft",
       },
       {
         id: 4,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "Leather",
       },
       {
         id: 5,
         icon: iconBlack,
-        filterOptionTitle: "Black",
+        filterOptionTitle: "Fabric",
       },
     ],
     selected: []
@@ -164,40 +164,7 @@ const FilterSubOptions = [
       },
     ],
     selected: []
-  },
-  {
-    id:6,
-    filter: "Brand",
-    filterNameContext: "brand",
-    filterOptions: [
-      {
-        id: 1,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 2,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 3,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 4,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-      {
-        id: 5,
-        icon: iconBlack,
-        filterOptionTitle: "Black",
-      },
-    ],
-    selected: []
-  },
+  }
 ];
 
 export default FilterSubOptions;

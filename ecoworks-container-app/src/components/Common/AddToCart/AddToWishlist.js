@@ -15,7 +15,6 @@ import {useWishlistContext } from "../../../context/WishlistContext"
 const AddToWishlist = (props) => {
   const { wishlist, removeItem, addToWishlist } = useWishlistContext();
   const [wishlistDisplayed, setWishlistDisplayed] = useState(false);
-  console.log(wishlist);
   const handlePopupClose = () => {
     setWishlistDisplayed(false);
   };
@@ -72,8 +71,6 @@ const AddToWishlist = (props) => {
           ></img>
         </div>
         {wishlist.map((data, index) => (
-          <div>
-            {console.log(data)}
           <AddToWishlistProduct
             key={data.id}
             id={data.id}
@@ -88,7 +85,6 @@ const AddToWishlist = (props) => {
             productId={data.productId}
             setWishlistDisplayed={setWishlistDisplayed}
           />
-          </div>
         ))}
         
       </div>

@@ -1,21 +1,9 @@
 import React from "react";
 import LargeTextDarkThin from "../Typography/LargeTextDarkThin";
 import Cross from "../../../assets/Navigation/VectorCross.svg";
-import {useProductFilterContext} from "../../../context/ProductFilterContext";
 
 const FilterSubOptions = (props) => {
-  const {filters} = useProductFilterContext();
-  // const filterType = eval(props.filterNameContext);
 
-  const onClickFilterSubOption = (e) => {
-    props.onClickFilterSubOption(props.filterOptionTitle);
-    console.log(props.filterName);
-    if (props.filterNameContext === "productType"){
-      // console.log(filterType);
-      console.log(filters.eval(props.filterNameContext));
-      console.log("reached");
-    }
-  }
   return (
     <div>
       <div
@@ -26,7 +14,7 @@ const FilterSubOptions = (props) => {
         }`}
         name = {props.filterName}
         value = {[]}
-        onClick={(e) => onClickFilterSubOption(e)}
+        onClick={(e) => props.onClickFilterSubOption(props.filterOptionTitle)}
       >
         <img className = "icon_sub_option" src={props.icon} alt="" />
         <div className="filter_sub_option_text">
@@ -40,7 +28,6 @@ const FilterSubOptions = (props) => {
         }`}
         src={Cross}
         alt="Close"
-        onClick={() => props.closeFilter()}
       />
       </div>
       <div className="divider_line_sub_option" />

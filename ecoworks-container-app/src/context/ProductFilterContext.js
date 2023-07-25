@@ -9,19 +9,22 @@ const initialState = {
   all_products: [],
   filters: {
     text: "",
-    productType: ["Dot Grit Notebooks"],
+    productType: [],
     colour: [],
     size: [],
     price: [],
-    // layout: "",
+    coverType: [],
     // brand: ""
   },
+  isFilterSelected: false,
 };
 
 export const ProductFilterContextProvider = ({ children }) => {
   const { products } = useProductContext();
 
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  console.log(state.isFilterSelected);
 
   // sorting function
   const sorting = (event) => {
@@ -30,11 +33,7 @@ export const ProductFilterContextProvider = ({ children }) => {
   };
 
   // update the filter values
-  const updateFilterValue = (event) => {
-    let name = event.target.name;
-    let value = event.target.value;
-    console.log(value);
-
+  const updateFilterValue = (name, value) => {
     return dispatch({ type: "UPDATE_FILTERS_VALUE", payload: { name, value } });
   };
 
@@ -46,8 +45,7 @@ export const ProductFilterContextProvider = ({ children }) => {
   // to sort the product
   useEffect(() => {
     dispatch({ type: "FILTER_PRODUCTS" });
-    dispatch({ type: "SORTING_PRODUCTS" });
-  }, [products, state.sorting_value, state.filters]);
+  }, [state.filters]);
 
   // to load all the products for grid and list view
   useEffect(() => {

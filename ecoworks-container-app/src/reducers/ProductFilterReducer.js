@@ -1,26 +1,14 @@
 const ProductFilterReducer = (state, action) => {
   switch (action.type) {
     case "LOAD_FILTER_PRODUCTS":
-      let priceArr = action.payload.map((curElem) => curElem.price);
-      let maxPrice = Math.max(...priceArr);
+      // let priceArr = action.payload.map((curElem) => curElem.price);
+      // let maxPrice = Math.max(...priceArr);
 
       return {
         ...state,
         filter_products: [...action.payload],
         all_products: [...action.payload],
-        filters: { ...state.filters, maxPrice, price: maxPrice },
-      };
-
-    case "SET_GRID_VIEW":
-      return {
-        ...state,
-        grid_view: true,
-      };
-
-    case "SET_LIST_VIEW":
-      return {
-        ...state,
-        grid_view: false,
+        filters: { ...state.filters },
       };
 
     case "GET_SORT_VALUE":
@@ -77,6 +65,7 @@ const ProductFilterReducer = (state, action) => {
     case "FILTER_PRODUCTS":
       let { all_products } = state;
       let tempFilterProduct = [...all_products];
+      let tempFilterSelected = state.isFilterSelected;
 
       const { text, productType, colour, size, price } = state.filters;
 
@@ -90,32 +79,35 @@ const ProductFilterReducer = (state, action) => {
         tempFilterProduct = tempFilterProduct.filter((curElem) =>
           productType.includes(curElem.productType)
         );
+        tempFilterSelected = true;
       }
 
       if (colour.length !== 0) {
         tempFilterProduct = tempFilterProduct.filter((curElem) =>
           colour.some((r) => curElem.colours.includes(r))
         );
+        tempFilterSelected = true;
       }
 
       if (size.length !== 0) {
         tempFilterProduct = tempFilterProduct.filter((curElem) =>
           size.includes(curElem.subcategory)
         );
+        tempFilterSelected = true;
       }
 
+      console.log(price);
       if (price.length !== 0) {
         tempFilterProduct = tempFilterProduct.filter(
           (curElem) => curElem.price === price
         );
-      } else {
-        tempFilterProduct = tempFilterProduct.filter(
-          (curElem) => curElem.price <= price
-        );
-      }
+        tempFilterSelected = true;
+      } 
+
       return {
         ...state,
         filter_products: tempFilterProduct,
+        isFilterSelected: tempFilterSelected
       };
 
     case "CLEAR_FILTERS":

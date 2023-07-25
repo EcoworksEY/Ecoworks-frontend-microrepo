@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Product.css";
-import ecoworksFavouriteIcon from "../../assets/VectorFavorite.svg";
 import { useNavigate } from "react-router-dom";
 
 import AddToCart from "../Common/AddToCart/AddToCart";

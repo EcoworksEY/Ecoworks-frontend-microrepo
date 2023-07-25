@@ -9,9 +9,6 @@ import productImage from "../../../assets/SampleProduct/Image3.svg";
 import sugProd1 from "../../../assets/SampleProduct/suggestedProd1.svg";
 import sugProd2 from "../../../assets/SampleProduct/suggestedProd2.svg";
 import sugProd3 from "../../../assets/tempProduct2.svg";
-import NavBar1 from "../../NavBar/NavBar1";
-import NavBar2 from "../../NavBar/NavBar2";
-import Footer from "../../Footer/Footer";
 
 const SingleProductPage = (props) => {
   

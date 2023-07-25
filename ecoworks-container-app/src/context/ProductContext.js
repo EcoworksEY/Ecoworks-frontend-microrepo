@@ -29,7 +29,7 @@ var productsDummy = [
       images: [temp, tempProduct2],
       title: "Dot Grit Notebooks",
       price: "10.99",
-      productType: "Dot Grit",
+      productType: "Dot Grit Notebooks",
       category: "Note",
       subCategory: "A5",
       colours: [
@@ -44,7 +44,7 @@ var productsDummy = [
       images: [temp, tempProduct2],
       title: "Dot Grit Notebooks - A4",
       price: "12.99",
-      productType: "Dot Grit",
+      productType: "Dot Grit Notebooks",
       category: "Note",
       subCategory: "A4",
       colours: [
@@ -59,7 +59,7 @@ var productsDummy = [
       images: [sugProd1, tempProduct2],
       title: "Lined Notebook Black Marble ",
       price: "18.89",
-      productType: "Dot Grit",
+      productType: "Dot Grit Notebooks",
       category: "Note",
       subCategory: "A5",
       colours: [
@@ -74,7 +74,7 @@ var productsDummy = [
       images: [meadProd, tempProduct2],
       title: "Recycled Notebook Dark Green",
       price: "10.99",
-      productType: "Lined",
+      productType: "Lined Paper Notebooks",
       category: "Note",
       subCategory: "A5",
       colours: [
@@ -89,7 +89,7 @@ var productsDummy = [
       images: [productImage, productImage3],
       title: "Recycled Paper Cover Notebook",
       price: "15.89",
-      productType: "Lined",
+      productType: "Lined Paper Notebooks",
       category: "Note",
       subCategory: "A5",
       colours: [
@@ -104,7 +104,7 @@ var productsDummy = [
       images: [tempProduct2, tempProduct2],
       title: "Recycled Lined Notebook Bright Yellow",
       price: "20.89",
-      productType: "Dot Grit",
+      productType: "Dot Grit Notebooks",
       category: "Note",
       subCategory: "A5",
       colours: [
