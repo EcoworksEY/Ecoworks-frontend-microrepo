@@ -24,8 +24,6 @@ export const ProductFilterContextProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  console.log(state.isFilterSelected);
-
   // sorting function
   const sorting = (event) => {
     let userValue = event.target.value;

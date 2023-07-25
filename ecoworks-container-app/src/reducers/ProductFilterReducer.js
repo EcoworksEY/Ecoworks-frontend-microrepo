@@ -67,7 +67,7 @@ const ProductFilterReducer = (state, action) => {
       let tempFilterProduct = [...all_products];
       let tempFilterSelected = state.isFilterSelected;
 
-      const { text, productType, colour, size, price } = state.filters;
+      const { text, productType, colour, size, price, coverType } = state.filters;
 
       if (text) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
@@ -83,26 +83,32 @@ const ProductFilterReducer = (state, action) => {
       }
 
       if (colour.length !== 0) {
-        tempFilterProduct = tempFilterProduct.filter((curElem) =>
-          colour.some((r) => curElem.colours.includes(r))
-        );
+        if (!colour.includes("MultiColour")){
+          tempFilterProduct = tempFilterProduct.filter((curElem) =>
+          curElem.colours.some((r) => colour.includes(r.name)))
+        }
         tempFilterSelected = true;
       }
 
       if (size.length !== 0) {
         tempFilterProduct = tempFilterProduct.filter((curElem) =>
-          size.includes(curElem.subcategory)
+          size.includes(curElem.subCategory)
         );
         tempFilterSelected = true;
       }
 
-      console.log(price);
       if (price.length !== 0) {
-        tempFilterProduct = tempFilterProduct.filter(
-          (curElem) => curElem.price === price
-        );
+        const numberPrice = [];
+        price.map((price) => numberPrice.push(price.split(" - ")))
+        tempFilterProduct = tempFilterProduct.filter((curElem) => 
+          numberPrice.some(prices => (Number(prices[0]) < Number(curElem.price) && Number(prices[1]) > Number(curElem.price)))
+        )
         tempFilterSelected = true;
-      } 
+      }
+
+      if (coverType !== 0){
+        console.log("This can be implemented in the future")
+      }
 
       return {
         ...state,

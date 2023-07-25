@@ -3,6 +3,10 @@ import LargeTextDarkThin from "../Typography/LargeTextDarkThin";
 import Cross from "../../../assets/Navigation/VectorCross.svg";
 
 const FilterSubOptions = (props) => {
+  let imageData = "";
+  if (props.icon){
+    imageData = <img className = "icon_sub_option" src={props.icon} alt="" />
+  }
 
   return (
     <div>
@@ -16,7 +20,7 @@ const FilterSubOptions = (props) => {
         value = {[]}
         onClick={(e) => props.onClickFilterSubOption(props.filterOptionTitle)}
       >
-        <img className = "icon_sub_option" src={props.icon} alt="" />
+        {imageData}
         <div className="filter_sub_option_text">
           <LargeTextDarkThin content={props.filterOptionTitle} />
         </div>
