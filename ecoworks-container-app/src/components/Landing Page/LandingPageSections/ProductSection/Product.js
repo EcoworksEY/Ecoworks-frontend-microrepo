@@ -30,7 +30,7 @@ export default function Product(props) {
   return (
     <div className="container_product_landing_page">
       {productsList.map((product, index) => 
-          <div className="product_landing_page">
+          <div className="product_landing_page" key = {product.id}>
             <img className="product_image" src={product.images[0]} alt="" onClick={() => navigateToProduct(product.id)}/>
             <p className="product_text" onClick={() => navigateToProduct(product.id)}>{product.title} </p>
             <div className="product_price">

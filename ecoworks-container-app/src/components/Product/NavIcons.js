@@ -15,7 +15,7 @@ export default function NavIcons(props) {
           handleFilterClick = {props.handleFilterClick}
         />
       </div>
-      {/* <div class = "flex">
+      {/* <div className = "flex">
                 <p>Sort By: </p>
 
                 <select className='button'>

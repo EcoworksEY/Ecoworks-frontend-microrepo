@@ -26,7 +26,7 @@ const FilterOption = (props) => {
           <LargeTextDarkThin content={props.filterName} />
           <div className="selected_filter_names">
             {props.filterSelected.map((selected) => (
-              <p key = {props.id} className="selected_filter_text">{selected}</p>
+              <p key = {selected} className="selected_filter_text">{selected}</p>
             ))}
           </div>
         </div>

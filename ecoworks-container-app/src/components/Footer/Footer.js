@@ -33,7 +33,7 @@ export default function Footer(props) {
   return (
     <div>
       <div className="footer_sign_up_background">
-        <div class="footer_sign_up">
+        <div className="footer_sign_up">
           <div className="footer_join_conversation">
             <p className="footer_join_conversation_text">
               JOIN THE CONVERSATION
@@ -60,7 +60,7 @@ export default function Footer(props) {
             </div>
           </div>
         </div>
-        <div class="footer_sign_up2">
+        <div className="footer_sign_up2">
           <img
             className="footer_social_icons"
             src={socialMediaIcons}
@@ -90,7 +90,7 @@ export default function Footer(props) {
           {message}
         </p>
       </div>
-      <div class="flex">
+      <div className="flex">
         <div className="footer_difference">
           <h1 className="footer_difference_title">
             MAKE A DIFFERENCE WITH SUSTAINABLE STATIONARY
@@ -133,7 +133,7 @@ export default function Footer(props) {
 
       <div className="footer_grey">
         <p> © 2023 Ecoworks All Rights Reserved </p>
-        <div class="flex">
+        <div className="flex">
           <p>Site Map </p>
           <p>|</p>
           <p> Privacy Policy </p>

@@ -9,11 +9,11 @@ const NavBarSubMenu = (props) => {
     <div className="navbar_sub_container">
         <div className="nav_bar_featured">
             <MediumTextDarkVHeavy content="Featured" />
-            {props.featuredList.map((features) => <MediumTextDark content = {features} handleClick = {props.handleFeaturesClick}/>)}
+            {props.featuredList.map((features) => <MediumTextDark key = {features} content = {features} handleClick = {props.handleFeaturesClick}/>)}
         </div>
         <div className="nav_bar_featured">
             <MediumTextDarkVHeavy content="Type" />
-            {props.typeList.map((types) => <MediumTextDark content = {types} handleClick = {props.handleTypeClick}/>)}
+            {props.typeList.map((types) => <MediumTextDark key ={types} content = {types} handleClick = {props.handleTypeClick}/>)}
         </div>
         <div className="navbar_sub_menu_image">
         <img src={props.image} alt="" />

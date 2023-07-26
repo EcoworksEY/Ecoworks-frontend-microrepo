@@ -9,7 +9,7 @@ const Blog = (props) => {
   return (
     <div>
       {props.blogsData.map((blog) => (
-        <div className="blog_container">
+        <div className="blog_container" key={blog.title}>
           <BlogTitle text={blog.title} />
           <BlogText text={blog.paragraph1}/>
           <div className="blog_container_image">

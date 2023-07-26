@@ -15,7 +15,7 @@ const TemplatePage = (props) => {
 
   return (
     <div className="template_page_container">
-      <div class="navigation_text_group">
+      <div className="navigation_text_group">
         <p
           className="navigation_categories_text"
           onClick={() => navigateToHome()}
@@ -29,7 +29,7 @@ const TemplatePage = (props) => {
         <BlogTitle text={props.pageData.title} />
         <BlogText text={props.pageData.introduction} />
         {props.pageData.subSectionTitle.map((data, index) => (
-          <div>
+          <div key = {data}>
             <BlogSubtitle text={data} />
             <BlogText text={props.pageData.subSectionText[index]} />
           </div>

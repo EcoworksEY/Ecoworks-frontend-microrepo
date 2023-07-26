@@ -10,7 +10,7 @@
 - Write concise and descriptive commit messages.
 
 ## Naming Conventions
-- Use camelCase for variable, function, and class names.
+- Use camelCase for variable, function, and className names.
 - Use PascalCase for type names.
 - Prefix private properties and methods with an underscore.
 - Avoid using single-letter variable names.
@@ -21,7 +21,7 @@
 - Use single quotes for string literals.
 - Avoid lines longer than 80 characters.
 - Use blank lines to separate logical blocks of code.
-- Keep the opening brace on the same line as the function or class declaration.
+- Keep the opening brace on the same line as the function or className declaration.
 - Use parentheses around the condition of an `if` statement, unless it's a single-line `if`.
 - Always use braces for `if`, `else`, `for`, and `while` statements, even for single-line blocks.
 

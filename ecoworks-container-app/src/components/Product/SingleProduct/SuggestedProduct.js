@@ -14,8 +14,8 @@ const SuggestedProduct = (props) => {
             <p className='suggsted_product_price_text'>${props.suggestedProduct.price}</p>
             <div className = 'product_colours_container'>
                 {props.suggestedProduct.colours.map ((data, index) => ( 
-                    <div className={selectedColour === data ? 'product_colour_selected_circle' : ''}>
-                        <div className={selectedColour === data ? 'product_colour_circle selected' : 'product_colour_circle'} style={{'background-color' : data}} onClick={() => setselectedColour(data)}>
+                    <div key={data} className={selectedColour === data ? 'product_colour_selected_circle' : ''}>
+                        <div className={selectedColour === data ? 'product_colour_circle selected' : 'product_colour_circle'} style={{'backgroundColor' : data}} onClick={() => setselectedColour(data)}>
                         </div>
                     </div>
                 ))}

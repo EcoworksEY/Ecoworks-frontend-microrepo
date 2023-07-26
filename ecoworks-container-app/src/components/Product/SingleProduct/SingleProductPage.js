@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom";
 
 let suggestedProducts = [
   {
+    id:1,
     image: sugProd1,
     title: "Lined Notebook Black Marble ",
     price: "18.89",
@@ -16,6 +17,7 @@ let suggestedProducts = [
     colours: ["#000000", "#6C6940"],
   },
   {
+    id:2,
     image: sugProd2,
     title: "M16 Ballpoint Pen Refill",
     price: "15.99",
@@ -23,6 +25,7 @@ let suggestedProducts = [
     colours: ["#1881E0", "#2B292A"],
   },
   {
+    id:3,
     image: sugProd3,
     title: "Recycled Lined Notebook Bright Yellow",
     price: "20.89",
@@ -37,9 +40,7 @@ const SingleProductPage = (props) => {
   
   useEffect(() => {
     getSingleProduct(Number(id));
-    console.log(singleProduct);
   }, [id])
-  console.log(singleProduct);
 
     if (singleProduct.length > 0){
       // setMainImage(singleProduct[0].images[0]);
@@ -54,7 +55,8 @@ const SingleProductPage = (props) => {
     <SingleProduct
     id={productData.id}
     category={productData.category}
-    subCategory={productData.subcategory}
+    subCategory={productData.subCategory}
+    productType={productData.productType}
     title={productData.title}
     addInfo={productData.addInfo}
     price={productData.price}

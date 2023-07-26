@@ -29,6 +29,7 @@ const SelectedFilterSidebar = (props) => {
       <div className="divider_line" />
       {props.filterSubOptions.map((option) => (
         <FilterSubOptions
+          key = {option.filterOptionTitle}
           filterOptionTitle={option.filterOptionTitle}
           icon={option.icon}
           onClickFilterSubOption={props.onClickFilterSubOption}
