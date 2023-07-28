@@ -4,8 +4,8 @@ module.exports = {
   mode: 'development',
   devServer: {
     port: 8080,
-    allowedHosts: "all",
-    historyApiFallback: true
+    historyApiFallback: true,
+    allowedHosts: "all"
   },
   output: {
     publicPath : '/',
