@@ -151,7 +151,20 @@
   height: auto;
   overflow-x: hidden;
   background-color: #fff;
+  /* animation: fade-down 0.5s ease-in; */
 }
+
+/* @keyframes fade-down {
+    0% {height: 0px;}
+    25% {height:25%}
+    50% {height:50%}
+    75% {height:75%}
+    100%{height: auto;}
+}
+@keyframes fade-out {
+    0% {left: 0px;}
+    100%{left: 35%;}
+} */
 
 .not_hovering_container_navbar{
   display: none;

@@ -3,7 +3,7 @@
     grid-template-columns: 25% 25% 25% 25%;
     grid-auto-flow: row; 
     /* display: flex; */
-    width: 98%;
+    width: 91%;
     margin-left: 1%;
     margin-top: 1%;
     gap: 0.5%;
@@ -56,6 +56,8 @@
 .product_image {
     position: relative;
     align-items : center;
+    width: 300px;
+    height: 250px;
 }
 
 .new_arrivals_image {
@@ -63,6 +65,8 @@
     align-items : center;
     /* margin-left: 5%; */
     background-color: #E1DFDE;
+    width: 300px;
+    height: 250px;
 }
 
 .new_arrivals2_image {
@@ -70,6 +74,8 @@
     align-items : center;
     /* margin-left: 5%; */
     background-color: #FFFFFF;
+    width: 300px;
+    height: 250px;
 }
 
 .product_text {
@@ -158,4 +164,19 @@
     cursor: pointer;
     margin-top: -7%;
     /* background-color: #E1DFDE; */
+}
+
+.loading_container_main_page {
+    margin-top:2%;
+    margin-left: 100%;
+    margin-bottom: 5%; 
+    width: 700px;
+}
+
+.loading_container_new_arrivals {
+    margin-top:2%;
+    margin-left: 30%;
+    /* margin-right:30%; */
+    margin-bottom: 5%; 
+    width: 700px;
 }

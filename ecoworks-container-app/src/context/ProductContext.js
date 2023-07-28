@@ -14,18 +14,117 @@ const ProductContext = createContext();
 
 // INTEGRATION WITH BACKEND
 const BFF_IP = "http://3.91.226.121:8080/product/list";
-
-const initialState = {
-  isLoading: false,
-  isError: false,
-  products: [],
-  featuredProducts: [],
-  newProducts: [],
-  isSingleLoading: false,
-  singleProduct: {},
-  suggestedProducts: [],
-};
-
+var features = [{
+    id: 1223561735867138,
+    images: [temp, tempProduct2],
+    title: "Dot Grit Notebooks - A4",
+    price: "12.99",
+    productType: "Dot Grit Notebooks",
+    category: "Note",
+    subCategory: "A4",
+    colours: [
+      { code: "#0E2C77", name: "Blue" },
+      { code: "#000000", name: "Black" },
+      { code: "#B8B3B3", name: "Light Grey" },
+      { code: "#304043", name: "Dark Grey" },
+    ],
+  },
+  {
+    id: 1223561735867139,
+    images: [sugProd1, tempProduct2],
+    title: "Lined Notebook Black Marble ",
+    price: "18.89",
+    productType: "Dot Grit Notebooks",
+    category: "Note",
+    subCategory: "A5",
+    colours: [
+      { code: "#0E2C77", name: "Blue" },
+      { code: "#000000", name: "Black" },
+      { code: "#B8B3B3", name: "Light Grey" },
+      { code: "#304043", name: "Dark Grey" },
+    ],
+  },
+  {
+    id: 1223561735867140,
+    images: [meadProd, tempProduct2],
+    title: "Recycled Notebook Dark Green",
+    price: "10.99",
+    productType: "Lined Paper Notebooks",
+    category: "Note",
+    subCategory: "A5",
+    colours: [
+      { code: "#0E2C77", name: "Blue" },
+      { code: "#000000", name: "Black" },
+      { code: "#B8B3B3", name: "Light Grey" },
+      { code: "#304043", name: "Dark Grey" },
+    ],
+  },
+  {
+    id: 1223561735867141,
+    images: [productImage, productImage3],
+    title: "Recycled Paper Cover Notebook",
+    price: "15.89",
+    productType: "Lined Paper Notebooks",
+    category: "Note",
+    subCategory: "A5",
+    colours: [
+      { code: "#0E2C77", name: "Blue" },
+      { code: "#000000", name: "Black" },
+      { code: "#B8B3B3", name: "Light Grey" },
+      { code: "#304043", name: "Dark Grey" },
+    ],
+  },
+  {
+    id: 1223561735867142,
+    images: [tempProduct2, tempProduct2],
+    title: "Recycled Lined Notebook Bright Yellow",
+    price: "20.89",
+    productType: "Dot Grit Notebooks",
+    category: "Note",
+    subCategory: "A5",
+    colours: [
+      { code: "#0E2C77", name: "Blue" },
+      { code: "#000000", name: "Black" },
+      { code: "#B8B3B3", name: "Light Grey" },
+      { code: "#304043", name: "Dark Grey" },
+    ],
+  },
+  {
+    id: 1,
+    images: [sugProd1],
+    title: "Lined Notebook Black Marble ",
+    price: "18.89",
+    subCategory: "A5",
+    category: "Write",
+    productType: "Lined Paper Notebooks",
+    colours: [
+      { code: "#6C6940", name: "Green" },
+      { code: "#000000", name: "Black" },
+    ],
+  },
+  {
+    id: 2,
+    images: [sugProd2],
+    title: "M16 Ballpoint Pen Refill",
+    price: "15.99",
+    category: "Note",
+    productType: "Popular Items",
+    subCategory: "F,M,B",
+    colours: [
+      { code: "#0E2C77", name: "Blue" },
+      { code: "#000000", name: "Black" },
+    ],
+  },
+  {
+    id: 3,
+    images: [sugProd3],
+    title: "Recycled Lined Notebook Bright Yellow",
+    price: "20.89",
+    subCategory: "A5",
+    category: "Note",
+    productType: "Lined Paper Notebooks",
+    colours: [{ code: "#F6D324", name: "Yellow" }],
+  },]
 var productsDummy = [
   {
     id: 1223561735867137,
@@ -193,6 +292,20 @@ var suggested_products = [
   },
 ];
 
+  
+const initialState = {
+  isLoading: true,
+  isError: false,
+  products: [],
+  featuredProducts: features,
+  newProducts1: features,
+  newProducts2: features,
+  isSingleLoading: false,
+  singleProduct: {},
+  suggestedProducts: [],
+};
+
+
 const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -203,7 +316,8 @@ const ProductProvider = ({ children }) => {
     //   const products = await res.data;
     //   console.log(products);
     //   console.log("Hello");
-      dispatch({ type: "SET_API_DATA", payload: productsDummy });
+    setTimeout(() => dispatch({ type: "SET_API_DATA", payload: productsDummy }), 5000)
+      
       dispatch({ type: "SET_SUGGESTED_PRODUCTS", payload: suggested_products})
     // } catch (error) {
     //   dispatch({ type: "API_ERROR" });
