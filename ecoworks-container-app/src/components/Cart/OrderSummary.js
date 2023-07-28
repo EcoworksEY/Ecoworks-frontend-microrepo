@@ -147,7 +147,7 @@ const OrderSummary = (props) => {
       </div>
       <p className={`${promoMessage ? "promo_message" : "closed"}`}>{promoMessageText}</p>
         <div
-          className="mt-12 h-14 px-5 justify-center border border-secondary-dark-theme bg-black cursor-pointer"
+          className={`${props.isCartEmpty ? "closed" : "mt-12 h-14 px-5 justify-center border border-secondary-dark-theme bg-black cursor-pointer"}`}
           type="button"
           id="checkout"
           onClick={() => props.handleCheckoutClick()}

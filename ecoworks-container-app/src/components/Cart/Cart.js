@@ -3,13 +3,6 @@ import ProductSummary from "./ProductSummary";
 import OrderSummary from "./OrderSummary";
 
 import { useCartContext } from "../../context/CartContext";
-import OrderPopup from "../Order/OrderPopup";
-
-// import productImage from "../../assets/SampleProduct/Image3.svg";
-// import productImage3 from "../../assets/SampleProduct/Image2.svg";
-
-// import sugProd1 from "../../assets/SampleProduct/suggestedProd1.svg";
-// import meadProd from "../../assets/SampleProduct/meadProd.svg";
 
 const SHIPPING_PRICE_STANDARD = 9;
 const SHIPPING_PRICE_EXPRESS = 15;
@@ -23,6 +16,17 @@ const Cart = (props) => {
   const [productsList, setProductsList] = useState(cart);
 
   const [subTotal, setSubTotal] = useState(0);
+
+  const [isCartEmpty, setIsCartEmpty] = useState(false);
+
+  useEffect(() => {
+    if (productsList.length > 0) {
+      setIsCartEmpty(false);
+    } else {
+      setIsCartEmpty(true);
+    }
+  }, [productsList]);
+
   useEffect(() => {
     let product;
     let totalProductPrice = 0;
@@ -105,6 +109,7 @@ const Cart = (props) => {
           onClickSignIn={props.onClickSignIn}
           SHIPPING_PRICE_STANDARD={SHIPPING_PRICE_STANDARD}
           SHIPPING_PRICE_EXPRESS={SHIPPING_PRICE_EXPRESS}
+          isCartEmpty = {isCartEmpty}
         />
         <OrderSummary
           productsList={productsList}
@@ -112,6 +117,7 @@ const Cart = (props) => {
           shippingPrice={shippingPrice}
           FREE_STANDARD_SHIPPING_THRESHOLD={FREE_STANDARD_SHIPPING_THRESHOLD}
           handleCheckoutClick = {props.handleCheckoutClick}
+          isCartEmpty={isCartEmpty}
         />
       </div>
     </div>

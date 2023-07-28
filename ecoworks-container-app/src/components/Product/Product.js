@@ -22,12 +22,12 @@ export default function Product(props) {
           alt=""
           onClick={navigateToProduct}
         />
-        <img
+        {/* <img
           className="product_image_hover_products_page"
           src={props.images[1]}
           alt=""
           onClick={navigateToProduct}
-        />
+        /> */}
       </div>
 
       <p

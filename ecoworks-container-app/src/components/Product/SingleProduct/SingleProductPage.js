@@ -5,9 +5,6 @@ import { useProductContext } from "../../../context/ProductContext";
 import { useParams } from "react-router-dom";
 import Loading from "../../Common/Loading/Loading";
 
-let suggestedProducts = [
-];
-
 const SingleProductPage = (props) => {
   const { singleProduct, suggestedProducts, getSingleProduct } = useProductContext();
   let { id } = useParams();
@@ -17,7 +14,7 @@ const SingleProductPage = (props) => {
   }, [id]);
 
   let productData = "";
-  let pageData = <Loading />;
+  let pageData = <div className="loading_container_single_product"><Loading /></div>;
   if (singleProduct.length > 0) {
     productData = singleProduct[0];
     pageData = (

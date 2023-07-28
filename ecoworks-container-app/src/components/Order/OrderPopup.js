@@ -15,7 +15,7 @@ const OrderPopup = (props) => {
   useEffect(() => {
     console.log("HELLOW");
     if (props.orderPopupVisible) {
-      setInfoToShow(<Loading />);
+      setInfoToShow(<div className="loading_container_order"><Loading /></div>);
       setTimeout(
         () =>
           setInfoToShow(

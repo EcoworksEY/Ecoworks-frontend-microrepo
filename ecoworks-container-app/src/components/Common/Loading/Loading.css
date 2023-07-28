@@ -1,7 +1,5 @@
 .loading_text {
-  margin-top: 18%;
-  margin-bottom: 20%;
-  margin-left: 25%;
+ 
   color: #333;
   font-size: 3rem;
   font-weight: 100;
@@ -10,10 +8,7 @@
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  /* width: 40%; */
-  /* margin-left: -300px; */
   display: flex;
-  /* justify-content: center; */
 }
 
 .loading_title_text {
