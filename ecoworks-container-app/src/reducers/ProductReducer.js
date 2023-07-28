@@ -22,15 +22,21 @@ const ProductReducer = (state, action) => {
         };
   
       case "SET_API_DATA":
-        const featureData = action.payload.filter((curElem) => {
-          return curElem.featured === true;
-        });
+        let productsData = action.payload;
+        
+        let featuredData = (productsData.filter((curElem) => {
+          return (curElem.category === "Featured")
+        }))
+        const newProductsData = action.payload.filter((curElem) => {
+          return curElem.category === "New"
+        })
   
         return {
           ...state,
           isLoading: false,
           products: action.payload,
-          featureProducts: featureData,
+          featuredProducts: featuredData,
+          newProducts1: newProductsData
         };
   
       case "API_ERROR":

@@ -5,6 +5,8 @@ import iconRed from "../../../assets/Filters/Colour/Red.svg";
 import iconYellow from "../../../assets/Filters/Colour/Yellow.svg";
 import iconMulti from "../../../assets/Filters/Colour/Multicolour.svg";
 import iconWhite from "../../../assets/Filters/Colour/White.svg";
+import iconSalmon from "../../../assets/Filters/Colour/Salmon.svg";
+import iconGrey from "../../../assets/Filters/Colour/Grey.svg";
 
 
 import A4 from "../../../assets/Filters/Size/A4.svg";
@@ -77,6 +79,16 @@ const FilterSubOptions = [
         id: 5,
         icon: iconYellow,
         filterOptionTitle: "Yellow",
+      },
+      {
+        id: 7,
+        icon: iconSalmon,
+        filterOptionTitle: "Salmon",
+      },
+      {
+        id: 8,
+        icon: iconGrey,
+        filterOptionTitle: "Grey",
       },
       {
         id: 6,

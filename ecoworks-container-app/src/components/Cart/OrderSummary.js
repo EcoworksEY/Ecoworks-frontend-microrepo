@@ -10,10 +10,10 @@ import MediumTextDarkHeavy from "..//Common/MediumTextDarkHeavy";
 import LargeTextWhite from "..//Common/LargeTextWhite";
 import MediumTextWhite from "..//Common/MediumTextWhite";
 
-import arrow from "../../assets/VectorArrow.svg";
-import afterpay from "../../assets/VectorAfterpay.svg";
-import info from "../../assets/VectorInfo.svg";
-import truck from "../../assets/VectorTruck.svg";
+import arrow from "../../assets/Navigation/VectorArrow.svg";
+import afterpay from "../../assets/Footer/VectorAfterpay.svg";
+import info from "../../assets/Footer/VectorInfo.svg";
+import truck from "../../assets/Navigation/VectorTruck.svg";
 
 const OrderSummary = (props) => {
   /* DYNAMIC PRODUCT LIST -> That will updated dynamically */

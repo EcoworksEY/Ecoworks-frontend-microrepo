@@ -3,7 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
   mode: 'development',
   devServer: {
-    port: 80,
+    port: 8080,
     allowedHosts: "all",
     historyApiFallback: true
   },

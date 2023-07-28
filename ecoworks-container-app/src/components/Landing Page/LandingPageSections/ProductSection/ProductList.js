@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Product from './Product';
 import "./ProductList.css";
-import SideArrow from '../../../../assets/VectorSideArrow.svg'
+import SideArrow from '../../../../assets/Navigation/VectorSideArrow.svg'
 
 
 export default function ProductList(props) {

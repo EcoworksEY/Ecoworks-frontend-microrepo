@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Footer.css";
-import paymentMethods from "../../assets/VectorPaymentMethod.svg";
-import socialMediaIcons from "../../assets/VectorSocials.svg";
+import paymentMethods from "../../assets/Footer/VectorPaymentMethod.svg";
+import socialMediaIcons from "../../assets/Footer/VectorSocials.svg";
 import { useNavigate } from "react-router-dom";
 
 export default function Footer(props) {

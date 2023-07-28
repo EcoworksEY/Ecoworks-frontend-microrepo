@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import arrow from "../../../assets/VectorArrowMainSection.svg";
+import arrow from "../../../assets/Navigation/VectorArrowMainSection.svg";
 
 const Description = () => {
     const [isExpanded, setIsExpanded] = useState(false);

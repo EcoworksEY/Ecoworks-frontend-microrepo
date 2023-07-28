@@ -2,137 +2,50 @@ import React, { createContext, useContext, useEffect, useReducer } from "react";
 import axios from "axios";
 import reducer from "../reducers/ProductReducer";
 
-import temp from "../assets/tempProduct.svg";
-import tempProduct2 from "../assets/tempProduct2.svg";
-import productImage from "../assets/SampleProduct/Image3.svg";
-import productImage3 from "../assets/SampleProduct/Image2.svg";
-import sugProd1 from "../assets/SampleProduct/suggestedProd1.svg";
-import sugProd2 from "../assets/SampleProduct/suggestedProd2.svg";
-import sugProd3 from "../assets/tempProduct2.svg";
-import meadProd from "../assets/SampleProduct/meadProd.svg";
+import temp from "../assets/NavBar/Carry.svg";
+
+import Note from "../assets/NewArrivals/Notebook.svg";
+import Write from "../assets/NewArrivals/Write.svg";
+import Carry from "../assets/NewArrivals/Carry.svg";
+import Art from "../assets/NewArrivals/Art.svg";
+import Refills from "../assets/NewArrivals/Refills.svg";
+
 const ProductContext = createContext();
 
 // INTEGRATION WITH BACKEND
 const BFF_IP = "http://3.91.226.121:8080/product/list";
-var features = [{
-    id: 1223561735867138,
-    images: [temp, tempProduct2],
-    title: "Dot Grit Notebooks - A4",
-    price: "12.99",
-    productType: "Dot Grit Notebooks",
-    category: "Note",
-    subCategory: "A4",
-    colours: [
-      { code: "#0E2C77", name: "Blue" },
-      { code: "#000000", name: "Black" },
-      { code: "#B8B3B3", name: "Light Grey" },
-      { code: "#304043", name: "Dark Grey" },
-    ],
+
+var new_arrivals = [
+  {
+    title: "Notebook",
+    images: [Note],
   },
   {
-    id: 1223561735867139,
-    images: [sugProd1, tempProduct2],
-    title: "Lined Notebook Black Marble ",
-    price: "18.89",
-    productType: "Dot Grit Notebooks",
-    category: "Note",
-    subCategory: "A5",
-    colours: [
-      { code: "#0E2C77", name: "Blue" },
-      { code: "#000000", name: "Black" },
-      { code: "#B8B3B3", name: "Light Grey" },
-      { code: "#304043", name: "Dark Grey" },
-    ],
+    title: "Write",
+    images: [Write],
   },
   {
-    id: 1223561735867140,
-    images: [meadProd, tempProduct2],
-    title: "Recycled Notebook Dark Green",
-    price: "10.99",
-    productType: "Lined Paper Notebooks",
-    category: "Note",
-    subCategory: "A5",
-    colours: [
-      { code: "#0E2C77", name: "Blue" },
-      { code: "#000000", name: "Black" },
-      { code: "#B8B3B3", name: "Light Grey" },
-      { code: "#304043", name: "Dark Grey" },
-    ],
+    title: "Carry",
+    images: [Carry],
   },
   {
-    id: 1223561735867141,
-    images: [productImage, productImage3],
-    title: "Recycled Paper Cover Notebook",
-    price: "15.89",
-    productType: "Lined Paper Notebooks",
-    category: "Note",
-    subCategory: "A5",
-    colours: [
-      { code: "#0E2C77", name: "Blue" },
-      { code: "#000000", name: "Black" },
-      { code: "#B8B3B3", name: "Light Grey" },
-      { code: "#304043", name: "Dark Grey" },
-    ],
+    title: "Refills",
+    images: [Refills],
   },
   {
-    id: 1223561735867142,
-    images: [tempProduct2, tempProduct2],
-    title: "Recycled Lined Notebook Bright Yellow",
-    price: "20.89",
-    productType: "Dot Grit Notebooks",
-    category: "Note",
-    subCategory: "A5",
-    colours: [
-      { code: "#0E2C77", name: "Blue" },
-      { code: "#000000", name: "Black" },
-      { code: "#B8B3B3", name: "Light Grey" },
-      { code: "#304043", name: "Dark Grey" },
-    ],
+    title: "Art Supplies",
+    images: [Art],
   },
-  {
-    id: 1,
-    images: [sugProd1],
-    title: "Lined Notebook Black Marble ",
-    price: "18.89",
-    subCategory: "A5",
-    category: "Write",
-    productType: "Lined Paper Notebooks",
-    colours: [
-      { code: "#6C6940", name: "Green" },
-      { code: "#000000", name: "Black" },
-    ],
-  },
-  {
-    id: 2,
-    images: [sugProd2],
-    title: "M16 Ballpoint Pen Refill",
-    price: "15.99",
-    category: "Note",
-    productType: "Popular Items",
-    subCategory: "F,M,B",
-    colours: [
-      { code: "#0E2C77", name: "Blue" },
-      { code: "#000000", name: "Black" },
-    ],
-  },
-  {
-    id: 3,
-    images: [sugProd3],
-    title: "Recycled Lined Notebook Bright Yellow",
-    price: "20.89",
-    subCategory: "A5",
-    category: "Note",
-    productType: "Lined Paper Notebooks",
-    colours: [{ code: "#F6D324", name: "Yellow" }],
-  },]
+];
+
 var productsDummy = [
   {
     id: 1223561735867137,
-    images: [temp, tempProduct2],
+    images: [temp],
     title: "Dot Grit Notebooks",
     price: "10.99",
     productType: "Dot Grit Notebooks",
-    category: "Note",
+    category: "Featured",
     subCategory: "A5",
     colours: [
       { code: "#0E2C77", name: "Blue" },
@@ -143,11 +56,11 @@ var productsDummy = [
   },
   {
     id: 1223561735867138,
-    images: [temp, tempProduct2],
+    images: [temp],
     title: "Dot Grit Notebooks - A4",
     price: "12.99",
     productType: "Dot Grit Notebooks",
-    category: "Note",
+    category: "Featured",
     subCategory: "A4",
     colours: [
       { code: "#0E2C77", name: "Blue" },
@@ -158,11 +71,11 @@ var productsDummy = [
   },
   {
     id: 1223561735867139,
-    images: [sugProd1, tempProduct2],
+    images: [temp],
     title: "Lined Notebook Black Marble ",
     price: "18.89",
     productType: "Dot Grit Notebooks",
-    category: "Note",
+    category: "Featured",
     subCategory: "A5",
     colours: [
       { code: "#0E2C77", name: "Blue" },
@@ -173,11 +86,11 @@ var productsDummy = [
   },
   {
     id: 1223561735867140,
-    images: [meadProd, tempProduct2],
+    images: [temp],
     title: "Recycled Notebook Dark Green",
     price: "10.99",
     productType: "Lined Paper Notebooks",
-    category: "Note",
+    category: "Featured",
     subCategory: "A5",
     colours: [
       { code: "#0E2C77", name: "Blue" },
@@ -188,11 +101,11 @@ var productsDummy = [
   },
   {
     id: 1223561735867141,
-    images: [productImage, productImage3],
+    images: [temp],
     title: "Recycled Paper Cover Notebook",
     price: "15.89",
     productType: "Lined Paper Notebooks",
-    category: "Note",
+    category: "Featured",
     subCategory: "A5",
     colours: [
       { code: "#0E2C77", name: "Blue" },
@@ -203,11 +116,11 @@ var productsDummy = [
   },
   {
     id: 1223561735867142,
-    images: [tempProduct2, tempProduct2],
+    images: [temp],
     title: "Recycled Lined Notebook Bright Yellow",
     price: "20.89",
     productType: "Dot Grit Notebooks",
-    category: "Note",
+    category: "New",
     subCategory: "A5",
     colours: [
       { code: "#0E2C77", name: "Blue" },
@@ -218,11 +131,11 @@ var productsDummy = [
   },
   {
     id: 1,
-    images: [sugProd1],
+    images: [temp],
     title: "Lined Notebook Black Marble ",
     price: "18.89",
     subCategory: "A5",
-    category: "Write",
+    category: "New",
     productType: "Lined Paper Notebooks",
     colours: [
       { code: "#6C6940", name: "Green" },
@@ -231,10 +144,10 @@ var productsDummy = [
   },
   {
     id: 2,
-    images: [sugProd2],
+    images: [temp],
     title: "M16 Ballpoint Pen Refill",
     price: "15.99",
-    category: "Note",
+    category: "New",
     productType: "Popular Items",
     subCategory: "F,M,B",
     colours: [
@@ -244,11 +157,11 @@ var productsDummy = [
   },
   {
     id: 3,
-    images: [sugProd3],
+    images: [temp],
     title: "Recycled Lined Notebook Bright Yellow",
     price: "20.89",
     subCategory: "A5",
-    category: "Note",
+    category: "New",
     productType: "Lined Paper Notebooks",
     colours: [{ code: "#F6D324", name: "Yellow" }],
   },
@@ -256,7 +169,7 @@ var productsDummy = [
 var suggested_products = [
   {
     id: 1,
-    images: [sugProd1],
+    images: [temp],
     title: "Lined Notebook Black Marble ",
     price: "18.89",
     subCategory: "A5",
@@ -269,7 +182,7 @@ var suggested_products = [
   },
   {
     id: 2,
-    images: [sugProd2],
+    images: [temp],
     title: "M16 Ballpoint Pen Refill",
     price: "15.99",
     category: "Note",
@@ -282,7 +195,7 @@ var suggested_products = [
   },
   {
     id: 3,
-    images: [sugProd3],
+    images: [temp],
     title: "Recycled Lined Notebook Bright Yellow",
     price: "20.89",
     category: "Note",
@@ -292,36 +205,39 @@ var suggested_products = [
   },
 ];
 
-  
 const initialState = {
   isLoading: true,
   isError: false,
   products: [],
-  featuredProducts: features,
-  newProducts1: features,
-  newProducts2: features,
+  featuredProducts: [],
+  newProducts1: [],
+  newProducts2: new_arrivals,
   isSingleLoading: false,
   singleProduct: {},
   suggestedProducts: [],
 };
 
-
 const ProductProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const getProducts = async (url) => {
-    // dispatch({ type: "SET_LOADING" });
+    dispatch({ type: "SET_LOADING" });
     // try {
     //   const res = await axios.get(url);
     //   const products = await res.data;
     //   console.log(products);
     //   console.log("Hello");
-    setTimeout(() => dispatch({ type: "SET_API_DATA", payload: productsDummy }), 5000)
-      
-      dispatch({ type: "SET_SUGGESTED_PRODUCTS", payload: suggested_products})
-    // } catch (error) {
-    //   dispatch({ type: "API_ERROR" });
-    // }
+    // setTimeout(
+    //   () => 
+      dispatch({ type: "SET_API_DATA", payload: productsDummy })
+    //   5000
+    // );
+
+    dispatch({ type: "SET_SUGGESTED_PRODUCTS", payload: suggested_products });
+
+    //   } catch (error) {
+    //     dispatch({ type: "API_ERROR" });
+    //   }
   };
 
   // TRIGERRED FROM THE SINGLE PRODUCT PAGE

@@ -29,11 +29,13 @@
     "yup": "^1.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "webpack serve",
+    "build": "webpack build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "serve": "webpack serve"
+    "serve": "webpack serve",
+    "init": "webpack init",
+    "info": "webpack info"
   },
   "eslintConfig": {
     "extends": [

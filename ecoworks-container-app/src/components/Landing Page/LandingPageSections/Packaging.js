@@ -1,6 +1,6 @@
 import React from "react";
 import "./Packaging.css"
-import packaging from "../../../assets/VectorPackaging.svg"
+import packaging from "../../../assets/Footer/VectorPackaging.svg"
 
 export default function Packaging(props) {
     return (

@@ -1,5 +1,5 @@
 import React from "react";
-import Bin from "../../../assets/VectorBin.svg";
+import Bin from "../../../assets/Navigation/VectorBin.svg";
 import { useNavigate } from "react-router-dom";
 
 const AddToCartProduct = (props) => {

@@ -11,9 +11,9 @@ import "./CartProduct.css";
 import {useNavigate} from 'react-router-dom';
 
 
-import minus from "../../assets/VectorMinus.svg";
-import plus from "../../assets/VectorPlus.svg";
-import bin from "../../assets/VectorBin.svg";
+import minus from "../../assets/Navigation/VectorMinus.svg";
+import plus from "../../assets/Navigation/VectorPlus.svg";
+import bin from "../../assets/Navigation/VectorBin.svg";
 
 const CartProduct = (props) => {
   const [selectedColour, setselectedColour] = useState(props.selectedColour);
