@@ -5,7 +5,7 @@ import "../ProductSection/Product.css"
 export default function NewArrivalsProduct2(props) {
         const navigate = useNavigate();
         const navigateToProduct = () => {
-            navigate(`/products/${props.id}`)
+            navigate(`/products/${props.product.id}`)
         }
         return(
             <div className='product_new_arrivals_2' onClick = {() => navigateToProduct()}>

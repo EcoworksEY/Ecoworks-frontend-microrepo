@@ -11,7 +11,7 @@ export default function NoteProductTypeIcons(props) {
     };
     return (
        <div>
-            <div class = "single_product_categories_text_group">
+            <div className = "single_product_categories_text_group">
                 <p className = "single_product_categories_text" onClick={() => navigateToHome()}>Home |</p>
                 &nbsp;
                 <p className = "single_product_categories_text" > Note</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
+import { parse } from "date-fns";
 
 import MediumTextDarkHeavy from "..//Common/MediumTextDarkHeavy";
 import LargeTextDark from "..//Common/LargeTextDark";
@@ -9,15 +10,26 @@ import TextInput from "..//Common/SignUpForm/TextInput";
 import Checkbox from "..//Common/SignUpForm/Checkbox";
 import CheckboxRight from "..//Common/SignUpForm/CheckboxRight";
 import ButtonDark from "..//Common/SignUpForm/ButtonDark";
+import { useNavigate } from "react-router-dom";
+import Loading from "../Common/Loading/Loading";
 
 // And now we can use these
 const CreateAccountForm = () => {
+  const navigate = useNavigate();
   const getCharacterValidationError = (str) => {
     return `Your password must have at least 1 ${str} character`;
   };
   const handleSubmit = (event) => {
-    console.log(event.target.value)
-  }
+    console.log(event.target.value);
+    
+  };
+
+  const navigateToTerms = () => {
+    navigate("/terms-and-conditions");
+  };
+  const navigateToPrivacy = () => {
+    navigate("/privacy");
+  };
 
   return (
     <div className="create_an_account_container">
@@ -64,8 +76,12 @@ const CreateAccountForm = () => {
             .required("Required")
             .oneOf([true], "You must accept the terms and conditions."),
           birthday: Yup.date()
+          .transform((value, originalValue, context) => {
+            if (context.isType(value)) return value;
+            return parse(originalValue, 'dd/MM', new Date());
+      })
             .required("Not Provided")
-            .typeError("please enter a valid date"),
+            // .typeError("please enter a valid date"),
         })}
         onSubmit={(values, { setSubmitting }) => {
           setTimeout(() => {
@@ -76,16 +92,16 @@ const CreateAccountForm = () => {
       >
         <Form>
           <div className="form_container">
+            <TextInput name="firstName" type="text" placeholder="First Name*" />
             <TextInput
-              name="firstName"
-              type="text"
-              placeholder="First Name*"
+              name="password"
+              type="password"
+              placeholder="Password*"
             />
-            <TextInput name="password" type="text" placeholder="Password*" />
             <TextInput name="lastName" type="text" placeholder="Last Name*" />
             <TextInput
               name="confirmPassword"
-              type="text"
+              type="password"
               placeholder="Confirm Password*"
             />
           </div>
@@ -114,20 +130,50 @@ const CreateAccountForm = () => {
                 birthday voucher and exclusive offers.
               </Checkbox>
               <Checkbox name="acceptedTermsNewsLetter">
-                {<p>I accept the {<u>Terms & Conditions</u>} signing up to the newsletter.</p>}
+                {
+                  <p>
+                    I accept the{" "}
+                    {
+                      <u
+                        className="cursor-pointer"
+                        onClick={() => navigateToTerms()}
+                      >
+                        Terms & Conditions
+                      </u>
+                    }{" "}
+                    for creating an account.
+                  </p>
+                }
               </Checkbox>
               <Checkbox name="acceptedTerms">
-                {<p>I accept the {<u>Terms & Conditions</u>} for creating an account.</p>}
+                {
+                  <p>
+                    I accept the{" "}
+                    {
+                      <u
+                        className="cursor-pointer"
+                        onClick={() => navigateToPrivacy()}
+                      >
+                        Privacy Policy
+                      </u>
+                    }{" "}
+                    for creating an account.
+                  </p>
+                }
               </Checkbox>
             </div>
           </div>
           <div className="form_container">
-            <CheckboxRight name="acceptRememberMe" >Remember Me</CheckboxRight>
+            <CheckboxRight name="acceptRememberMe">Remember Me</CheckboxRight>
 
             {/* <button className = "checkoutButton"type="submit" onClick={(e) => handleSubmit(e)}>Create Account</button> */}
-            <ButtonDark type= "submit" className = "checkoutButton2" text = "Create Account" handleSubmit = {handleSubmit}/>
+            <ButtonDark
+              type="submit"
+              className="checkoutButton2"
+              text="Create Account"
+              handleSubmit={handleSubmit}
+            />
           </div>
-          
         </Form>
       </Formik>
     </div>

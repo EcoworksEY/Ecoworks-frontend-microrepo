@@ -38,8 +38,8 @@ const App = (props) => {
           <Route exact path="/cart" element={<CartPage />} />
           <Route exact path="/signup" element={<CreateAccountPage />} />
           <Route exact path="/signin" element={<SignInPage />} />
-          <Route exact path="/products" element={<ProductListPage />} />
-          <Route exact path="/products/:id" element={<SingleProductPage />} />
+          <Route exact path="/notes" element={<ProductListPage />} />
+          <Route path="/products/:id" element={<SingleProductPage />} />
           <Route exact path ="/terms-and-conditions" element={<TermsPage />} />
           <Route exact path ="/privacy" element={<PrivacyPage />} />
         </Routes>

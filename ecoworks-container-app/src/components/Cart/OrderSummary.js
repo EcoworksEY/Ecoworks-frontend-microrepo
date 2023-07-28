@@ -18,6 +18,8 @@ import truck from "../../assets/VectorTruck.svg";
 const OrderSummary = (props) => {
   /* DYNAMIC PRODUCT LIST -> That will updated dynamically */
   const [isExpanded, setIsExpanded] = useState(false);
+  const [promoCode, setPromoCode]  = useState("");
+  const [promoMessage, setPromoMessage] = useState(false);
 
   const onExpand = () => {
     if (isExpanded) {
@@ -26,6 +28,20 @@ const OrderSummary = (props) => {
       setIsExpanded(true);
     }
   };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setPromoCode(e.target.value)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPromoMessage(true);
+    setPromoCode("");
+    setTimeout(() => {
+      setPromoMessage(false);
+    }, 4000);
+  };
+  const promoMessageText = "Invalid Promo Code!"
 
   return (
     <div className="w-1/3 bg-white px-5 py-3.5">
@@ -115,28 +131,32 @@ const OrderSummary = (props) => {
           id="postcode"
           type="postcode"
           placeholder="Enter Promo Code..."
+          value={promoCode}
+          onChange={(e) => handleChange(e)}
+          required
         />
         <div
           className="my-2 h-14 w-1/3 px-5 justify-center border border-secondary-dark-theme bg-black cursor-pointer"
           type="button"
+          onClick = {(e) => handleSubmit(e)}
         >
           <div className="my-3">
             <MediumTextWhite text="Apply" />
           </div>
         </div>
       </div>
-      <div className="">
+      <p className={`${promoMessage ? "promo_message" : "closed"}`}>{promoMessageText}</p>
         <div
-          className="mt-12 h-14 px-5 justify-center border border-secondary-dark-theme bg-black cursor-pointer"
+          className={`${props.isCartEmpty ? "closed" : "mt-12 h-14 px-5 justify-center border border-secondary-dark-theme bg-black cursor-pointer"}`}
           type="button"
           id="checkout"
+          onClick={() => props.handleCheckoutClick()}
         >
           <div className="my-3">
-            <LargeTextWhite text="CHECKOUT SECURELY" />
+            <LargeTextWhite text="CHECKOUT SECURELY"/>
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

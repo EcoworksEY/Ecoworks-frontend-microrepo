@@ -32,7 +32,7 @@ export default function MainSectionSlider (props) {
   const navigate = useNavigate();
 
   const navigateToProducts = () => {
-    navigate("/products");
+    navigate("/notes");
   };
 
   const promotions = [
@@ -85,18 +85,18 @@ export default function MainSectionSlider (props) {
         <div className = "slideshow">
             <div className = "slideshowSlider" style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
             {promotions.map((promo, index) => (
-                <div className='slide'>
-                <div class = "main_section_rectangle3">
+                <div className='slide' key={promo.promoImage}>
+                <div className = "main_section_rectangle3">
                     <img src = {promo.promoImage} alt =""></img>                   
                 </div>
-                <div class = "main_section_rectangle3_text">
-                    <p class = "title">{promo.title}</p>
-                    <p class = "subtitle">{promo.subtitle}</p>
-                    <p class = "text_main_section">{promo.additionalText}</p>
+                <div className = "main_section_rectangle3_text">
+                    <p className = "title">{promo.title}</p>
+                    <p className = "subtitle">{promo.subtitle}</p>
+                    <p className = "text_main_section">{promo.additionalText}</p>
                 </div>
-                <div class = "main_section_rectangle4" onClick={() => promo.onClickFunction()}>
-                    <p class ="shop_now" >SHOP NOW</p>
-                    <img class = "icon" src = {arrow} alt =""></img> 
+                <div className = "main_section_rectangle4" onClick={() => promo.onClickFunction()}>
+                    <p className ="shop_now" >SHOP NOW</p>
+                    <img className = "icon" src = {arrow} alt =""></img> 
                 </div>
             </div>
             ))}

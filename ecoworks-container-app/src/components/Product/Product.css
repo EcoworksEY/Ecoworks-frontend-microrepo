@@ -10,6 +10,10 @@
     background-color: #E1DFDE;
     cursor: pointer;
 }
+.product_image_products_page:hover{
+    background-color: rgba(225, 223, 222, 0.26);
+}
+
 
 .product_image_hover_products_page {
     position: absolute;

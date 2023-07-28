@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Cross from "../../../assets/Navigation/VectorCross.svg";
 import "./FilterSidebar.css";
@@ -18,7 +18,7 @@ const FilterSidebar = (props) => {
   //if the length of each of the filter type is 0, then isFilterSelected = false
   //
 
-  const { filters, updateFilterValue } = useProductFilterContext();
+  const { isFilterSelected, filters, updateFilterValue } = useProductFilterContext();
 
   const scrollDown = () => {
     window.scrollTo({
@@ -27,13 +27,12 @@ const FilterSidebar = (props) => {
       behavior: "smooth",
     });
   };
-  const [isFilterSelected, setisFilterSelected] = useState(false);
+  // const [isFilterSelected, setisFilterSelected] = useState(false);
 
   const onClickCloseEntireMenu = props.onClickClose;
 
   const onFilterSubOptionClick = (filterId, filterSubOption) => {
-    setisFilterSelected(true);
-    console.log(filterId, filterSubOption);
+    // setisFilterSelected(true);
     FilterSubOptions.filter((filter) => filter.id === filterId).filter(
       (subOpt) => {
         if (subOpt.selected.indexOf(filterSubOption) === -1) {
@@ -46,7 +45,12 @@ const FilterSidebar = (props) => {
     );
   };
   const onFiltersClear = () => {
-    setisFilterSelected(false);
+    FilterSubOptions.map((filter) => 
+      filter.selected.length = 0
+    );
+    FilterSubOptions.map((filter) =>
+      updateFilterValue(filter.filterNameContext, filter.selected)
+    );
   };
 
   const handleApplyFilters = () => {
@@ -57,12 +61,11 @@ const FilterSidebar = (props) => {
     scrollDown();
   };
     if (filters.productType.length > 0){
-      console.log(filters.productType);
       FilterSubOptions[0].selected = filters.productType;
     }
 
   return (
-    <div className={`${props.displayed ? "sidebar" : "sidebar sidebar_close"}`}>
+    <div className={`${props.displayed ? "sidebar" : "sidebar_close"}`}>
       <LargeTextDarkThin centered={true} content="Filters" />
       <img
         className="sidebar_cross_button"
@@ -84,7 +87,7 @@ const FilterSidebar = (props) => {
         />
       ))}
       <div className="filter_buttons_container">
-        <ButtonDark content="Apply Filters" handleClick={handleApplyFilters} />
+        <ButtonDark content="Apply" handleClick={handleApplyFilters} />
         <ButtonGrey
           onFiltersClear={onFiltersClear}
           displayed={isFilterSelected}

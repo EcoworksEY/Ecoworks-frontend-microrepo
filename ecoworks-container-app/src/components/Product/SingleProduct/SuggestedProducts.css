@@ -24,6 +24,11 @@
     position: relative;
     width: 200px;
     align-items : center;
+    cursor: pointer;
+}
+
+.suggested_product_image:hover{
+    background-color: #8FADE9;
 }
 
 .suggested_product_title {
@@ -38,7 +43,9 @@
     margin-top: 5%;
     cursor: pointer;
 }
-
+.suggested_product_title:hover{
+    text-decoration: underline;
+}
 .suggested_product_category_text {
     margin-top:1%;
     font-style: normal;

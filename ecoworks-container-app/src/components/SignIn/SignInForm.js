@@ -24,6 +24,10 @@ const SignInForm = (props) => {
         console.log("forgotten")
     }
 
+    const handleSubmit = (event) => {
+      console.log(event.target.value)
+    }
+
   return (
     <div>
       <LargeTextDark text="Welcome Back!" />
@@ -39,6 +43,7 @@ const SignInForm = (props) => {
             .required("Required*"),
         })}
         onSubmit={(values, { setSubmitting }) => {
+
           setTimeout(() => {
             console.log(JSON.stringify(values, null, 2));
             setSubmitting(false);
@@ -54,7 +59,7 @@ const SignInForm = (props) => {
                 <MediumTextDark className="forgot_password" underline = {true} text = "Forgot Password?"/> 
             </div>
           </div>
-          <ButtonDark type="submit" text="Sign In" />
+          <ButtonDark type="submit" text="Sign In" handleSubmit={handleSubmit}/>
           <ButtonGrey type="submit2" text="Register" handleSubmit = {navigateToSignUp} />
         </Form>
       </Formik>

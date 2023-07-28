@@ -5,16 +5,25 @@
     border: 1px solid rgba(184, 179, 179, 0.82);
     height: 95%;
     left: 0px;
-    top: 5%; /* CHANGE HERE -- IF WANT TO MAKE IT GO TO THE TOP*/
+    top: 45px; /* CHANGE HERE -- IF WANT TO MAKE IT GO TO THE TOP*/
     padding-top:2%;
     z-index: 3;
+    animation: fade-in 1.5s ease-in;
 }
 
 .sidebar_close{
-    /* z-index: -2;
-    opacity: 0; */
     display: none;
 }
+/* 
+@keyframes fade-in {
+    0% {left: -35%;}
+    100%{left: 0px;}
+}
+@keyframes fade-out {
+    0% {left: 0px;}
+    100%{left: 35%;}
+} */
+
 .sidebar2 { 
     position:fixed;
     width: 34.5%;
@@ -25,6 +34,7 @@
     top: 5%; /* CHANGE HERE -- IF WANT TO MAKE IT GO TO THE TOP*/
     padding-top:2%;
     z-index: 4;
+    animation: fade-in 1.5s ease-in;
 }
 
 .sidebar_cross_button{

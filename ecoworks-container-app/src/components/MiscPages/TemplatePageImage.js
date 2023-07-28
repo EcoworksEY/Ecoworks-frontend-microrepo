@@ -20,7 +20,7 @@ const TemplatePage = (props) => {
   return (
     <div className="template_image_container">
       {mainImageData}
-      <div class="navigation_text_group">
+      <div className="navigation_text_group">
         <p className="navigation_categories_text" onClick={() => navigateToHome()}>
           Home |
         </p>

@@ -21,12 +21,12 @@ const NavBarOption = (props) => {
 
   const handleTypeClick = (feature) => {
     updateFilterValue("productType", [feature]);
-    props.navigate("/products");
+    props.navigate("/notes");
     handleHoverEnd();
   };
 
   const handleFeaturesClick = (feature) => {
-    props.navigate("/products");
+    props.navigate("/notes");
     handleHoverEnd();
   };
 

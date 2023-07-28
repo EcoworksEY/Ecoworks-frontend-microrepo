@@ -16,17 +16,17 @@ export default function NavBar1 (props) {
 
     return (
         <div className="navbar">
-            <div class = "navbar_rectangle1">
-                <p class = "navbar_message">Free Shipping on Orders Over $50*</p>
+            <div className = "navbar_rectangle1">
+                <p className = "navbar_message">Free Shipping on Orders Over $50*</p>
             </div>
-            <div class = "navbar_icons_top_layer">
+            <div className = "navbar_icons_top_layer">
                 <div className = "options" onClick = {navigateToBlogs}>
-                    <img class = "navbar_ecoworks_blog_logo" src = {ecoworksBlogIcon} alt =""/>
-                    <p class = "navbar_ecoworks_blog">ECOWORKS BLOG</p>
+                    <img className = "navbar_ecoworks_blog_logo" src = {ecoworksBlogIcon} alt =""/>
+                    <p className = "navbar_ecoworks_blog">ECOWORKS BLOG</p>
                 </div>
                 <div className='options' onClick = {navigateToSignIn}>
-                    <img class = "navbar_ecoworks_blog_logo" src = {ecoworksSignInIcon} alt =""/>
-                    <p class = "navbar_ecoworks_blog">SIGN IN</p>
+                    <img className = "navbar_ecoworks_blog_logo" src = {ecoworksSignInIcon} alt =""/>
+                    <p className = "navbar_ecoworks_blog">SIGN IN</p>
                 </div>
             </div>
         </div>

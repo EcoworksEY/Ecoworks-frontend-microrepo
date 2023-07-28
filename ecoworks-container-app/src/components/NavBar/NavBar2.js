@@ -39,12 +39,12 @@ export default function NavBar2(props) {
   return (
     <div className={`${hovering ? "navbar2 navbar2_hovering" : "navbar2"}`}>
       <img
-        class="ecoworks_logo"
+        className="ecoworks_logo"
         src={logo}
         alt=""
         onClick={navigateToHome}
       ></img>
-      <ul class="ecoworks_menu_options">
+      <ul className="ecoworks_menu_options">
         {menuOptions.map((menuOption) => (
           // console.log(menuOption.title)
           <NavBarOption
@@ -59,15 +59,15 @@ export default function NavBar2(props) {
           />
         ))}
       </ul>
-      <div class="navbar_menu_options_icons">
-        {/* <img class = "navbar_search" src = {ecoworksSearchIcon} alt =""/> */}
+      <div className="navbar_menu_options_icons">
+        {/* <img className = "navbar_search" src = {ecoworksSearchIcon} alt =""/> */}
 
         <div className="search-bar">
           {/* <button className= {`search-icon ${expanded ? 'hidden' : ''}`} onClick = {handleSearchClick}>
                             <i className = 'fa fa-search'></i>
                         </button> */}
           <img
-            class="navbar_ecoworks_blog_logo"
+            className="navbar_ecoworks_blog_logo"
             src={ecoworksSearchIcon}
             alt=""
             onClick={handleSearchClick}
@@ -87,7 +87,7 @@ export default function NavBar2(props) {
           </div>
         </div>
         {/* <img
-          class="navbar_ecoworks_blog_logo"
+          className="navbar_ecoworks_blog_logo"
           src={ecoworksFavouriteIcon}
           alt=""
         /> */}
@@ -95,7 +95,7 @@ export default function NavBar2(props) {
         
           <img
           onClick={() => navigateToCart()}
-          class="navbar_ecoworks_blog_logo"
+          className="navbar_ecoworks_blog_logo"
           src={ecoworksShoppingBagIcon}
           alt=""
         />
