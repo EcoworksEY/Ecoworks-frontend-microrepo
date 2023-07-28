@@ -14,7 +14,6 @@ const initialState = {
     size: [],
     price: [],
     coverType: [],
-    // brand: ""
   },
   isFilterSelected: false,
 };

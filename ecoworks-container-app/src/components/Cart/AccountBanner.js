@@ -4,9 +4,16 @@ import MediumTextLight from "../Common/MediumTextLight";
 
 import ButtonDark from "../Common/ButtonDark";
 import ButtonLight from "../Common/ButtonLight";
+import { useNavigate } from "react-router-dom";
 
 const AccountBanner = (props) => {
   const onButtonClick = props.onClickSignIn;
+  const navigate = useNavigate();
+  const navigateToSignUp = () => {
+    navigate("/signup");
+  } 
+
+
   return (
     <div className="bg-primary-grey my-6 px-10 py-7">
       <div className="flex justify-between">
@@ -16,7 +23,7 @@ const AccountBanner = (props) => {
           <MediumTextLight text="birthday discounts and more." />
         </div>
         <div>
-          <ButtonDark text="Create Account" />
+          <ButtonDark onButtonClick={navigateToSignUp} text="Create Account" />
           <ButtonLight onButtonClick={onButtonClick} text="Sign In" />
         </div>
       </div>

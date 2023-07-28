@@ -52,7 +52,7 @@ const AddToCart = (props) => {
   const handleCheckoutButtonClick = () => {
     navigate("/cart");
     setVisible(false);
-  }
+  };
 
   let loadingData = "";
   if (props.type === "icon") {
@@ -72,11 +72,19 @@ const AddToCart = (props) => {
     );
   } else if (props.type === "button_light") {
     loadingData = (
-        <div onClick={() => handlePopupOpen()}>
-            <ButtonTextOnly title = {"ADD TO BAG"} />
-        </div>
-        
-    )
+      <div onClick={() => handlePopupOpen()}>
+        <ButtonTextOnly title={"ADD TO BAG"} />
+      </div>
+    );
+  } else if (props.type === "button_dark_small") {
+    loadingData = (
+      <div
+        className="suggested_product_add_to_bag_button"
+        onClick={() => handlePopupOpen()}
+      >
+        ADD TO BAG
+      </div>
+    );
   }
 
   return (
@@ -112,7 +120,9 @@ const AddToCart = (props) => {
           <MediumTextDarkHeavy text={"$" + subTotal} />
         </div>
         <div className="cart_popup_line"></div>
-        <PopupCheckoutButton handleCheckoutButtonClick={handleCheckoutButtonClick}/>
+        <PopupCheckoutButton
+          handleCheckoutButtonClick={handleCheckoutButtonClick}
+        />
       </div>
     </div>
   );

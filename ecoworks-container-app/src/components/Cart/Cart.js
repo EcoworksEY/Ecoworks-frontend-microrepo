@@ -3,6 +3,7 @@ import ProductSummary from "./ProductSummary";
 import OrderSummary from "./OrderSummary";
 
 import { useCartContext } from "../../context/CartContext";
+import OrderPopup from "../Order/OrderPopup";
 
 // import productImage from "../../assets/SampleProduct/Image3.svg";
 // import productImage3 from "../../assets/SampleProduct/Image2.svg";
@@ -20,6 +21,7 @@ const Cart = (props) => {
   const [shippingPrice, setShippingPrice] = useState(SHIPPING_PRICE_STANDARD);
 
   const [productsList, setProductsList] = useState(cart);
+
   const [subTotal, setSubTotal] = useState(0);
   useEffect(() => {
     let product;
@@ -109,6 +111,7 @@ const Cart = (props) => {
           totalProductPrice={subTotal}
           shippingPrice={shippingPrice}
           FREE_STANDARD_SHIPPING_THRESHOLD={FREE_STANDARD_SHIPPING_THRESHOLD}
+          handleCheckoutClick = {props.handleCheckoutClick}
         />
       </div>
     </div>

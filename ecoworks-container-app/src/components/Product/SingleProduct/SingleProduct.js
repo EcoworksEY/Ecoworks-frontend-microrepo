@@ -16,8 +16,11 @@ import Description from "./Description";
 import AddToCart from "../../Common/AddToCart/AddToCart";
 import AddToWishlist from "../../Common/AddToCart/AddToWishlist";
 
+import {useProductFilterContext} from "../../../context/ProductFilterContext"
+
 export default function SingleProduct(props) {
   const navigate = useNavigate();
+  const { updateFilterValue } = useProductFilterContext();
 
   const navigateToHome = () => {
     navigate("/home");
@@ -25,6 +28,10 @@ export default function SingleProduct(props) {
   const navigateToProducts = () => {
     navigate("/notes");
   };
+  const handleProductType = (productType) => {
+    updateFilterValue("productType", [productType]);
+    navigateToProducts();
+  } 
 
   const [selectedColour, setselectedColour] = useState(props.colours[0]);
   const [quantity, setQuantity] = useState(1);
@@ -67,6 +74,7 @@ export default function SingleProduct(props) {
       setMainImage(props.images[new_index]);
     }
   };
+  
 
   return (
     <div>
@@ -86,7 +94,7 @@ export default function SingleProduct(props) {
           {props.category} |{" "}
         </p>
         &nbsp;
-        <p className="single_product_categories_text">{props.productType}</p>
+        <p className="single_product_categories_text" onClick={() => handleProductType(props.productType)}>{props.productType}</p>
       </div>
       <div className="single_product_container">
         <div className="left_container">

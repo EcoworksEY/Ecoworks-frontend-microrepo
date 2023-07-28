@@ -55,6 +55,15 @@ const AddToWishlist = (props) => {
         onClick={() => handlePopupOpen()}
       />
     );
+  } else if (props.type === "icon_suggested"){
+    loadingData = (
+      <img
+        className="suggested_product_favourite_icon"
+        src={Heart}
+        alt=""
+        onClick={() => handlePopupOpen()}
+      />
+    )
   }
 
   return (

@@ -53,6 +53,11 @@ const ProductReducer = (state, action) => {
           isSingleLoading: false,
           singleProduct: action.payload,
         };
+        case "SET_SUGGESTED_PRODUCTS":
+        return {
+          ...state,
+          suggestedProducts: action.payload,
+        };
   
       case "SET_SINGLE_ERROR":
         return {

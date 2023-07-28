@@ -69,3 +69,10 @@
 .closed {
     display: none;
 }
+
+.promo_message{
+    color: red;
+    margin-top: -10px;
+    text-align: center;
+    margin-bottom: -20px;
+}
