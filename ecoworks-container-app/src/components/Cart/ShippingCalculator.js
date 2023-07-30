@@ -3,8 +3,8 @@ import UpperLargeTextDark from "..//Common/UpperLargeTextDark";
 import MediumTextLight from "..//Common/MediumTextLight";
 import MediumTextWhite from "..//Common/MediumTextWhite";
 
-import truck from "../../assets/VectorTruck.svg";
-import arrow from "../../assets/VectorDownArrow.svg";
+import truck from "../../assets/Navigation/VectorTruck.svg";
+import arrow from "../../assets/Navigation/VectorDownArrow.svg";
 
 const ShippingCalculator = (props) => {
   return (

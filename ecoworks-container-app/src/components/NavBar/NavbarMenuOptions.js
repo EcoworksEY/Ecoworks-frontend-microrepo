@@ -20,7 +20,7 @@ const menuOptions = [
     typeList: [
       "Bullet Journals",
       "Lined Paper Notebooks",
-      "Dot Grit Notebooks",
+      "Dot Grid Notebooks",
       "Popular Items",
     ],
     image: Write,
@@ -38,7 +38,7 @@ const menuOptions = [
     typeList: [
       "Bullet Journals",
       "Lined Paper Notebooks",
-      "Dot Grit Notebooks",
+      "Dot Grid Notebooks",
       "Popular Items",
     ],
     image: Note,
@@ -56,7 +56,7 @@ const menuOptions = [
     typeList: [
       "Bullet Journals",
       "Lined Paper Notebooks",
-      "Dot Grit Notebooks",
+      "Dot Grid Notebooks",
       "Popular Items",
     ],
     image: Plan,
@@ -74,7 +74,7 @@ const menuOptions = [
     typeList: [
       "Bullet Journals",
       "Lined Paper Notebooks",
-      "Dot Grit Notebooks",
+      "Dot Grid Notebooks",
       "Popular Items",
     ],
     image: ArtSupplies,
@@ -92,7 +92,7 @@ const menuOptions = [
     typeList: [
       "Bullet Journals",
       "Lined Paper Notebooks",
-      "Dot Grit Notebooks",
+      "Dot Grid Notebooks",
       "Popular Items",
     ],
     image: Carry,
@@ -110,7 +110,7 @@ const menuOptions = [
     typeList: [
       "Bullet Journals",
       "Lined Paper Notebooks",
-      "Dot Grit Notebooks",
+      "Dot Grid Notebooks",
       "Popular Items",
     ],
     image: Refills,
@@ -128,7 +128,7 @@ const menuOptions = [
     typeList: [
       "Bullet Journals",
       "Lined Paper Notebooks",
-      "Dot Grit Notebooks",
+      "Dot Grid Notebooks",
       "Popular Items",
     ],
     image: Sale,

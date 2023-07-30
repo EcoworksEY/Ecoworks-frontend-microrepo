@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.svg";
-import ecoworksSearchIcon from "../../assets/VectorSearch.svg";
-import ecoworksShoppingBagIcon from "../../assets/VectorShoppingBag.svg";
+import ecoworksSearchIcon from "../../assets/Navigation/VectorSearch.svg";
+import ecoworksShoppingBagIcon from "../../assets/Navigation/VectorShoppingBag.svg";
 import "./NavBar.css";
 import { useNavigate } from "react-router-dom";
 // import { RxCross1 } from "react-icons/Rx";

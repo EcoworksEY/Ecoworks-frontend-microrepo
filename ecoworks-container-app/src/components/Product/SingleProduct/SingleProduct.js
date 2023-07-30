@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./SingleProduct.css";
-import minus from "../../../assets/VectorMinus.svg";
-import plus from "../../../assets/VectorPlus.svg";
-import arrow from "../../../assets/VectorArrowMainSection.svg";
+import minus from "../../../assets/Navigation/VectorMinus.svg";
+import plus from "../../../assets/Navigation/VectorPlus.svg";
+import arrow from "../../../assets/Navigation/VectorArrowMainSection.svg";
 import buyNowIcon from "../../../assets/SingleProduct/VectorBuyNow.svg";
 import afterpayLogo from "../../../assets/SingleProduct/VectorAfterPay.svg";
 import KlarnaIcon from "../../../assets/SingleProduct/VectorKlarna.svg";

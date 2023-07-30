@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Cross from "../../../assets/Navigation/VectorCross.svg";
-import Heart from "../../../assets/VectorFavorite.svg";
+import Heart from "../../../assets/Navigation/VectorFavorite.svg";
 
 import "./AddToCart.css";
 import LargeTextDark from "../LargeTextDark";

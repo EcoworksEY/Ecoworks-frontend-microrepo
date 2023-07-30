@@ -1,6 +1,6 @@
 import React from "react";
 import "./Promotion.css"
-import PromoImage from "../../assets/VectorPromoImage.svg"
+import PromoImage from "../../assets/SingleProduct/VectorPromoImage.svg"
 
 export default function Promotion(props) {
 

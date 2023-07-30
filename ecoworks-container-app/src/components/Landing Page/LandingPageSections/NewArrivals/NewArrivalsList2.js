@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import NewArrivalsProduct2 from "./NewArrivalsProduct2";
-import SideArrow from "../../../../assets/VectorSideArrow.svg";
+import SideArrow from "../../../../assets/Navigation/VectorSideArrow.svg";
 import "./NewArrivalsList.css";
 import "../ProductSection/Product.css";
 import { useProductContext } from "../../../../context/ProductContext";

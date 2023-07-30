@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Cross from "../../../assets/Navigation/VectorCross.svg";
-import ecoworksShoppingBagIcon from "../../../assets/VectorShoppingBag.svg";
+import ecoworksShoppingBagIcon from "../../../assets/Navigation/VectorShoppingBag.svg";
 
 import "./AddToCart.css";
 import LargeTextDark from "../LargeTextDark";

@@ -9,7 +9,7 @@ import NoteIcon from "./FiltersIcon";
 export const noteIcons = [
     {
         image: DotGritNote,
-        title: "Dot Grit Notebooks",
+        title: "Dot Grid Notebooks",
         contextName: "productType"
     },
     {

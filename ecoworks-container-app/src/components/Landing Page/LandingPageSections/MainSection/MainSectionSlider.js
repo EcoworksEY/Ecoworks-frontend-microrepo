@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Image1 from "../../../../assets/MainSection/MainSection1.svg"
 import Image2 from "../../../../assets/MainSection/MainSection2.svg"
 import Image3 from "../../../../assets/MainSection/MainSection3.svg"
-import arrow from "../../../../assets/VectorArrowMainSection.svg"
+import arrow from "../../../../assets/Navigation/VectorArrowMainSection.svg"
 
 import "./MainSectionSlider.css";
 import "./MainSection.css"
@@ -12,7 +12,7 @@ import "./MainSection.css"
 const scrollDownToNewArrivals = () => {
   window.scrollTo({
       left: 0,
-      top: 2300,
+      top: 2725,
       behavior: 'smooth'
   });
 }
@@ -38,9 +38,9 @@ export default function MainSectionSlider (props) {
   const promotions = [
     { 
         promoImage: Image1, 
-        title: "20%OFF", 
+        title: "Notebooks", 
         subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 August. T&C apply",
+        additionalText: "Enjoy our extensive collection of Notebooks & Pencils",
         onClickFunction: navigateToProducts,
     },
     { 

@@ -1,5 +1,5 @@
 import React from 'react'
-import mainImage from "../../../../assets/VectorMainImage.svg"
+import mainImage from "../../../../assets/MainSection/VectorMainImage.svg"
 import "./MainSection.css"
 import MainSectionSlider from './MainSectionSlider'
 
