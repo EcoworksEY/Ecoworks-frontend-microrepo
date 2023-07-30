@@ -38,9 +38,9 @@ export default function MainSectionSlider (props) {
   const promotions = [
     { 
         promoImage: Image1, 
-        title: "20%OFF", 
+        title: "Notebooks", 
         subtitle:"Notebooks & Pencils",
-        additionalText: "Enjoy 20% off all notebook and pencils. Ends 15 August. T&C apply",
+        additionalText: "Enjoy our extensive collection of Notebooks & Pencils",
         onClickFunction: navigateToProducts,
     },
     { 

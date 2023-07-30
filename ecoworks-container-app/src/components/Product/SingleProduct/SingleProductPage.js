@@ -6,12 +6,12 @@ import { useParams } from "react-router-dom";
 import Loading from "../../Common/Loading/Loading";
 
 const SingleProductPage = (props) => {
-  const { singleProduct, suggestedProducts, getSingleProduct } = useProductContext();
+  const { singleProduct, suggestedProducts, getSingleProduct, products } = useProductContext();
   let { id } = useParams();
 
   useEffect(() => {
-    getSingleProduct(Number(id));
-  }, [id]);
+    getSingleProduct((id));
+  }, [products]);
 
   let productData = "";
   let pageData = <div className="loading_container_single_product"><Loading /></div>;
@@ -29,6 +29,7 @@ const SingleProductPage = (props) => {
         colours={productData.colours}
         images={productData.images}
         suggestedProducts={suggestedProducts}
+        description={productData.description}
       />
     );
   }

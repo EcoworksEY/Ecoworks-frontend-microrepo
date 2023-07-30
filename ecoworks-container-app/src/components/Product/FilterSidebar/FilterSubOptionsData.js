@@ -30,7 +30,7 @@ const FilterSubOptions = [
       {
         id: 1,
         icon: DotGritNote,
-        filterOptionTitle: "Dot Grit Notebooks",
+        filterOptionTitle: "Dot Grid Notebooks",
       },
       {
         id: 2,

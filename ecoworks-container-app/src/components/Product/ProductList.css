@@ -1,25 +1,31 @@
 .title_text {
-    /* width: 356px; */
-    height: 59px;
-    margin-top: 4%;
-    margin-left: 5%;
+  /* width: 356px; */
+  height: 59px;
+  margin-top: 4%;
+  margin-left: 5%;
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 45px;
-    text-align: left;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 45px;
+  text-align: left;
 
-    color: #000000;
+  color: #000000;
 }
 
 .container_products {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: auto;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2%;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  justify-items: center;
+}
+
+.loading_container_product_page {
+  margin-top: 1%;
+  margin-left: 35%;
+  margin-bottom: 2%;
 }
