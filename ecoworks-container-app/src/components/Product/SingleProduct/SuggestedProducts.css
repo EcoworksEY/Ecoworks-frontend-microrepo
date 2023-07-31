@@ -23,6 +23,7 @@
 .suggested_product_image {
     position: relative;
     width: 200px;
+    height:200px;
     align-items : center;
     cursor: pointer;
 }

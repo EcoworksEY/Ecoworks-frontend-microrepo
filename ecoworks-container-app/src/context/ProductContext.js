@@ -54,29 +54,30 @@ const ProductProvider = ({ children }) => {
   const getProducts = async (url) => {
     dispatch({ type: "SET_LOADING" });
     try {
-      const res = await axios.get(url, {timeout: 10000});
+      const res = await axios.get(url, { timeout: 10000 });
       const products = await res.data;
       console.log(products);
       console.log("Hello");
-    // setTimeout(
-    //   () => 
-      dispatch({ type: "SET_API_DATA", payload: products.products })
-    //   5000
-    // );
-
-    // dispatch({ type: "SET_SUGGESTED_PRODUCTS", payload: suggested_products });
-
-      } catch (error) {
-        dispatch({ type: "API_ERROR" });
-      }
+      // setTimeout(
+      //   () =>
+      dispatch({ type: "SET_API_DATA", payload: products.products });
+      //   5000
+      // );
+    } catch (error) {
+      dispatch({ type: "API_ERROR" });
+    }
   };
 
   // TRIGERRED FROM THE SINGLE PRODUCT PAGE
   const getSingleProduct = (id) => {
-    // dispatch({ type: "SET_SINGLE_LOADING" });
-    // try {
-    //   const res = await axios.get(url);
-    //   const singleProduct = await res.data;
+    dispatch({
+      type: "SET_SUGGESTED_PRODUCTS",
+      payload: [
+        state.products[getRandomNumberInt(0, state.products.length)],
+        state.products[getRandomNumberInt(0, state.products.length)],
+        state.products[getRandomNumberInt(0, state.products.length)],
+      ],
+    });
     dispatch({
       type: "SET_SINGLE_PRODUCT",
       payload: state.products.filter((product) => id === product.id),
@@ -87,71 +88,13 @@ const ProductProvider = ({ children }) => {
     // }
   };
 
+  const getRandomNumberInt = (min, max) => {
+    return Math.floor(Math.random() * (max - min) + min);
+  };
+
   useEffect(() => {
     getProducts(BFF_IP);
   }, []);
-
-  // Use Effect for async function definition and fetching via BFF
-  //    useEffect(() => {
-  //     // Function for handling graphql access specifically for procut listing
-  //     const listProducts = async () => {
-  //       const options = {
-  //         method: "POST",
-  //         url: BFF_IP,
-  //         headers: {
-  //           "content-type": "application/json",
-  //         },
-  //         data: {
-  //           query: `{
-  //                         productList {
-  //                             product_id
-  //                             name
-  //                             description
-  //                             price
-  //                             sku_units
-  //                         }
-  //                     }`,
-  //         },
-  //       };
-  //       // axios
-  //       // 	.request(options)
-  //       // 	.then(function (response) {
-  //       // 		console.log(response.data); // Response
-  //       //         return response.data;
-  //       // 	})
-  //       // 	.catch(function (error) {
-  //       // 		console.error('Axios error: ',error);
-  //       // 	});
-  //       try {
-  //         // HAVE to await here. Otherwise it does not work.
-  //         // Also, maybe think about inserting a loading thingy.
-
-  //         const response = await axios.request(options);
-  //         setProducts(response.data.data.productList);
-  //         //return response;
-  //       } catch (error) {
-  //         console.error("Axios error: ", error);
-  //         return error;
-  //       }
-  //     };
-
-  // Actually invoke the function now
-  //     listProducts();
-  //   }, []);
-
-  //   console.log(`Products is: ${JSON.stringify(products)}`);
-
-  //   var index = 0;
-  //   while (index < products.length) {
-  //     // append to the productsData
-  //     var productItem = products[index];
-  //     console.log(`We have producItem = ${JSON.stringify(productItem)}`);
-  //     productsDummy[index].id = productItem.product_id;
-  //     productsDummy[index].title = productItem.name;
-  //     productsDummy[index].price = productItem.price;
-
-  //     index += 1;
-  //   }
 
   return (
     <ProductContext.Provider value={{ ...state, getSingleProduct }}>
