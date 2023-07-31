@@ -11,7 +11,7 @@ const SingleProductPage = (props) => {
 
   useEffect(() => {
     getSingleProduct((id));
-  }, [products]);
+  }, [products, id]);
 
   let productData = "";
   let pageData = <div className="loading_container_single_product"><Loading /></div>;
