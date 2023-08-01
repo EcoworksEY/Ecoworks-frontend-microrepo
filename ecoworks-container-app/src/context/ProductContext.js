@@ -11,7 +11,7 @@ import Refills from "../assets/NewArrivals/Refills.svg";
 const ProductContext = createContext();
 
 // INTEGRATION WITH BACKEND
-const BFF_IP = "https://www.eyecoworks.com:444/product/list";
+const BFF_IP = "https://api.eyecoworks.com/product/list";
 
 const new_arrivals = [
   {
@@ -54,7 +54,7 @@ const ProductProvider = ({ children }) => {
   const getProducts = async (url) => {
     dispatch({ type: "SET_LOADING" });
     try {
-      const res = await axios.get(url, { timeout: 10000 });
+      const res = await axios.get(url, { timeout: 60000 });
       const products = await res.data;
       console.log(products);
       console.log("Hello");
