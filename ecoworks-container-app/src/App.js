@@ -17,6 +17,7 @@ import SingleProductPage from "./components/Product/SingleProduct/SingleProductP
 import BlogsPage from "./components/MiscPages/Blogs/BlogsPage";
 import TermsPage from "./components/MiscPages/Terms/TermsPage";
 import PrivacyPage from "./components/MiscPages/Privacy/PrivacyPage";
+import NotFoundPage from "./components/MiscPages/NotFound/404";
 
 const App = (props) => {
   return (
@@ -42,6 +43,7 @@ const App = (props) => {
           <Route path="/products/:id" element={<SingleProductPage />} />
           <Route exact path ="/terms-and-conditions" element={<TermsPage />} />
           <Route exact path ="/privacy" element={<PrivacyPage />} />
+          <Route path ="/*" element = {<NotFoundPage />} />
         </Routes>
         <Footer />
       </ScrollToTop>
