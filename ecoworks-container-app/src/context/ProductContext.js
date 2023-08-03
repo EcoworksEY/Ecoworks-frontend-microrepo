@@ -56,8 +56,6 @@ const ProductProvider = ({ children }) => {
     try {
       const res = await axios.get(url, { timeout: 60000 });
       const products = await res.data;
-      console.log(products);
-      console.log("Hello");
       // setTimeout(
       //   () =>
       dispatch({ type: "SET_API_DATA", payload: products.products });

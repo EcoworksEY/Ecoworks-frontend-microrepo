@@ -13,26 +13,28 @@ const OrderPopup = (props) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("HELLOW");
     if (props.orderPopupVisible) {
       setInfoToShow(<div className="loading_container_order"><Loading /></div>);
       setTimeout(
         () =>
           setInfoToShow(
             <div className="order_accepted_container">
-              <TitleTextHeavy text="Order Accepted" />
+              <TitleTextHeavy text={props.title} />
+              <div className="order_image_container">
+                <img className="w-2/5" src = {props.image} alt = "" ></img>
+              </div>
               <div className="order_additional_text">
-                <UpperLargeTextDark text="Thank you for your order!" />
-                <LargeTextDark text="It has been placed successfully!" />
-                <MediumTextGrey text="You are now being redirected to the home page" />
+                <UpperLargeTextDark text= {props.line1}/>
+                <LargeTextDark text={props.line2} />
+                <MediumTextGrey text={props.redirectLine} />
               </div>
             </div>
           ),
         5000
       );
-        setTimeout(() => navigate("/home"), 10000);
+        setTimeout(() => navigate(props.redirectRoute), 10000);
     }
-  }, [props.orderPopupVisible, navigate]);
+  }, [props, navigate]);
 
   return (
     <div

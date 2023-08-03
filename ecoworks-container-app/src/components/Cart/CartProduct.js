@@ -19,7 +19,6 @@ const CartProduct = (props) => {
   const [selectedColour, setselectedColour] = useState(props.selectedColour);
   const {setColour} = useCartContext();
   const handleChangeColour = (colour) => {
-    console.log(colour)
     setselectedColour(colour);
     setColour(props.id, colour)
 

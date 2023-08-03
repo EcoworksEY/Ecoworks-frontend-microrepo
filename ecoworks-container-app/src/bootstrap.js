@@ -9,9 +9,11 @@ import reportWebVitals from "./reportWebVitals";
 import { ProductProvider } from "./context/ProductContext";
 import { ProductFilterContextProvider } from "./context/ProductFilterContext";
 import { WishlistProvider } from "./context/WishlistContext";
+import { UserProvider } from "./context/UserContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  <UserProvider>
   <ProductProvider>
     <ProductFilterContextProvider>
       <CartProvider>
@@ -21,6 +23,7 @@ root.render(
       </CartProvider>
     </ProductFilterContextProvider>
   </ProductProvider>
+  </UserProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

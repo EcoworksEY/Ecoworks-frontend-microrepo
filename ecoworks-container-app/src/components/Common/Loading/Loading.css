@@ -95,3 +95,88 @@
     text-indent: 0;
   }
 }
+
+.loading_title_text2 {
+  font-size: 20px;
+  /* margin-left: 40px; */
+}
+.message2 {
+  background-color: #D6C6C6;
+  color: #333;
+  display: block;
+  font-weight: 500;
+  overflow: hidden;
+  position: absolute;
+  padding-left: 0.5rem;
+  top: 0.2rem;
+  margin-left: 135px;
+  font-size: 30px;
+  
+  animation: openclose2 5s ease-in-out infinite;
+}
+
+@keyframes openclose2 {
+  0% {
+    top:-0.5rem;
+    width: 0;
+  }
+  5% {
+    top:-0.5rem;
+    width: 0;
+  }
+  15% {
+    top:-0.5rem;
+    width: 67px;
+  }
+  30% {
+    top:-0.5rem;
+    width: 67px;
+  }
+  33% {
+    top:-0.5rem;
+    width: 0;
+  }
+  35% {
+    top:-3.3rem;
+    width: 0;
+  }
+  38% {
+    top: -3.3rem;
+  }
+  48% {
+    top: -3.3rem;
+    width: 197px;
+  }
+  62% {
+    top: -3.3rem;
+    width: 197px;
+  }
+  66% {
+    top: -3.3rem;
+    width: 0;
+    text-indent: 0;
+  }
+  71% {
+    top: -6.1rem;
+    width: 0;
+    text-indent: 5px;
+  }
+  86% {
+    top: -6.1rem;
+    width: 236px;
+  }
+  95% {
+    top: -6.1rem;
+    width: 236px;
+  }
+  98% {
+    top: -6.1rem;
+    width: 0;
+    text-indent: 5px;
+  }
+  100% {
+    top: 0;
+    width: 0;
+    text-indent: 0;
+  }
+}

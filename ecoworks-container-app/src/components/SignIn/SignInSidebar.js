@@ -9,7 +9,7 @@ const SignInSidebar = (props) => {
     <div className={`${props.displayed ? "sidebar_sign_in" : "sidebar_sign_in sidebar_close_sign_in"}`}>
       <img className= "sidebar_cross_button_sign_in" src = {Cross} alt ="Close" onClick ={() => props.onClickClose()} />
       <div className = "signin_form_container" >
-        <SignInForm />
+        <SignInForm onSidebar = {true} onClickClose = {props.onClickClose}/>
       </div>
     </div>
   )
