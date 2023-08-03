@@ -21,7 +21,6 @@ export default function NoteIcon(props) {
             scrollDown();
         } else {
             newArr.splice(props.productTypeSelected.indexOf(props.title), 1)
-            console.log(newArr);
             updateFilterValue(props.productTypeSelected, newArr);
         }
     }

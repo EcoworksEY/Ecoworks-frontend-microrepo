@@ -40,6 +40,7 @@ export default function SingleProduct(props) {
   useEffect(() => {
     setMainImage(props.images[mainImageIndex]);
     setselectedColour(props.colours[0]);
+    setQuantity(1);
   }, [props]);
 
   const handleIncrease = () => {
@@ -61,7 +62,6 @@ export default function SingleProduct(props) {
     if (props.images.length - 1 > mainImageIndex) {
       let new_index = mainImageIndex + 1;
       setMainImageIndex(new_index);
-      console.log(new_index);
       setMainImage(props.images[new_index]);
     }
   };
@@ -70,7 +70,6 @@ export default function SingleProduct(props) {
     if (mainImageIndex > 0 && props.images.length > 1) {
       let new_index = mainImageIndex - 1;
       setMainImageIndex(new_index);
-      console.log(new_index);
       setMainImage(props.images[new_index]);
     }
   };

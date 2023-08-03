@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from 'react-router-dom';
@@ -12,8 +12,14 @@ import ButtonGrey from "../Common/SignUpForm/ButtonGrey";
 
 import LargeTextDark from "../Common/LargeTextDark";
 import MediumTextDark from "../Common/MediumTextDark";
+import { useUserContext } from "../../context/UserContext";
 
+let message = "";
 const SignInForm = (props) => {
+    const {signIn} = useUserContext();
+    const [errorMessageVisible, setErrorMessageVisible] = useState(false);
+    const [loading, setLoading] = useState(false)
+
     const navigate = useNavigate();
 
     const navigateToSignUp = () => {
@@ -24,8 +30,8 @@ const SignInForm = (props) => {
         console.log("forgotten")
     }
 
-    const handleSubmit = (event) => {
-      console.log(event.target.value)
+    const handleSubmit = () => {
+      console.log("Signing In")
     }
 
   return (
@@ -42,23 +48,38 @@ const SignInForm = (props) => {
             .email("Invalid email address")
             .required("Required*"),
         })}
-        onSubmit={(values, { setSubmitting }) => {
+        onSubmit={(values, { setSubmitting, resetForm }) => {
 
-          setTimeout(() => {
-            console.log(JSON.stringify(values, null, 2));
+          setTimeout(async () => {
+            setLoading(true);
+            message = await signIn((values.email), (values.password));
             setSubmitting(false);
+            setLoading(false);
+            if (message === "OK") {
+              if (props.onSidebar){
+                props.onClickClose();
+              } else {
+                navigate("/home")
+              }
+            } else {
+              setErrorMessageVisible(true)
+              setTimeout(() => {setErrorMessageVisible(false)},3000)
+            }
           }, 400);
+          resetForm();
         }}
       >
         <Form>
-          <TextInput name="email" type="email" placeholder="Email Address*" />
-          <TextInput name="password" type="text" placeholder="Password*" />
+          <TextInput name="email" type="email" placeholder="Email Address*" autoComplete="username" />
+          <TextInput name="password" type="password" placeholder="Password*" autoComplete="current-password"/>
           <div className="signin_remember_me_forgot_container">
             <Checkbox name="acceptRememberMe">Remember Me</Checkbox>
             <div className="forgot_password" onClick = {onClickForgottenPassword}>
                 <MediumTextDark className="forgot_password" underline = {true} text = "Forgot Password?"/> 
             </div>
           </div>
+          <p className={`${ errorMessageVisible ? "text-red-400 mt-2" : "closed"}`}>{message}</p>
+          <p className={`${ loading ? "mt-2" : "closed"}`}>Signing you In...</p>
           <ButtonDark type="submit" text="Sign In" handleSubmit={handleSubmit}/>
           <ButtonGrey type="submit2" text="Register" handleSubmit = {navigateToSignUp} />
         </Form>

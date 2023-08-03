@@ -28,7 +28,6 @@ export default function NavBar2(props) {
   const [hovering, setHovering] = useState(false);
 
   const handleSearchClick = () => {
-    console.log("yellow");
     if (expanded) {
       setExpanded(false);
     } else {

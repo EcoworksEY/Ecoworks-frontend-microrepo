@@ -92,7 +92,6 @@ const Cart = (props) => {
       e.target.value === "standard-shipping" &&
       e.target.checked === true
     ) {
-      console.log(e);
       setShippingPrice(SHIPPING_PRICE_STANDARD);
     }
   };

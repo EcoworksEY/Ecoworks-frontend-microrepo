@@ -5,7 +5,6 @@ const CartProductList = (props) => {
   return (
     <div>
       <p className = {`${props.isCartEmpty ? "" : "closed"}`}> Your Cart is Empty, Please add some items!!!!!</p>
-      {console.log(props.productsList)}
       {props.productsList.map((data, index) => (
         <CartProduct
           key={index}

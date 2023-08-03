@@ -10,7 +10,7 @@ const SignInPage = () => {
             <div className="margin-left_account bg-light-purple-theme text-center">
                 <TitleText text = "Log into your account" />
                 <div className="signin_page_form_container">
-                    <SignInForm /> 
+                    <SignInForm onSidebar = {false}/> 
                 </div>      
             </div>
             <SubscribeBanner text = {"Make the Most of your account by subscribing to our newsletter"}/>

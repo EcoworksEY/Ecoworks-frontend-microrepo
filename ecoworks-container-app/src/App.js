@@ -18,6 +18,7 @@ import BlogsPage from "./components/MiscPages/Blogs/BlogsPage";
 import TermsPage from "./components/MiscPages/Terms/TermsPage";
 import PrivacyPage from "./components/MiscPages/Privacy/PrivacyPage";
 import NotFoundPage from "./components/MiscPages/NotFound/404";
+import WelcomeBackMessage from "./components/Common/WelcomeBackMessage";
 
 const App = (props) => {
   return (
@@ -25,6 +26,7 @@ const App = (props) => {
       <ScrollToTop>
         <NavBar1 />
         <NavBar2 />
+        <WelcomeBackMessage />
         <Routes>
           <Route exact path="/home" element={<LandingPage />} />
           <Route exact path="/products/write" element={<p>WRITE</p>} />

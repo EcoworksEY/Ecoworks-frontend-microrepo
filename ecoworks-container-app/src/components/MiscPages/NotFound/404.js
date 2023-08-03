@@ -9,7 +9,7 @@ const NotFoundPage = () => {
     navigate("/home");
   };
   return (
-    <div className='"h-screen flex justify-center mt-20'>
+    <div className='h-screen flex justify-center mt-20'>
       <div className="w-2/5 text-center">
         <img src={NotFoundImage} alt="Not Found"></img>
         <div className="mt-4">
