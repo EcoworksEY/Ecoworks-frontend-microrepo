@@ -9,7 +9,7 @@ import LogOut from "./LogOut";
 export default function NavBar1(props) {
   const { user, userAccessToken, userRefreshToken, log_out } = useUserContext();
   const navigate = useNavigate();
-  const[logoutVisible, setLogoutVisible] = useState(false)
+  const [logoutVisible, setLogoutVisible] = useState(false);
 
   const navigateToSignIn = () => {
     navigate("/signin");
@@ -18,26 +18,29 @@ export default function NavBar1(props) {
     navigate("/blogs");
   };
   let signInButton = "";
-  
+
   const handleProfileIcon = () => {
-    setLogoutVisible(true);
-  }
+    if (logoutVisible) {
+      setLogoutVisible(false);
+    } else {
+      setLogoutVisible(true);
+    }
+  };
 
   const handleLogOutClick = () => {
     setLogoutVisible(false);
-    log_out(userAccessToken, userRefreshToken)
-  }
-  console.log(user)
+    log_out(userAccessToken, userRefreshToken);
+  };
   if (user !== "") {
     signInButton = (
       <div className="options" onClick={() => handleProfileIcon()}>
         <div className="signed_in_icon">
-            <p className="signed_in_text">{user[3].Value.at(0)}</p>
+          <p className="signed_in_text">{user[3].Value.at(0)}</p>
         </div>
       </div>
     );
   }
-  if (user === ""){
+  if (user === "") {
     signInButton = (
       <div className="options" onClick={navigateToSignIn}>
         <img
@@ -52,7 +55,10 @@ export default function NavBar1(props) {
 
   return (
     <div className="navbar">
-      <LogOut logoutVisible = {logoutVisible} handleLogOutClick={handleLogOutClick} />
+      <LogOut
+        logoutVisible={logoutVisible}
+        handleLogOutClick={handleLogOutClick}
+      />
       <div className="navbar_rectangle1">
         <p className="navbar_message">Free Shipping on Orders Over $50*</p>
       </div>
