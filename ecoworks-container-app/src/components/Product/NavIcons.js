@@ -22,7 +22,7 @@ export default function NavIcons(props) {
         <p className="selected_filters_text">{title}: </p>
         &nbsp;
         {filters[contextTitle].map((selected) => (
-          <div className="flex">
+          <div className="flex" key = {selected}>
             <p className="selected_filters_text">{selected}</p>
             <img
               className="selected_text_cross"
