@@ -83,7 +83,7 @@ const UserProvider = ({ children }) => {
   const log_out = async (userAccessToken, userRefreshToken) => {
     let accessToken = userAccessToken;
     let refreshToken = userRefreshToken;
-    console.log(accessToken, refreshToken)
+    // console.log(accessToken, refreshToken)
     try {
       // const res = await axios.post(LOG_OUT_URL, {accessToken, refreshToken})
       // console.log(res);
