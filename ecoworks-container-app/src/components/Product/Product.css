@@ -117,8 +117,10 @@
 }
 
 .selected_products_page{
-    width: 21px;
-    height: 21px;
-    margin-left: 5%;
-    margin-top: 5%;
+    width: 18px;
+    height: 18px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }

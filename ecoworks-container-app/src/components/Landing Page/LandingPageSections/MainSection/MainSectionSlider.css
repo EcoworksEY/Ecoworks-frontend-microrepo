@@ -2,6 +2,7 @@
 .slideshow {
     /* margin: 0 auto; */
     overflow: hidden;
+    width: 100%;
     /* max-width: 500px; */
   }
   .slideshowSlider {
@@ -13,6 +14,9 @@
   .slide {
     display: inline-block;
     white-space: initial;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    margin-top: 5.8%;
   }
   
   /* Buttons */

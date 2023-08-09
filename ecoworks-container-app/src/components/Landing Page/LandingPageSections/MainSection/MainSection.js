@@ -13,7 +13,7 @@ export default function MainSection (props) {
             </div>
         
             <div className = "main_section_rectangle2">
-                <img src = {mainImage} alt =""></img>
+                <img classname= "main_section_image" src = {mainImage} alt =""></img>
             </div>
         </div>
     )

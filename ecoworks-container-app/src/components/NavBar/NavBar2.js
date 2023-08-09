@@ -71,19 +71,19 @@ export default function NavBar2(props) {
             alt=""
             onClick={handleSearchClick}
           />
-          <div className="search_bar_flex">
+          {/* <div className="search_bar_flex">
             <input
               className={`search-input ${expanded ? "visible" : ""}`}
               type="text"
               placeholder="Search ... "
             />
-            {/* <img className={`cross-icon ${expanded ? 'visible' : ''}`} src = {ecoworksSearchIcon} alt ="" onClick = {handleSearchClick}/> */}
-            {/* <RxCross1
+            {/* <img className={`cross-icon ${expanded ? 'visible' : ''}`} src = {ecoworksSearchIcon} alt ="" onClick = {handleSearchClick}/>
+            <RxCross1
               className={`cross-icon ${expanded ? "visible" : ""}`}
               alt=""
               onClick={handleSearchClick}
-            /> */}
-          </div>
+            />
+          </div> */}
         </div>
         {/* <img
           className="navbar_ecoworks_blog_logo"
