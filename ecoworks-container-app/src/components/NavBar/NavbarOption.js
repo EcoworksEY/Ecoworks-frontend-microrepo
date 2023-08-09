@@ -43,6 +43,8 @@ const NavBarOption = (props) => {
         {props.title}
       </p>
       <div className={`${hovering ? "hovering_menu_option_rectangle" : ""}`}>
+      <div className={`${hovering ? "hovering_line" : ""}`}></div>
+
         <div
           className={`${
             hovering
@@ -59,7 +61,7 @@ const NavBarOption = (props) => {
           />
         </div>
       </div>
-      <div className={`${hovering ? "hovering_line" : ""}`}></div>
+      
     </div>
   );
 };

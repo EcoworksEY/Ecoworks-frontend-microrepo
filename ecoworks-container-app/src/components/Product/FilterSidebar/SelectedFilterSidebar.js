@@ -38,9 +38,9 @@ const SelectedFilterSidebar = (props) => {
           filterNameContext = {props.filterNameContext}
         />
       ))}
-      <div className="filter_buttons_container">
+      {/* <div className="filter_buttons_container">
         <ButtonDark content="Apply Filters" />
-      </div>
+      </div> */}
     </div>
   );
 };
