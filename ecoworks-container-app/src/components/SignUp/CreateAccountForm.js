@@ -86,7 +86,7 @@ const CreateAccountForm = () => {
             birthday: Yup.date()
               .transform((value, originalValue, context) => {
                 if (context.isType(value)) return value;
-                return parse(originalValue, "dd/MM", new Date());
+                return parse(originalValue, "dd/MM/yyyy", new Date());
               })
               .required("Not Provided"),
             // .typeError("please enter a valid date"),
