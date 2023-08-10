@@ -23,6 +23,7 @@ const SignInForm = (props) => {
     const navigate = useNavigate();
 
     const navigateToSignUp = () => {
+        props.onClickClose();
         navigate("/signup");
     }
 
